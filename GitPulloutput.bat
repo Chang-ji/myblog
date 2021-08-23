@@ -11,8 +11,7 @@ git pull origin main
 timeout 1
 cd ..
 
-bundle exec jekyll build
+bundle exec jekyll serve
 
-cmd/k
 
 
