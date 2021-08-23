@@ -4,7 +4,7 @@ cd output
 git add .
 timeout 1
 
-git commit -m "second commit"
+git commit -m "auto commit"
 timeout 1
 
 git pull origin main
