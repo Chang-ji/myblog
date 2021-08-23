@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://chang-ji.github.io/author/Chanji/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://chang-ji.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-08-23T21:23:23+09:00</updated>
+  <updated>2021-08-23T23:04:13+09:00</updated>
   <id>https://chang-ji.github.io/author/Chanji/feed.xml</id>
 
   
@@ -32,14 +32,170 @@
 
   
     <entry>
-      <title type="html">Startbucks - 순차적 요소 보이기</title>
-      <link href="https://chang-ji.github.io/Startbucks-Show-Sequential-Elements" rel="alternate" type="text/html" title="Startbucks - 순차적 요소 보이기" />
+      <title type="html">Startbucks - 공지사항 디자인</title>
+      <link href="https://chang-ji.github.io/Startbucks-Notice-design" rel="alternate" type="text/html" title="Startbucks - 공지사항 디자인" />
       <published>2021-08-22T19:18:00+09:00</published>
       <updated>2021-08-22T19:18:00+09:00</updated>
-      <id>https://chang-ji.github.io/Startbucks-Show-Sequential-Elements</id>
-      <content type="html" xml:base="https://chang-ji.github.io/Startbucks-Show-Sequential-Elements">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
+      <id>https://chang-ji.github.io/Startbucks-Notice-design</id>
+      <content type="html" xml:base="https://chang-ji.github.io/Startbucks-Notice-design">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Show-Sequential-Elements&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Notice-design&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;순차적-요소-보이기&quot;&gt;순차적 요소 보이기&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;html-구조&quot;&gt;HTML 구조&lt;/h3&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;notice&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;notice-line&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bg-left&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bg-right&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;inner&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;inner__left&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;공지사항&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;notice-line__more&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;material-icons&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;add_circle&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;inner__right&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;스타벅스 프로모션&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;toggle-promotion&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;material-icons&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;upload&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;notice-line 을 기준으로 bg-left, bg-right, inner 로 구성됨&lt;/li&gt;
+  &lt;li&gt;inner 기준으로 inner__left, inner__right로 구성됨&lt;/li&gt;
+  &lt;li&gt;inner__left 기준으로 h2 태그, div 요소, a.material-icons으로 구성됨&lt;/li&gt;
+  &lt;li&gt;inner__right 기준으로 h2 태그, div 요소, a.material-icons으로 구성됨&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;css&quot;&gt;&lt;strong&gt;css&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.bg-left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;     &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;position&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;relative&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기준&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                 &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;위에서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;0px&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;왼쪽에서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;0px&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;             &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;넓이&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;절반&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;           &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;높이&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;notice-line&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;과&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;같음&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#333&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;검은색&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.bg-right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;         &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;position&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;relative&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기준&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                     &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;위에서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;0px&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                   &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;오른쪽에서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;0px&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                 &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;넓이&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;절반&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;               &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;높이&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;notice-line&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;과&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;같음&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#f6f5ef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;흰색&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;62px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;        &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;수평쌓기&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;60%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#333&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;         &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;수평쌓기&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;수평정렬&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;가운데&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;정렬&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__left&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;17px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;700&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__left&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;62px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;orange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;flex-grow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;수평쌓기&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;요소&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;최대로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;늘이기&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__left&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line__more&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;62px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;62px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;              &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;수평쌓기&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;justify-content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;수평정렬&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;가운데&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;정렬&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;        &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;수직정렬&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;가운데&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;정렬&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__left&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line__more&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.material-icons&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;#fff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;              &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;수평쌓기&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;justify-content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;수평정렬&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;오른쪽&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;정렬&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;        &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;수직정렬&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;가운데&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;정렬&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__right&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;17px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;700&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__right&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.toggle-promotion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;62px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;62px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;pointer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;          &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;커서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;대면&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;포인터&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;보임&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;            &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;수평쌓기&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;justify-content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;수평정렬&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;가운데&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;정렬&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;      &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;수직정렬&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;가운데&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;정렬&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__right&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.toggle-promotion&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.material-icons&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Changji Kim</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Startbucks" />
+      
+
+      
+        <summary type="html">Startbucks Project Study Very Hard Startbucks-Show-Sequential-Elements Startbucks-Notice-design</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Startbucks - 순차적 요소 보이기</title>
+      <link href="https://chang-ji.github.io/Startbucks-Show-Sequential-Elements-copy" rel="alternate" type="text/html" title="Startbucks - 순차적 요소 보이기" />
+      <published>2021-08-22T19:18:00+09:00</published>
+      <updated>2021-08-22T19:18:00+09:00</updated>
+      <id>https://chang-ji.github.io/Startbucks-Show-Sequential-Elements%20copy</id>
+      <content type="html" xml:base="https://chang-ji.github.io/Startbucks-Show-Sequential-Elements-copy">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Show-Sequential-Elements&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Notice-design&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;순차적-요소-보이기&quot;&gt;순차적 요소 보이기&lt;/h2&gt;
@@ -120,7 +276,7 @@ gsap함수를 활용하여 Animation 효과 부여하고 delay 함수로 시간�
       
 
       
-        <summary type="html">Startbucks Project Study Very Hard Startbucks-Show-Sequential-Elements</summary>
+        <summary type="html">Startbucks Project Study Very Hard Startbucks-Show-Sequential-Elements Startbucks-Notice-design</summary>
       
 
       
