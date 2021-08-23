@@ -136,8 +136,6 @@ into the {body} of the default.hbs template -->
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
     <li class="nav-markdown" role="menuitem"><a href="/tag/markdown/">markdown</a></li>
     <li class="nav-vue" role="menuitem"><a href="/tag/vue/">vue</a></li>
-    <li class="nav-vue" role="menuitem"><a href="/tag/FrontEnd/">FrontEnd</a></li>
-    <li class="nav-vue" role="menuitem"><a href="/tag/BackEnd/">BackEnd</a></li>
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
     </li>
@@ -185,24 +183,6 @@ into the {body} of the default.hbs template -->
 
 <script>
     window.store = {
-    
-    "frontend-parcel": {
-        "title": "Parcel",
-            "author": "Chanji",
-            "category": "",
-            "content": "FrontEnd 기본 요소에 대해서 학습합니다.    ParcelParcel 프로젝트 만들기프로젝트 생성 github 주소https://github.com/Chang-ji/Parcel-example참고 자료https://heropy.blog/package.json 파일 생성npm init -ypackage.json parcel-bundler 설치npm i -D parcel-bundlerpackage.json 파일에 scripts 부분 변경  \"scripts\": {    \"dev\": \"parcel index.html\",    \"build\": \"parcel build index.html\"  },scss 추가  &lt;link rel=\"stylesheet\" href=\"./scss/main.scss\"&gt;javascript 추가&lt;script defer src=\"./js/main.js\"&gt;&lt;/script&gt;reset.css cdn 추가&lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css\"&gt;favicon 파일 만들기  파비콘 만들기 : https://www.icoconverter.com/정적 파일 연결  정적파일연결 : https://www.npmjs.com/package/parcel-plugin-static-files-copy    npm install -D parcel-plugin-static-files-copy      package.json 파일에 추가\"staticFiles\": {    \"staticPath\": \"static\"}postcss autoprefixer 설치npm i -D postcss autoprefixerpackage.json 파일에 추가  \"browserslist\": [    \"&gt;1%\",    \"last 2 versions\"  ].postcssrc.js 작성//importconst autoprefixer = require('autoprefixer')// exportmodule.exports = {  plugins: [    autoprefixer  ]}Error: PostCSS plugin autoprefixer requires PostCSS 8.  autoprefixer 10버전에서 8버전으로 다운그레이드https://stackoverflow.com/questions/64057023/error-postcss-plugin-autoprefixer-requires-postcss-8-update-postcss-or-downgra    npm i -D autoprefixer@9      Babelhttps://en.wikipedia.org/wiki/Babel_(transcompiler)  ES6, ES7, ES8 을 ES5로 변환(compile)    npm i -D @babel/core @babel/preset-env        .babelrc.js 파일 생성    module.exports = {presets:['@babel/preset-env']}      Promise 객체 적용 안되는 문제 해결npm i -D @babel/plugin-transform-runtime.babelrc.js 플러그인 추가module.exports = {  presets:['@babel/preset-env'],  plugins:[    ['@babel/plugin-transform-runtime']  ]}Parcelhttps://ko.parceljs.org/https://ko.parceljs.org/cli.htmlgithub 관리git initgit add README.mdgit commit -m \"first commit\"git branch -M maingit remote add origin https://github.com/Chang-ji/Parcel-example.gitgit push -u origin main",
-        "url": "/FrontEnd-Parcel"
-    }
-    ,
-    
-    "backend-spring-exception": {
-        "title": "BackEnd - Spring",
-            "author": "Chanji",
-            "category": "",
-            "content": "BackEnd 기본 요소에 대해서 학습합니다.    BackEnd-Spring-ExceptionBackEnd Exception",
-        "url": "/BackEnd-Spring-Exception"
-    }
-    ,
     
     "markdown-basic": {
         "title": "Markdown Basic",
