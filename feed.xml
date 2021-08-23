@@ -1,4 +1,131 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://chang-ji.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chang-ji.github.io/" rel="alternate" type="text/html" /><updated>2021-08-23T15:44:48+09:00</updated><id>https://chang-ji.github.io/feed.xml</id><title type="html">Code Training</title><subtitle>작업 향상 개선을 위한 블로그</subtitle><entry><title type="html">Markdown Basic</title><link href="https://chang-ji.github.io/markdown-basic" rel="alternate" type="text/html" title="Markdown Basic" /><published>2021-08-16T19:18:00+09:00</published><updated>2021-08-16T19:18:00+09:00</updated><id>https://chang-ji.github.io/markdown-basic</id><content type="html" xml:base="https://chang-ji.github.io/markdown-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Markdown Basic 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://chang-ji.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chang-ji.github.io/" rel="alternate" type="text/html" /><updated>2021-08-23T16:03:06+09:00</updated><id>https://chang-ji.github.io/feed.xml</id><title type="html">Code Training</title><subtitle>작업 향상 개선을 위한 블로그</subtitle><entry><title type="html">Parcel</title><link href="https://chang-ji.github.io/FrontEnd-Parcel" rel="alternate" type="text/html" title="Parcel" /><published>2021-08-23T16:02:00+09:00</published><updated>2021-08-23T16:02:00+09:00</updated><id>https://chang-ji.github.io/FrontEnd-Parcel</id><content type="html" xml:base="https://chang-ji.github.io/FrontEnd-Parcel">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;FrontEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./FrontEnd-Parcel&quot;&gt;Parcel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;parcel-프로젝트-만들기&quot;&gt;Parcel 프로젝트 만들기&lt;/h1&gt;
+
+&lt;h2 id=&quot;프로젝트-생성-github-주소&quot;&gt;&lt;strong&gt;&lt;em&gt;프로젝트 생성 github 주소&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;https://github.com/Chang-ji/Parcel-example&lt;/p&gt;
+
+&lt;h3 id=&quot;참고-자료&quot;&gt;참고 자료&lt;/h3&gt;
+&lt;p&gt;https://heropy.blog/&lt;/p&gt;
+
+&lt;h3 id=&quot;packagejson-파일-생성&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;&lt;u&gt;package.json&lt;/u&gt; 파일 생성&lt;/span&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm init -y
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;packagejson-parcel-bundler-설치&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;&lt;u&gt;package.json&lt;/u&gt; parcel-bundler 설치&lt;/span&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i -D parcel-bundler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;packagejson-파일에-scripts-부분-변경&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;&lt;u&gt;package.json&lt;/u&gt; 파일에 &lt;u&gt;scripts&lt;/u&gt; 부분 변경&lt;/span&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;scripts&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;dev&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;parcel index.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;parcel build index.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;scss-추가&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;scss 추가&lt;/span&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./scss/main.scss&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;javascript-추가&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;javascript 추가&lt;/span&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;defer&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;./js/main.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;resetcss-cdn-추가&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;reset.css cdn 추가&lt;/span&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;favicon-파일-만들기&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;favicon 파일 만들기&lt;/span&gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;파비콘 만들기&lt;/code&gt; : https://www.icoconverter.com/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;정적-파일-연결&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;정적 파일 연결&lt;/span&gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;정적파일연결&lt;/code&gt; : https://www.npmjs.com/package/parcel-plugin-static-files-copy
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; parcel-plugin-static-files-copy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;packagejson-파일에-추가&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;&lt;u&gt;package.json&lt;/u&gt; 파일에 추가&lt;/span&gt;&lt;/h4&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nl&quot;&gt;&quot;staticFiles&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;staticPath&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;static&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;postcss-autoprefixer-설치&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;postcss autoprefixer 설치&lt;/span&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; postcss autoprefixer
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;packagejson-파일에-추가-1&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;&lt;u&gt;package.json&lt;/u&gt; 파일에 추가&lt;/span&gt;&lt;/h4&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;browserslist&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;1%&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;last 2 versions&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;postcssrcjs-작성&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;.postcssrc.js 작성&lt;/span&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//import&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;autoprefixer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;autoprefixer&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// export&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;autoprefixer&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;error-postcss-plugin-autoprefixer-requires-postcss-8&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;Error: PostCSS plugin autoprefixer requires PostCSS 8.&lt;/span&gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;autoprefixer 10버전에서 8버전으로 다운그레이드
+https://stackoverflow.com/questions/64057023/error-postcss-plugin-autoprefixer-requires-postcss-8-update-postcss-or-downgra
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; autoprefixer@9
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;babel&quot;&gt;&lt;strong&gt;&lt;em&gt;Babel&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;https://en.wikipedia.org/wiki/Babel_(transcompiler)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ES6, ES7, ES8 을 ES5로 변환(compile)
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; @babel/core @babel/preset-env
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;h3 id=&quot;babelrcjs-파일-생성&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;.babelrc.js 파일 생성&lt;/span&gt;&lt;/h3&gt;
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;presets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;@babel/preset-env&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;promise-객체-적용-안되는-문제-해결&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;Promise 객체 적용 안되는 문제 해결&lt;/span&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm i &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; @babel/plugin-transform-runtime
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;babelrcjs-플러그인-추가&quot;&gt;&lt;span style=&quot;color:gray&quot;&gt;.babelrc.js 플러그인 추가&lt;/span&gt;&lt;/h4&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;presets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;@babel/preset-env&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;@babel/plugin-transform-runtime&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;parcel&quot;&gt;&lt;strong&gt;&lt;em&gt;Parcel&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;https://ko.parceljs.org/&lt;br /&gt;
+https://ko.parceljs.org/cli.html&lt;/p&gt;
+
+&lt;h2 id=&quot;github-관리&quot;&gt;&lt;strong&gt;&lt;em&gt;github 관리&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&quot;language-git&quot;&gt;git init
+git add README.md
+git commit -m &quot;first commit&quot;
+git branch -M main
+git remote add origin https://github.com/Chang-ji/Parcel-example.git
+git push -u origin main
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>Changji Kim</name></author><category term="FrontEnd" /><summary type="html">FrontEnd 기본 요소에 대해서 학습합니다. Parcel</summary></entry><entry><title type="html">Markdown Basic</title><link href="https://chang-ji.github.io/markdown-basic" rel="alternate" type="text/html" title="Markdown Basic" /><published>2021-08-16T19:18:00+09:00</published><updated>2021-08-16T19:18:00+09:00</updated><id>https://chang-ji.github.io/markdown-basic</id><content type="html" xml:base="https://chang-ji.github.io/markdown-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Markdown Basic 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./markdown-basic&quot;&gt;Markdown Basic&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
