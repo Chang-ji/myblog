@@ -12,8 +12,5 @@ timeout 1
 cd ..
 
 bundle exec jekyll build
-timeout 1
 
-cd output
-git push -u origin main
-timeout 10
+
