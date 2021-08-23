@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://chang-ji.github.io/author/Chanji/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://chang-ji.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-08-23T16:03:53+09:00</updated>
+  <updated>2021-08-23T16:08:59+09:00</updated>
   <id>https://chang-ji.github.io/author/Chanji/feed.xml</id>
 
   
@@ -186,6 +186,45 @@ git push -u origin main
 
       
         <summary type="html">FrontEnd 기본 요소에 대해서 학습합니다. Parcel</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">BackEnd - Spring</title>
+      <link href="https://chang-ji.github.io/BackEnd-Spring-Exception" rel="alternate" type="text/html" title="BackEnd - Spring" />
+      <published>2021-08-22T19:18:00+09:00</published>
+      <updated>2021-08-22T19:18:00+09:00</updated>
+      <id>https://chang-ji.github.io/BackEnd-Spring-Exception</id>
+      <content type="html" xml:base="https://chang-ji.github.io/BackEnd-Spring-Exception">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;backend-exception&quot;&gt;BackEnd Exception&lt;/h1&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Changji Kim</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="BackEnd" />
+      
+
+      
+        <summary type="html">BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception</summary>
       
 
       
