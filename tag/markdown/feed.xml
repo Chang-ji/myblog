@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://chang-ji.github.io/tag/markdown/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://chang-ji.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-08-23T14:57:55+09:00</updated>
+  <updated>2021-08-23T15:35:48+09:00</updated>
   <id>https://chang-ji.github.io/tag/markdown/feed.xml</id>
 
   
@@ -32,24 +32,319 @@
 
   
     <entry>
-      <title type="html">markdown 강좌 - (1)</title>
-      <link href="https://chang-ji.github.io/markdown-first" rel="alternate" type="text/html" title="markdown 강좌 - (1)" />
+      <title type="html">Markdown Basic</title>
+      <link href="https://chang-ji.github.io/markdown-basic" rel="alternate" type="text/html" title="Markdown Basic" />
       <published>2021-08-16T19:18:00+09:00</published>
       <updated>2021-08-16T19:18:00+09:00</updated>
-      <id>https://chang-ji.github.io/markdown-first</id>
-      <content type="html" xml:base="https://chang-ji.github.io/markdown-first">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;MarkDown 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>https://chang-ji.github.io/markdown-basic</id>
+      <content type="html" xml:base="https://chang-ji.github.io/markdown-basic">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;MarkDown 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./markdown-first&quot;&gt;markdown 강좌 - (1)&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./markdown-second&quot;&gt;markdown 강좌 - (2)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;markdown-1-강의&quot;&gt;markdown 1 강의&lt;/h1&gt;
+&lt;h1 id=&quot;markdown&quot;&gt;MARKDOWN&lt;/h1&gt;
+&lt;h2 id=&quot;장점&quot;&gt;장점&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;문법이 쉽고 간결하다!&lt;/li&gt;
+  &lt;li&gt;관리가 쉽다.&lt;/li&gt;
+  &lt;li&gt;지원 가능한 플랫폼과 프로그램이 다양하다!&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;syntaxHighlight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Hello World&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;h2 id=&quot;단점&quot;&gt;단점&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;표준이 없다!&lt;/li&gt;
+  &lt;li&gt;모든 HTML 마크업을 대신하지 못한다!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;참고-자료&quot;&gt;참고 자료&lt;/h1&gt;
+
+&lt;p&gt;https://theorydb.github.io/&lt;/p&gt;
+
+&lt;h1 id=&quot;제목header&quot;&gt;제목(Header)&lt;/h1&gt;
+
+&lt;h1 id=&quot;제목-1&quot;&gt;제목 1&lt;/h1&gt;
+&lt;h2 id=&quot;제목-2&quot;&gt;제목 2&lt;/h2&gt;
+&lt;h3 id=&quot;제목-3&quot;&gt;제목 3&lt;/h3&gt;
+&lt;h4 id=&quot;제목-4&quot;&gt;제목 4&lt;/h4&gt;
+&lt;h5 id=&quot;제목-5&quot;&gt;제목 5&lt;/h5&gt;
+&lt;h6 id=&quot;제목-6&quot;&gt;제목 6&lt;/h6&gt;
+
+&lt;h1 id=&quot;문장paragraph&quot;&gt;문장(Paragraph)&lt;/h1&gt;
+
+&lt;p&gt;동해물과 백두산이 마르고 닳도록
+하느님이 보우하사 우리나라 만세&lt;/p&gt;
+
+&lt;h1 id=&quot;줄바꿈line-breaks&quot;&gt;줄바꿈(Line Breaks)&lt;/h1&gt;
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;동해물과 백두산이 마르고 닳도록&lt;span class=&quot;nt&quot;&gt;&amp;lt;br/&amp;gt;&lt;/span&gt;
+하느님이 보우하사 우리나라 만세&lt;span class=&quot;nt&quot;&gt;&amp;lt;br/&amp;gt;&lt;/span&gt;
+무궁화 삼천리 화려 강산&lt;span class=&quot;nt&quot;&gt;&amp;lt;br/&amp;gt;&lt;/span&gt;
+대한 사람 대한으로 길이 보전하세&lt;span class=&quot;nt&quot;&gt;&amp;lt;br/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;동해물과 백두산이 마르고 닳도록&lt;br /&gt;
+하느님이 보우하사 우리나라 만세&lt;br /&gt;
+무궁화 삼천리 화려 강산&lt;br /&gt;
+대한 사람 대한으로 길이 보전하세&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;강조emphasis&quot;&gt;강조(Emphasis)&lt;/h1&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;ge&quot;&gt;_이텔릭_&lt;/span&gt;  
+&lt;span class=&quot;gs&quot;&gt;**두껍게**&lt;/span&gt;  
+&lt;span class=&quot;gs&quot;&gt;**_이텔릭 + 두껍게_**&lt;/span&gt;  
+~~취소선~~  
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;u&amp;gt;&lt;/span&gt;밑줄&lt;span class=&quot;nt&quot;&gt;&amp;lt;/u&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;이텔릭&lt;/em&gt;&lt;br /&gt;
+&lt;strong&gt;두껍게&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;이텔릭 + 두껍게&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+&lt;del&gt;취소선&lt;/del&gt;&lt;br /&gt;
+&lt;u&gt;밑줄&lt;/u&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;목록list&quot;&gt;목록(List)&lt;/h1&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; 순서가 필요한 목록
+&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; 순서가 필요한 목록
+&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; 순서가 필요한 목록
+&lt;span class=&quot;p&quot;&gt;    1.&lt;/span&gt; 순서가 필요한 목록
+&lt;span class=&quot;p&quot;&gt;    1.&lt;/span&gt; 순서가 필요한 목록
+&lt;span class=&quot;p&quot;&gt;    1.&lt;/span&gt; 순서가 필요한 목록
+&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; 순서가 필요한 목록
+&lt;span class=&quot;p&quot;&gt;
+-&lt;/span&gt; 순서가 필요하지 않은 목록
+&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 순서가 필요하지 않은 목록
+&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 순서가 필요하지 않은 목록
+&lt;span class=&quot;p&quot;&gt;    -&lt;/span&gt; 순서가 필요하지 않은 목록
+&lt;span class=&quot;p&quot;&gt;    -&lt;/span&gt; 순서가 필요하지 않은 목록
+&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; 순서가 필요하지 않은 목록
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;순서가 필요한 목록&lt;/li&gt;
+  &lt;li&gt;순서가 필요한 목록&lt;/li&gt;
+  &lt;li&gt;순서가 필요한 목록
+    &lt;ol&gt;
+      &lt;li&gt;순서가 필요한 목록&lt;/li&gt;
+      &lt;li&gt;순서가 필요한 목록&lt;/li&gt;
+      &lt;li&gt;순서가 필요한 목록&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;순서가 필요한 목록&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;순서가 필요하지 않은 목록&lt;/li&gt;
+  &lt;li&gt;순서가 필요하지 않은 목록&lt;/li&gt;
+  &lt;li&gt;순서가 필요하지 않은 목록
+    &lt;ul&gt;
+      &lt;li&gt;순서가 필요하지 않은 목록&lt;/li&gt;
+      &lt;li&gt;순서가 필요하지 않은 목록&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;순서가 필요하지 않은 목록&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;링크links&quot;&gt;링크(Links)&lt;/h1&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;GOOGLE&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GOOGLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;https://google.com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://google.com&quot;&gt;GOOGLE&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://google.com&quot;&gt;GOOGLE&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://naver.com&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;NAVER로 이동!&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;NAVER&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;NAVER&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;https://naver.com&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;&quot;NAVER로 이동!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://naver.com&quot; title=&quot;NAVER로 이동!&quot;&gt;NAVER&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://naver.com&quot; title=&quot;NAVER로 이동!&quot;&gt;NAVER&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;이미지image&quot;&gt;이미지(image)&lt;/h1&gt;
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://heropy.blog/css/images/logo.png  
+&lt;span class=&quot;p&quot;&gt;![&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;HEROPY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;https://heropy.blog/css/images/logo.png&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;![HEROPY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;https://heropy.blog/css/images/logo.png&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;](https://heropy.blog)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;https://heropy.blog/css/images/logo.png&lt;br /&gt;
+&lt;img src=&quot;https://heropy.blog/css/images/logo.png&quot; alt=&quot;HEROPY&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://heropy.blog&quot;&gt;&lt;img src=&quot;https://heropy.blog/css/images/logo.png&quot; alt=&quot;HEROPY&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;인용문blockquoto&quot;&gt;인용문(BlockQuoto)&lt;/h1&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gt&quot;&gt;&amp;gt; 남의 말이나 글에서 직접 또는 간접으로 따온 문장.  &lt;/span&gt;
+&lt;span class=&quot;gt&quot;&gt;&amp;gt; (네이버 국어 사전)&lt;/span&gt;
+&lt;span class=&quot;gt&quot;&gt;
+&amp;gt; 인용문을 작성하세요!&lt;/span&gt;
+&lt;span class=&quot;gt&quot;&gt;&amp;gt;&amp;gt; 중전된 인용문&lt;/span&gt;
+&lt;span class=&quot;gt&quot;&gt;&amp;gt;&amp;gt;&amp;gt; 중첩된 인용문 1  &lt;/span&gt;
+&lt;span class=&quot;gt&quot;&gt;&amp;gt;&amp;gt;&amp;gt; 중첩된 인용문 2  &lt;/span&gt;
+&lt;span class=&quot;gt&quot;&gt;&amp;gt;&amp;gt;&amp;gt; 중첩된 인용문 3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;남의 말이나 글에서 직접 또는 간접으로 따온 문장.&lt;br /&gt;
+(네이버 국어 사전)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;인용문을 작성하세요!&lt;/p&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;중전된 인용문&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;중첩된 인용문 1&lt;br /&gt;
+중첩된 인용문 2&lt;br /&gt;
+중첩된 인용문 3&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;인라인-inline-코드-강조&quot;&gt;인라인 (inline) 코드 강조&lt;/h1&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CSS에서 &lt;span class=&quot;sb&quot;&gt;`background`&lt;/span&gt; 혹은 &lt;span class=&quot;sb&quot;&gt;`background-image`&lt;/span&gt; 속성으로 요소에 배경 이미지를 삽입할 수 있습니다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;CSS에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;background&lt;/code&gt; 혹은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;background-image&lt;/code&gt; 속성으로 요소에 배경 이미지를 삽입할 수 있습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;블록block-코드-강조&quot;&gt;블록(block) 코드 강조&lt;/h1&gt;
+
+&lt;h2 id=&quot;html&quot;&gt;HTML&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.google.co.kr&quot;&gt;GOOGLE&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;~~~html
+&amp;lt;a href=&quot;https://www.google.co.kr&quot;&amp;gt;GOOGLE&amp;lt;/a&amp;gt;~~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.google.co.kr&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;GOOGLE&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;css&quot;&gt;CSS&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;~~~css
+.list &amp;gt; li {
+  position: absolute;
+  top: 40px;
+}~~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;javascript&quot;&gt;JAVASCRIPT&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;~~~javascript
+function func() {
+  var a = 'AAA';
+  return a;
+}~~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;AAA&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;bash&quot;&gt;BASH&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;~~~bash
+$ git commit -m 'Study Markdown'~~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Study Markdown'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;plaintext&quot;&gt;PLAINTEXT&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;~~~plaintext
+동해물과 백두산의 마르고 닳도록
+하느님이 보우하사 우리나라 만세~~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;동해물과 백두산의 마르고 닳도록
+하느님이 보우하사 우리나라 만세
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;표table&quot;&gt;표(Table)&lt;/h1&gt;
+
+&lt;p&gt;position 속성&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;값 | 의미 | 기본값
+:--|:--:|--:
+static | 기준 없음 | 0
+relative | 요소 자신 | X
+absolute | 위치 상 부모 요소 | X
+fixed | 뷰포트 | X
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;값&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;의미&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;기본값&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;static&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;기준 없음&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;relative&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;요소 자신&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;absolute&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;위치 상 부모 요소&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;fixed&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;뷰포트&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;원시-htmlraw-html&quot;&gt;원시 HTML(Raw HTML)&lt;/h1&gt;
+&lt;h2 id=&quot;밑줄&quot;&gt;밑줄&lt;/h2&gt;
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;동해물과 &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text-decoration: underline;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;백두산&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;이 마르고 닳도록&lt;span class=&quot;nt&quot;&gt;&amp;lt;br/&amp;gt;&lt;/span&gt;
+하느님이 보우하사 우리나라 만세
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;동해물과 &lt;span style=&quot;text-decoration: underline;&quot;&gt;백두산&lt;/span&gt;이 마르고 닳도록&lt;br /&gt;
+하느님이 보우하사 우리나라 만세&lt;/p&gt;
+
+&lt;h2 id=&quot;링크&quot;&gt;링크&lt;/h2&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://naver.com&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;NAVER로 이동!&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;_blank&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;NAVER&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://naver.com&quot; title=&quot;NAVER로 이동!&quot; target=&quot;_blank&quot;&gt;NAVER&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;수평선&quot;&gt;수평선&lt;/h2&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;---
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;이미지&quot;&gt;이미지&lt;/h2&gt;
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;70&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://heropy.blog/css/images/logo.png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;HEROPY&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img width=&quot;70&quot; src=&quot;https://heropy.blog/css/images/logo.png&quot; alt=&quot;HEROPY&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;수평선horizontal-rule&quot;&gt;수평선(Horizontal Rule)&lt;/h1&gt;
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;***&lt;/span&gt;
+&lt;span class=&quot;ge&quot;&gt;__&lt;/span&gt;_
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+&lt;hr /&gt;</content>
 
       
       
