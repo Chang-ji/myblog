@@ -136,6 +136,7 @@ into the {body} of the default.hbs template -->
     <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
     <li class="nav-markdown" role="menuitem"><a href="/tag/markdown/">markdown</a></li>
     <li class="nav-vue" role="menuitem"><a href="/tag/vue/">vue</a></li>
+    <li class="nav-vue" role="menuitem"><a href="/tag/Startbucks/">Startbucks</a></li>
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
     </li>
@@ -183,6 +184,15 @@ into the {body} of the default.hbs template -->
 
 <script>
     window.store = {
+    
+    "startbucks-show-sequential-elements": {
+        "title": "Startbucks - 순차적 요소 보이기",
+            "author": "Chanji",
+            "category": "",
+            "content": "Startbucks Project Study Very Hard    Startbucks-Show-Sequential-Elements순차적 요소 보이기html&lt;!-- VISUAL --&gt;  &lt;section class=\"visual\"&gt;    &lt;div class=\"inner\"&gt;      &lt;div class=\"title fade-in\"&gt;        &lt;img src=\"/images/visual_title.png\" alt=\"STARBUCKS DELIGHTFUL START TO THE YEARS\" /&gt;        &lt;a href=\"javascript:void(0)\" class=\"btn btn--brown\"&gt;자세히 보기&lt;/a&gt;      &lt;/div&gt;      &lt;div class=\"fade-in\"&gt;        &lt;img src=\"/images/visual_cup1.png\" alt=\" new OATMEAL LATTE\" class=\"cup1 image\" /&gt;        &lt;img src=\"/images/visual_cup1_text.png\" alt=\"오트밀 라떼\" class=\"cup1 text\" /&gt;      &lt;/div&gt;      &lt;div class=\"fade-in\"&gt;        &lt;img src=\"/images/visual_cup2.png\" alt=\"new STARBUCKS CARAMEL CRUMBLE MOCHA\" class=\"cup2 image\" /&gt;        &lt;img src=\"/images/visual_cup2_text.png\" alt=\"스타벅스 카라멜 크럼블 모카\" class=\"cup2 text\" /&gt;      &lt;/div&gt;      &lt;div class=\"fade-in\"&gt;        &lt;img src=\"/images/visual_spoon.png\" alt=\"Spoon\" class=\"spoon\" /&gt;      &lt;/div&gt;    &lt;/div&gt;  &lt;/section&gt;  각각의 이미지에 div 요소 및 fade-in class 추가visual_title =&gt; visual_cup1 =&gt; visual_cup2 =&gt; visual_spooncss.visual .fade-in {  opacity: 0;}  visual fade-in 클래스 요소 투명도 0으로 설정향후에 각각의 요소를 투명도 1로 변경하여 순차적으로 보이게함javascriptconst fadeEls = document.querySelectorAll('.visual .fade-in');fadeEls.forEach(function (fadeEl, index) {  //gsap.to(요소, 지속시간, 옵션);  gsap.to(fadeEl, 1, {    delay: (index + 1) * .7, // 0.7초, 1.4초, 2.1초 2.7초    opacity: 1  });});  querySelectorAll을 통해서 해당하는 클래스를 가진 모든 요소를 불러옴forEach를 통해서 각각의 요소를 설정 visual_title =&gt; visual_cup1 =&gt; visual_cup2 =&gt; visual_spoon 해당하는 순서gsap함수를 활용하여 Animation 효과 부여하고 delay 함수로 시간차를 둠",
+        "url": "/Startbucks-Show-Sequential-Elements"
+    }
+    ,
     
     "markdown-basic": {
         "title": "Markdown Basic",
