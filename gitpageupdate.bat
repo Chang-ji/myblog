@@ -13,7 +13,6 @@ cd ..
 
 bundle exec jekyll serve
 timeout 1
-break
 
 cd output
 git push -u origin main
