@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://chang-ji.github.io/tag/startbucks/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://chang-ji.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-08-23T23:07:31+09:00</updated>
+  <updated>2021-08-24T23:03:34+09:00</updated>
   <id>https://chang-ji.github.io/tag/startbucks/feed.xml</id>
 
   
@@ -32,6 +32,208 @@
 
   
     <entry>
+      <title type="html">Startbucks Element center</title>
+      <link href="https://chang-ji.github.io/Startbucks-Element-center" rel="alternate" type="text/html" title="Startbucks Element center" />
+      <published>2021-08-24T19:18:00+09:00</published>
+      <updated>2021-08-24T19:18:00+09:00</updated>
+      <id>https://chang-ji.github.io/Startbucks-Element-center</id>
+      <content type="html" xml:base="https://chang-ji.github.io/Startbucks-Element-center">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Show-Sequential-Elements&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Notice-design&quot;&gt;Startbucks-Notice-design&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Swiper&quot;&gt;Startbucks-Swiper&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Element-center&quot;&gt;Startbucks-Element-center&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;startbucks-element-center&quot;&gt;Startbucks Element center&lt;/h2&gt;
+
+&lt;h3 id=&quot;html&quot;&gt;Html&lt;/h3&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;promotion&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    TEST
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;css&quot;&gt;css&lt;/h3&gt;
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.promotion&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;693px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;#f6f5ef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                              &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기준&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;요소로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;설정&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;/* width: calc(100% -50px) 예시 */&lt;/span&gt; 
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.promotion&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;819px&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;              &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;css에서는&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;calc를&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;통해서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;연산가능&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;553px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;orange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;200px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                             &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;relative&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기준으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;배치&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                                      &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;relative&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기준으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;위에서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;40px&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                                      &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;relative&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기준으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;옆에서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;절반으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;배치&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin-left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;819px&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;절반으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;배치된&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;곳에서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;요소&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;길이만큼&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;빼기하니&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;중앙으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;배치&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Changji Kim</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Startbucks" />
+      
+
+      
+        <summary type="html">Startbucks Project Study Very Hard Startbucks-Show-Sequential-Elements Startbucks-Notice-design Startbucks-Swiper Startbucks-Element-center</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Startbucks Swiper</title>
+      <link href="https://chang-ji.github.io/Startbucks-Swiper" rel="alternate" type="text/html" title="Startbucks Swiper" />
+      <published>2021-08-24T19:18:00+09:00</published>
+      <updated>2021-08-24T19:18:00+09:00</updated>
+      <id>https://chang-ji.github.io/Startbucks-Swiper</id>
+      <content type="html" xml:base="https://chang-ji.github.io/Startbucks-Swiper">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Show-Sequential-Elements&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Notice-design&quot;&gt;Startbucks-Notice-design&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Swiper&quot;&gt;Startbucks-Swiper&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Element-center&quot;&gt;Startbucks-Element-center&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;startbucks-swiper&quot;&gt;Startbucks Swiper&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;swiperjs-설치&quot;&gt;swiperjs 설치&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;주소 : https://swiperjs.com/&lt;/li&gt;
+  &lt;li&gt;예제 : https://swiperjs.com/demos
+~~~html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/swiper/swiper-bundle.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/swiper/swiper-bundle.min.css&quot; /&gt;
+
+&lt;script src=&quot;https://unpkg.com/swiper/swiper-bundle.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://unpkg.com/swiper/swiper-bundle.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+### Add Swiper HTML Layout
+~~~html
+&amp;lt;!-- Slider main container --&amp;gt;
+&amp;lt;div class=&quot;swiper-container&quot;&amp;gt;
+  &amp;lt;!-- Additional required wrapper --&amp;gt;
+  &amp;lt;div class=&quot;swiper-wrapper&quot;&amp;gt;
+    &amp;lt;!-- Slides --&amp;gt;
+    &amp;lt;div class=&quot;swiper-slide&quot;&amp;gt;Slide 1&amp;lt;/div&amp;gt;
+    &amp;lt;div class=&quot;swiper-slide&quot;&amp;gt;Slide 2&amp;lt;/div&amp;gt;
+    &amp;lt;div class=&quot;swiper-slide&quot;&amp;gt;Slide 3&amp;lt;/div&amp;gt;
+    ...
+  &amp;lt;/div&amp;gt;
+  &amp;lt;!-- If we need pagination --&amp;gt;
+  &amp;lt;div class=&quot;swiper-pagination&quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+  &amp;lt;!-- If we need navigation buttons --&amp;gt;
+  &amp;lt;div class=&quot;swiper-button-prev&quot;&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&quot;swiper-button-next&quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+  &amp;lt;!-- If we need scrollbar --&amp;gt;
+  &amp;lt;div class=&quot;swiper-scrollbar&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;starbucks-html-swiper&quot;&gt;Starbucks html swiper&lt;/h3&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-wrapper&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-slide&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;크리스마스 &lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt; 연말연시 스타벅스 매장 영업시간&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-slide&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;[당첨자 발표] 2021 스타벅스 플래너 영수증 이벤트&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-slide&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;스타벅스커피 코리아 애플리케이션 버전 업데이트 안내&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-slide&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;[당첨자 발표] 뉴이어 전자영수증 이벤트&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;위와 같은 예시로 설정해야함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;starbucks-css-swiper&quot;&gt;Starbucks css swiper&lt;/h3&gt;
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__left&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;62px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;flex-grow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__left&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-container&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-slide&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;62px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;              &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;수평으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;쌓음&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;        &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;수직정렬&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;가운데&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__left&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-container&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-slide&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;starbucks-javascript-swiper&quot;&gt;Starbucks javascript swiper&lt;/h3&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// new Swiper(선택자, 옵션)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Swiper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;.notice-line .swiper-container&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;direction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;vertical&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;autoplay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;위와 같이 Swiper 객체를 만들면 알아서 작동&lt;/li&gt;
+  &lt;li&gt;이때 요소를 선택할 선택자와 옵션을 설정할 객체를 넣어야함&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Changji Kim</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Startbucks" />
+      
+
+      
+        <summary type="html">Startbucks Project Study Very Hard Startbucks-Show-Sequential-Elements Startbucks-Notice-design Startbucks-Swiper Startbucks-Element-center</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Startbucks - 공지사항 디자인</title>
       <link href="https://chang-ji.github.io/Startbucks-Notice-design" rel="alternate" type="text/html" title="Startbucks - 공지사항 디자인" />
       <published>2021-08-22T19:18:00+09:00</published>
@@ -40,7 +242,9 @@
       <content type="html" xml:base="https://chang-ji.github.io/Startbucks-Notice-design">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Show-Sequential-Elements&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Notice-design&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Notice-design&quot;&gt;Startbucks-Notice-design&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Swiper&quot;&gt;Startbucks-Swiper&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Element-center&quot;&gt;Startbucks-Element-center&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;순차적-요소-보이기&quot;&gt;순차적 요소 보이기&lt;/h2&gt;
@@ -179,7 +383,7 @@
       
 
       
-        <summary type="html">Startbucks Project Study Very Hard Startbucks-Show-Sequential-Elements Startbucks-Notice-design</summary>
+        <summary type="html">Startbucks Project Study Very Hard Startbucks-Show-Sequential-Elements Startbucks-Notice-design Startbucks-Swiper Startbucks-Element-center</summary>
       
 
       
@@ -195,7 +399,9 @@
       <content type="html" xml:base="https://chang-ji.github.io/Startbucks-Show-Sequential-Elements">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Show-Sequential-Elements&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Notice-design&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Notice-design&quot;&gt;Startbucks-Notice-design&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Swiper&quot;&gt;Startbucks-Swiper&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Element-center&quot;&gt;Startbucks-Element-center&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;순차적-요소-보이기&quot;&gt;순차적 요소 보이기&lt;/h2&gt;
@@ -276,7 +482,7 @@ gsap함수를 활용하여 Animation 효과 부여하고 delay 함수로 시간�
       
 
       
-        <summary type="html">Startbucks Project Study Very Hard Startbucks-Show-Sequential-Elements Startbucks-Notice-design</summary>
+        <summary type="html">Startbucks Project Study Very Hard Startbucks-Show-Sequential-Elements Startbucks-Notice-design Startbucks-Swiper Startbucks-Element-center</summary>
       
 
       
