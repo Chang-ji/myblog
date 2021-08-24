@@ -371,6 +371,8 @@ into the {body} of the default.hbs template -->
 
     <span class="nd">@ExceptionHandler</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="nc">ConstraintViolationException</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="c1">// 특정 메소드의 예외를 처리 ConstraintViolationException 대한 예외 처리</span>
     <span class="kd">public</span> <span class="nc">ResponseEntity</span> <span class="nf">constraintViolationException</span><span class="o">(</span><span class="nc">ConstraintViolationException</span> <span class="n">e</span><span class="o">,</span> <span class="nc">HttpServletRequest</span> <span class="n">httpServletRequest</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"ConstraintViolationException 예외 처리"</span><span class="o">);</span>
+
         <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Error</span><span class="o">&gt;</span> <span class="n">errorList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
 
         <span class="n">e</span><span class="o">.</span><span class="na">getConstraintViolations</span><span class="o">().</span><span class="na">forEach</span><span class="o">(</span><span class="n">error</span> <span class="o">-&gt;</span> <span class="o">{</span>
@@ -413,6 +415,10 @@ into the {body} of the default.hbs template -->
 <blockquote>
   <p>위와 같은 것들을 구현 할때 Debug 기능을 이용해서 해당하는 값들을 잘 분석하기 바람</p>
 </blockquote>
+
+<ul>
+  <li>Spliterator에 대한 링크: https://jistol.github.io/java/2019/11/17/spliterator/</li>
+</ul>
 
 
                 </div>
