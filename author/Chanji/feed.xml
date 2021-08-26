@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://chang-ji.github.io/author/Chanji/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://chang-ji.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-08-26T17:19:18+09:00</updated>
+  <updated>2021-08-27T07:41:32+09:00</updated>
   <id>https://chang-ji.github.io/author/Chanji/feed.xml</id>
 
   
@@ -32,8 +32,8 @@
 
   
     <entry>
-      <title type="html">BackEnd - Spring - Async</title>
-      <link href="https://chang-ji.github.io/BackEnd-Spring-Async" rel="alternate" type="text/html" title="BackEnd - Spring - Async" />
+      <title type="html">Spring Async</title>
+      <link href="https://chang-ji.github.io/BackEnd-Spring-Async" rel="alternate" type="text/html" title="Spring Async" />
       <published>2021-08-24T19:18:00+09:00</published>
       <updated>2021-08-24T19:18:00+09:00</updated>
       <id>https://chang-ji.github.io/BackEnd-Spring-Async</id>
@@ -233,8 +233,8 @@
     </entry>
   
     <entry>
-      <title type="html">BackEnd Spring Swagger</title>
-      <link href="https://chang-ji.github.io/BackEnd-Spring-Swagger" rel="alternate" type="text/html" title="BackEnd Spring Swagger" />
+      <title type="html">Spring Swagger</title>
+      <link href="https://chang-ji.github.io/BackEnd-Spring-Swagger" rel="alternate" type="text/html" title="Spring Swagger" />
       <published>2021-08-24T19:18:00+09:00</published>
       <updated>2021-08-24T19:18:00+09:00</updated>
       <id>https://chang-ji.github.io/BackEnd-Spring-Swagger</id>
@@ -298,8 +298,8 @@
     </entry>
   
     <entry>
-      <title type="html">BackEnd Spring RestApi Server Client</title>
-      <link href="https://chang-ji.github.io/BackEnd-Spring-RestApi-Server-Client" rel="alternate" type="text/html" title="BackEnd Spring RestApi Server Client" />
+      <title type="html">Spring RestApi Server Client</title>
+      <link href="https://chang-ji.github.io/BackEnd-Spring-RestApi-Server-Client" rel="alternate" type="text/html" title="Spring RestApi Server Client" />
       <published>2021-08-24T19:18:00+09:00</published>
       <updated>2021-08-24T19:18:00+09:00</updated>
       <id>https://chang-ji.github.io/BackEnd-Spring-RestApi-Server-Client</id>
@@ -646,8 +646,8 @@
     </entry>
   
     <entry>
-      <title type="html">BackEnd Spring Naver Open API</title>
-      <link href="https://chang-ji.github.io/BackEnd-Spring-Naver-Api" rel="alternate" type="text/html" title="BackEnd Spring Naver Open API" />
+      <title type="html">Spring Naver Open API</title>
+      <link href="https://chang-ji.github.io/BackEnd-Spring-Naver-Api" rel="alternate" type="text/html" title="Spring Naver Open API" />
       <published>2021-08-24T19:18:00+09:00</published>
       <updated>2021-08-24T19:18:00+09:00</updated>
       <id>https://chang-ji.github.io/BackEnd-Spring-Naver-Api</id>
@@ -754,8 +754,8 @@
     </entry>
   
     <entry>
-      <title type="html">BackEnd Spring JUnit</title>
-      <link href="https://chang-ji.github.io/BackEnd-Spring-JUnit" rel="alternate" type="text/html" title="BackEnd Spring JUnit" />
+      <title type="html">Spring JUnit</title>
+      <link href="https://chang-ji.github.io/BackEnd-Spring-JUnit" rel="alternate" type="text/html" title="Spring JUnit" />
       <published>2021-08-24T19:18:00+09:00</published>
       <updated>2021-08-24T19:18:00+09:00</updated>
       <id>https://chang-ji.github.io/BackEnd-Spring-JUnit</id>
@@ -774,7 +774,7 @@
 
 &lt;h1 id=&quot;spring-web-junit&quot;&gt;Spring Web JUnit&lt;/h1&gt;
 
-&lt;h3 id=&quot;junit으로-테스트-하기&quot;&gt;JUnit으로 테스트 하기&lt;/h3&gt;
+&lt;h2 id=&quot;junit으로-테스트-하기&quot;&gt;JUnit으로 테스트 하기&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;TDD (Test-driven Development)
     &lt;blockquote&gt;
@@ -801,14 +801,14 @@ gradle &amp;gt; Task &amp;gt; verification &amp;gt; test 더블클릭으로 실�
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;junit-테스트-관련-mockito&quot;&gt;JUnit 테스트 관련 Mockito&lt;/h3&gt;
+&lt;h2 id=&quot;junit-테스트-관련-mockito&quot;&gt;JUnit 테스트 관련 Mockito&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://mvnrepository.com/artifact/org.mockito/mockito-core&quot;&gt;https://mvnrepository.com/artifact/org.mockito/mockito-core&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter&quot;&gt;https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;junit-관련-테스트-코드&quot;&gt;JUnit 관련 테스트 코드&lt;/h3&gt;
-&lt;h4 id=&quot;1-전체-스프링-부트-활성화-시켜서-테스트&quot;&gt;1. 전체 스프링 부트 활성화 시켜서 테스트&lt;/h4&gt;
+&lt;h2 id=&quot;junit-관련-테스트-코드&quot;&gt;JUnit 관련 테스트 코드&lt;/h2&gt;
+&lt;h3 id=&quot;1-전체-스프링-부트-활성화-시켜서-테스트&quot;&gt;1. 전체 스프링 부트 활성화 시켜서 테스트&lt;/h3&gt;
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@SpringBootTest&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// Import 시켜서 MarketApi, DollarCalculator 주입&lt;/span&gt;
 &lt;span class=&quot;nd&quot;&gt;@Import&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MarketApi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DollarCalculator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;  
@@ -837,8 +837,8 @@ gradle &amp;gt; Task &amp;gt; verification &amp;gt; test 더블클릭으로 실�
 
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;2-controller-테스트&quot;&gt;2. Controller 테스트&lt;/h4&gt;
-&lt;h5 id=&quot;기본적인-부분&quot;&gt;기본적인 부분&lt;/h5&gt;
+&lt;h3 id=&quot;2-controller-테스트&quot;&gt;2. Controller 테스트&lt;/h3&gt;
+&lt;h4 id=&quot;기본적인-부분&quot;&gt;기본적인 부분&lt;/h4&gt;
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 테스트 할려는 컨트롤러 선택&lt;/span&gt;
 &lt;span class=&quot;nd&quot;&gt;@WebMvcTest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;CalculatorApiController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// Controller 테스트시 기본적으로 설정&lt;/span&gt;
@@ -863,7 +863,7 @@ gradle &amp;gt; Task &amp;gt; verification &amp;gt; test 더블클릭으로 실�
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h5 id=&quot;get-방식-테스트&quot;&gt;GET 방식 테스트&lt;/h5&gt;
+&lt;h4 id=&quot;get-방식-테스트&quot;&gt;GET 방식 테스트&lt;/h4&gt;
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sumTest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 
@@ -885,7 +885,7 @@ gradle &amp;gt; Task &amp;gt; verification &amp;gt; test 더블클릭으로 실�
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h5 id=&quot;post-방식&quot;&gt;POST 방식&lt;/h5&gt;
+&lt;h4 id=&quot;post-방식&quot;&gt;POST 방식&lt;/h4&gt;
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;minusTest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 
@@ -943,8 +943,8 @@ gradle &amp;gt; Task &amp;gt; verification &amp;gt; test 더블클릭으로 실�
     </entry>
   
     <entry>
-      <title type="html">BackEnd - Spring-Validation-Exception-Process</title>
-      <link href="https://chang-ji.github.io/BackEnd-Spring-Validation-Exception-Process" rel="alternate" type="text/html" title="BackEnd - Spring-Validation-Exception-Process" />
+      <title type="html">Spring Validation Exception Process</title>
+      <link href="https://chang-ji.github.io/BackEnd-Spring-Validation-Exception-Process" rel="alternate" type="text/html" title="Spring Validation Exception Process" />
       <published>2021-08-24T19:18:00+09:00</published>
       <updated>2021-08-24T19:18:00+09:00</updated>
       <id>https://chang-ji.github.io/BackEnd-Spring-Validation-Exception-Process</id>
@@ -1170,7 +1170,7 @@ gradle &amp;gt; Task &amp;gt; verification &amp;gt; test 더블클릭으로 실�
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Spliterator에 대한 링크: https://jistol.github.io/java/2019/11/17/spliterator/&lt;/li&gt;
+  &lt;li&gt;Spliterator에 대한 링크: &lt;a href=&quot;https://jistol.github.io/java/2019/11/17/spliterator/&quot;&gt;https://jistol.github.io/java/2019/11/17/spliterator/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
 
       
@@ -1332,8 +1332,8 @@ gradle &amp;gt; Task &amp;gt; verification &amp;gt; test 더블클릭으로 실�
     </entry>
   
     <entry>
-      <title type="html">BackEnd - Filter - Interceptor</title>
-      <link href="https://chang-ji.github.io/BackEnd-Spring-Filter-Interceptor" rel="alternate" type="text/html" title="BackEnd - Filter - Interceptor" />
+      <title type="html">Filter Interceptor</title>
+      <link href="https://chang-ji.github.io/BackEnd-Spring-Filter-Interceptor" rel="alternate" type="text/html" title="Filter Interceptor" />
       <published>2021-08-24T19:18:00+09:00</published>
       <updated>2021-08-24T19:18:00+09:00</updated>
       <id>https://chang-ji.github.io/BackEnd-Spring-Filter-Interceptor</id>
@@ -1363,7 +1363,7 @@ gradle &amp;gt; Task &amp;gt; verification &amp;gt; test 더블클릭으로 실�
 &lt;h4 id=&quot;contentcachingrequestwrapper-예제-부분&quot;&gt;ContentCachingRequestWrapper 예제 부분&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;Filter에서 한번 읽으면 AOP 부분에서 다시 읽기 불가능해서 해당 클래스를 사용&lt;/li&gt;
-  &lt;li&gt;해당 부분 예시: https://ddasi-live.tistory.com/83&lt;/li&gt;
+  &lt;li&gt;해당 부분 예시: &lt;a href=&quot;https://jistol.github.io/java/2019/11/17/spliterator/&quot;&gt;https://ddasi-live.tistory.com/83&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;filter-관련-코드&quot;&gt;Filter 관련 코드&lt;/h3&gt;
@@ -1397,7 +1397,7 @@ gradle &amp;gt; Task &amp;gt; verification &amp;gt; test 더블클릭으로 실�
   &lt;li&gt;Mapping이 이루어지기 전에 발생한다.&lt;/li&gt;
   &lt;li&gt;chain.doFilter 가 작동된 이후에 데이터를 읽어야 오류가 나지 않는다.&lt;/li&gt;
   &lt;li&gt;필터로 먼저 들어오기 때문에 ContentCaching 부분 사용하여서 값을 저장해야한다.&lt;/li&gt;
-  &lt;li&gt;httpServletResponse.copyBodyToResponse(); 실행하여 응답을 복사해주어야 Client가 응답을 볼 수 있다.&lt;/li&gt;
+  &lt;li&gt;httpServletResponse.copyBodyToResponse() 실행하여 응답을 복사해주어야 Client가 응답을 볼 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;interceptor&quot;&gt;Interceptor&lt;/h2&gt;

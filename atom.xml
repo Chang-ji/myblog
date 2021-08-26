@@ -50,7 +50,7 @@
     
       
       <item>
-        <title>BackEnd Spring Swagger</title>
+        <title>Spring Swagger</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -76,7 +76,7 @@
     
       
       <item>
-        <title>BackEnd Spring RestApi Server Client</title>
+        <title>Spring RestApi Server Client</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -102,7 +102,7 @@
     
       
       <item>
-        <title>BackEnd Spring Naver Open API</title>
+        <title>Spring Naver Open API</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -128,7 +128,7 @@
     
       
       <item>
-        <title>BackEnd Spring JUnit</title>
+        <title>Spring JUnit</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -154,7 +154,7 @@
     
       
       <item>
-        <title>BackEnd - Filter - Interceptor</title>
+        <title>Filter Interceptor</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -180,7 +180,7 @@
     
       
       <item>
-        <title>BackEnd - Spring - Async</title>
+        <title>Spring Async</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -206,7 +206,7 @@
     
       
       <item>
-        <title>BackEnd - Spring-Validation-Exception-Process</title>
+        <title>Spring Validation Exception Process</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
@@ -293,7 +293,7 @@
     
       
       <item>
-        <title>BackEnd - Spring</title>
+        <title>Spring Exception</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
