@@ -59,7 +59,7 @@
     <meta property="og:site_name" content="Code Training" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Spring Swagger" />
-    <meta property="og:description" content="BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger Spring Web Swagger Swagger Swagger 란 개발한 REST API를 편리하게 문서화 해주고, 이를 통해서 관리 및 제 3의 사용자가 편리하게 API를 호출해보고 테스트 할 수 있는 프로젝트이다. Spring Boot에서는 간단하세 springfox-boot-starter 를 gradle dependencies 에 추가 함으로" />
+    <meta property="og:description" content="BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger BackEnd-Spring-RestAPI-Naver-Market-List Spring Web Swagger Swagger Swagger 란 개발한 REST API를 편리하게 문서화 해주고, 이를 통해서 관리 및 제 3의 사용자가 편리하게 API를 호출해보고 테스트 할 수 있는 프로젝트이다. Spring Boot에서는 간단하세 springfox-boot-starter 를 gradle dependencies 에 추가" />
     <meta property="og:url" content="https://Chang-ji.github.io/BackEnd-Spring-Swagger" />
     <meta property="og:image" content="https://Chang-ji.github.io/assets/built/images/sky.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -69,7 +69,7 @@
     <meta property="article:tag" content="Backend" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Spring Swagger" />
-    <meta name="twitter:description" content="BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger Spring Web Swagger Swagger Swagger 란 개발한 REST API를 편리하게 문서화 해주고, 이를 통해서 관리 및 제 3의 사용자가 편리하게 API를 호출해보고 테스트 할 수 있는 프로젝트이다. Spring Boot에서는 간단하세 springfox-boot-starter 를 gradle dependencies 에 추가 함으로" />
+    <meta name="twitter:description" content="BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger BackEnd-Spring-RestAPI-Naver-Market-List Spring Web Swagger Swagger Swagger 란 개발한 REST API를 편리하게 문서화 해주고, 이를 통해서 관리 및 제 3의 사용자가 편리하게 API를 호출해보고 테스트 할 수 있는 프로젝트이다. Spring Boot에서는 간단하세 springfox-boot-starter 를 gradle dependencies 에 추가" />
     <meta name="twitter:url" content="https://Chang-ji.github.io/" />
     <meta name="twitter:image" content="https://Chang-ji.github.io/assets/built/images/sky.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -101,7 +101,7 @@
         "@type": "WebPage",
         "@id": "https://Chang-ji.github.io/BackEnd-Spring-Swagger"
     },
-    "description": "BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger Spring Web Swagger Swagger Swagger 란 개발한 REST API를 편리하게 문서화 해주고, 이를 통해서 관리 및 제 3의 사용자가 편리하게 API를 호출해보고 테스트 할 수 있는 프로젝트이다. Spring Boot에서는 간단하세 springfox-boot-starter 를 gradle dependencies 에 추가 함으로"
+    "description": "BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger BackEnd-Spring-RestAPI-Naver-Market-List Spring Web Swagger Swagger Swagger 란 개발한 REST API를 편리하게 문서화 해주고, 이를 통해서 관리 및 제 3의 사용자가 편리하게 API를 호출해보고 테스트 할 수 있는 프로젝트이다. Spring Boot에서는 간단하세 springfox-boot-starter 를 gradle dependencies 에 추가"
 }
     </script>
 
@@ -211,6 +211,7 @@ into the {body} of the default.hbs template -->
     <li><a href="./BackEnd-Spring-Naver-Api">BackEnd-Spring-Naver-Api</a></li>
     <li><a href="./BackEnd-Spring-JUnit">BackEnd-Spring-JUnit</a></li>
     <li><a href="./BackEnd-Spring-Swagger">BackEnd-Spring-Swagger</a></li>
+    <li><a href="./BackEnd-Spring-RestAPI-Naver-Market-List">BackEnd-Spring-RestAPI-Naver-Market-List</a></li>
 </ul>
 <hr />
 
@@ -224,15 +225,83 @@ into the {body} of the default.hbs template -->
 </ul>
 
 <h3 id="swagger-annotation">Swagger Annotation</h3>
-<p>값 | 의미 
-:–|:–
-@Api | 클래스를 스웨거의 리소스로 표시 
-@ApiOperation | 특정 경로의 오퍼레이션 HTTP 메소드 설명 
-@ApiParam | 오퍼레이션 파라미터에 메타 데이터 설명 
-@ApiResponse | 오퍼레이션 응답 지정
-@ApiModelProperty | 모델의 속성 데이터를 설명
-@ApiLmplicitParam | 메소드 단위의 오퍼레이션 파라미터를 설명
-@ApilmplicitParams |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>값</th>
+      <th>의미</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>@Api</td>
+      <td>클래스를 스웨거의 리소스로 표시</td>
+    </tr>
+    <tr>
+      <td>@ApiOperation</td>
+      <td>특정 경로의 오퍼레이션 HTTP 메소드 설명</td>
+    </tr>
+    <tr>
+      <td>@ApiParam</td>
+      <td>오퍼레이션 파라미터에 메타 데이터 설명</td>
+    </tr>
+    <tr>
+      <td>@ApiResponse</td>
+      <td>오퍼레이션 응답 지정</td>
+    </tr>
+    <tr>
+      <td>@ApiModelProperty</td>
+      <td>모델의 속성 데이터를 설명</td>
+    </tr>
+    <tr>
+      <td>@ApiLmplicitParam</td>
+      <td>메소드 단위의 오퍼레이션 파라미터를 설명</td>
+    </tr>
+    <tr>
+      <td>@ApilmplicitParams</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="swagger-적용">Swagger 적용</h3>
+<ul>
+  <li>링크: <a href="https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter">https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter</a></li>
+  <li>사용할려면: <a href="http://localhost:8080/swagger-ui/">http://localhost:8080/swagger-ui/</a></li>
+</ul>
+
+<h3 id="swagger-관련-코드-예시">Swagger 관련 코드 예시</h3>
+
+<h4 id="1-get-mapping-관련-예시-코드">1. GET Mapping 관련 예시 코드</h4>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 아래의 어노테이션을 이용하여 이름, 필수요소인지, 데이터 타입, 파라미터 타입을 설정 가능</span>
+<span class="nd">@ApiImplicitParams</span><span class="o">({</span>
+                <span class="nd">@ApiImplicitParam</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"x"</span><span class="o">,</span> <span class="n">value</span> <span class="o">=</span> <span class="s">"x 값"</span><span class="o">,</span> <span class="n">required</span> <span class="o">=</span> <span class="kc">true</span><span class="o">,</span> <span class="n">dataType</span> <span class="o">=</span> <span class="s">"int"</span><span class="o">,</span> <span class="n">paramType</span> <span class="o">=</span> <span class="s">"path"</span><span class="o">),</span>
+                <span class="nd">@ApiImplicitParam</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"y"</span><span class="o">,</span> <span class="n">value</span> <span class="o">=</span> <span class="s">"y 값"</span><span class="o">,</span> <span class="n">required</span> <span class="o">=</span> <span class="kc">true</span><span class="o">,</span> <span class="n">dataType</span> <span class="o">=</span> <span class="s">"int"</span><span class="o">,</span> <span class="n">paramType</span> <span class="o">=</span> <span class="s">"query"</span><span class="o">)</span>
+    <span class="o">})</span>
+<span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/plus/{x}"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">plus</span><span class="o">(</span><span class="nd">@PathVariable</span> <span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="nd">@RequestParam</span> <span class="kt">int</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Api 상태코드가 502일때 조건을 표시할 수 있음</span>
+<span class="nd">@ApiResponse</span><span class="o">(</span><span class="n">code</span> <span class="o">=</span> <span class="mi">502</span><span class="o">,</span> <span class="n">message</span> <span class="o">=</span> <span class="s">"사용자의 나이가 10살 이하일때"</span><span class="o">)</span>
+<span class="c1">// Swagger 이름을 설정할 수 있음 이때 객체 데이터라서 객체로 표시</span>
+<span class="nd">@ApiOperation</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"사용자의 이름과 나이를 리턴하는 메소드"</span><span class="o">)</span>
+<span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/user"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="nc">UserRes</span> <span class="nf">userRes</span><span class="o">(</span><span class="nc">UserReq</span> <span class="n">userReq</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">UserRes</span><span class="o">(</span><span class="n">userReq</span><span class="o">.</span><span class="na">getName</span><span class="o">(),</span> <span class="n">userReq</span><span class="o">.</span><span class="na">getAge</span><span class="o">());</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="2-postmapping-관련-예시-코드">2. PostMapping 관련 예시 코드</h4>
+<p>// Post도 GET 과 같은 방식으로 작동</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@PostMapping</span><span class="o">(</span><span class="s">"/user"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="nc">UserRes</span> <span class="nf">user</span><span class="o">(</span><span class="nd">@RequestBody</span> <span class="nc">UserReq</span> <span class="n">req</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">UserRes</span><span class="o">(</span><span class="n">req</span><span class="o">.</span><span class="na">getName</span><span class="o">(),</span> <span class="n">req</span><span class="o">.</span><span class="na">getAge</span><span class="o">());</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 
                 </div>
@@ -366,7 +435,7 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/BackEnd-Spring-Naver-Api">Spring Naver Open API</a></li>
+                                            <li><a href="/BackEnd-Spring-RestAPI-Naver-Market-List">Spring RestAPI Naver Market List</a></li>
                                         
                                     
                                   
@@ -375,7 +444,14 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/BackEnd-Spring-JUnit">Spring JUnit</a></li>
+                                            <li><a href="/BackEnd-Spring-Naver-Api">Spring Naver Open API</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
                                         
                                     
                                   
@@ -423,7 +499,7 @@ into the {body} of the default.hbs template -->
                         <footer class="read-next-card-footer">
                             <a href="/tag/backend/">
                                 
-                                    See all 7 posts  →
+                                    See all 8 posts  →
                                 
                             </a>
                         </footer>
@@ -526,6 +602,7 @@ into the {body} of the default.hbs template -->
     BackEnd-Spring-Naver-Api
     BackEnd-Spring-JUnit
     BackEnd-Spring-Swagger
+    BackEnd-Spring-RestAPI-Naver-Market-List
 
 
 
