@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://chang-ji.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chang-ji.github.io/" rel="alternate" type="text/html" /><updated>2021-08-27T17:31:39+09:00</updated><id>https://chang-ji.github.io/feed.xml</id><title type="html">Code Training</title><subtitle>작업 향상 개선을 위한 블로그</subtitle><entry><title type="html">Startbucks Swiper</title><link href="https://chang-ji.github.io/Startbucks-Swiper" rel="alternate" type="text/html" title="Startbucks Swiper" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/Startbucks-Swiper</id><content type="html" xml:base="https://chang-ji.github.io/Startbucks-Swiper">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://chang-ji.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chang-ji.github.io/" rel="alternate" type="text/html" /><updated>2021-09-16T13:21:33+09:00</updated><id>https://chang-ji.github.io/feed.xml</id><title type="html">Code Training</title><subtitle>작업 향상 개선을 위한 블로그</subtitle><entry><title type="html">Startbucks Swiper</title><link href="https://chang-ji.github.io/Startbucks-Swiper" rel="alternate" type="text/html" title="Startbucks Swiper" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/Startbucks-Swiper</id><content type="html" xml:base="https://chang-ji.github.io/Startbucks-Swiper">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Show-Sequential-Elements&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./Startbucks-Notice-design&quot;&gt;Startbucks-Notice-design&lt;/a&gt;&lt;/li&gt;
@@ -437,7 +437,12 @@
   &lt;li&gt;Header 를 추가하기 위해서는 RequestEntity 를 생성해야한다.&lt;/li&gt;
   &lt;li&gt;UTF-8 변환할때 2번 변환하지 않게 조심하자&lt;/li&gt;
   &lt;li&gt;http://localhost:9090/api/server/naver 로 요청이 오면 위의 컨트롤러가 응답한다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Changji Kim</name></author><category term="BackEnd" /><summary type="html">BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger BackEnd-Spring-RestAPI-Naver-Market-List</summary></entry><entry><title type="html">Startbucks Element center</title><link href="https://chang-ji.github.io/Startbucks-Element-center" rel="alternate" type="text/html" title="Startbucks Element center" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/Startbucks-Element-center</id><content type="html" xml:base="https://chang-ji.github.io/Startbucks-Element-center">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;1-702911-가능&quot;&gt;1. 70.29.11 가능&lt;/h4&gt;
+&lt;h4 id=&quot;2-702602-가능&quot;&gt;2. 70.26.02 가능&lt;/h4&gt;
+
+&lt;h4 id=&quot;3&quot;&gt;3.&lt;/h4&gt;</content><author><name>Changji Kim</name></author><category term="BackEnd" /><summary type="html">BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger BackEnd-Spring-RestAPI-Naver-Market-List</summary></entry><entry><title type="html">Startbucks Element center</title><link href="https://chang-ji.github.io/Startbucks-Element-center" rel="alternate" type="text/html" title="Startbucks Element center" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/Startbucks-Element-center</id><content type="html" xml:base="https://chang-ji.github.io/Startbucks-Element-center">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Show-Sequential-Elements&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./Startbucks-Notice-design&quot;&gt;Startbucks-Notice-design&lt;/a&gt;&lt;/li&gt;
@@ -1280,4 +1285,15 @@ gradle &amp;gt; Task &amp;gt; verification &amp;gt; test 더블클릭으로 실�
 &lt;/ul&gt;
 &lt;hr /&gt;
 
-&lt;h1 id=&quot;spring-web-restapi-naver-market-list&quot;&gt;Spring Web RestAPI Naver Market List&lt;/h1&gt;</content><author><name>Changji Kim</name></author><category term="BackEnd" /><summary type="html">BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger BackEnd-Spring-RestAPI-Naver-Market-List</summary></entry></feed>
+&lt;h1 id=&quot;spring-web-restapi-naver-market-list&quot;&gt;Spring Web RestAPI Naver Market List&lt;/h1&gt;
+
+&lt;h2 id=&quot;정규식-만들기-사이트-참고&quot;&gt;정규식 만들기 사이트 참고&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://regex101.com/&quot;&gt;https://regex101.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://highcode.tistory.com/6&quot;&gt;https://highcode.tistory.com/6&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;스웨거-사이트&quot;&gt;스웨거 사이트&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter/3.0.0&quot;&gt;https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter/3.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Changji Kim</name></author><category term="BackEnd" /><summary type="html">BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger BackEnd-Spring-RestAPI-Naver-Market-List</summary></entry></feed>
