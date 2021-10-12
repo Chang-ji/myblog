@@ -1,112 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://chang-ji.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chang-ji.github.io/" rel="alternate" type="text/html" /><updated>2021-09-16T13:21:55+09:00</updated><id>https://chang-ji.github.io/feed.xml</id><title type="html">Code Training</title><subtitle>작업 향상 개선을 위한 블로그</subtitle><entry><title type="html">Startbucks Swiper</title><link href="https://chang-ji.github.io/Startbucks-Swiper" rel="alternate" type="text/html" title="Startbucks Swiper" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/Startbucks-Swiper</id><content type="html" xml:base="https://chang-ji.github.io/Startbucks-Swiper">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://chang-ji.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chang-ji.github.io/" rel="alternate" type="text/html" /><updated>2021-10-13T08:19:20+09:00</updated><id>https://chang-ji.github.io/feed.xml</id><title type="html">Code Training</title><subtitle>작업 향상 개선을 위한 블로그</subtitle><entry><title type="html">Linux</title><link href="https://chang-ji.github.io/Linux-Command" rel="alternate" type="text/html" title="Linux" /><published>2021-10-12T09:00:00+09:00</published><updated>2021-10-12T09:00:00+09:00</updated><id>https://chang-ji.github.io/Linux-Command</id><content type="html" xml:base="https://chang-ji.github.io/Linux-Command">&lt;p&gt;Linux Command Line And Linux CLI Learn&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Show-Sequential-Elements&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./Startbucks-Notice-design&quot;&gt;Startbucks-Notice-design&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./Startbucks-Swiper&quot;&gt;Startbucks-Swiper&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./Startbucks-Element-center&quot;&gt;Startbucks-Element-center&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;li&gt;&lt;a href=&quot;./Linux-Command&quot;&gt;Linux Command Line Learn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Changji Kim</name></author><category term="Linux" /><summary type="html">Linux Command Line And Linux CLI Learn</summary></entry><entry><title type="html">Filter Interceptor</title><link href="https://chang-ji.github.io/Spring-Filter-Interceptor" rel="alternate" type="text/html" title="Filter Interceptor" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/Spring-Filter-Interceptor</id><content type="html" xml:base="https://chang-ji.github.io/Spring-Filter-Interceptor">&lt;p&gt;스프링 필터와 인터셉터에 대해서 이해하고 코드를 구현&lt;/p&gt;
 
-&lt;h2 id=&quot;startbucks-swiper&quot;&gt;Startbucks Swiper&lt;/h2&gt;
-&lt;hr /&gt;
-&lt;h3 id=&quot;swiperjs-설치&quot;&gt;swiperjs 설치&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;주소 : https://swiperjs.com/&lt;/li&gt;
-  &lt;li&gt;예제 : https://swiperjs.com/demos
-~~~html&lt;/li&gt;
-&lt;/ul&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/swiper/swiper-bundle.css&quot; /&gt;
-
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/swiper/swiper-bundle.min.css&quot; /&gt;
-
-&lt;script src=&quot;https://unpkg.com/swiper/swiper-bundle.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;https://unpkg.com/swiper/swiper-bundle.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-### Add Swiper HTML Layout
-~~~html
-&amp;lt;!-- Slider main container --&amp;gt;
-&amp;lt;div class=&quot;swiper-container&quot;&amp;gt;
-  &amp;lt;!-- Additional required wrapper --&amp;gt;
-  &amp;lt;div class=&quot;swiper-wrapper&quot;&amp;gt;
-    &amp;lt;!-- Slides --&amp;gt;
-    &amp;lt;div class=&quot;swiper-slide&quot;&amp;gt;Slide 1&amp;lt;/div&amp;gt;
-    &amp;lt;div class=&quot;swiper-slide&quot;&amp;gt;Slide 2&amp;lt;/div&amp;gt;
-    &amp;lt;div class=&quot;swiper-slide&quot;&amp;gt;Slide 3&amp;lt;/div&amp;gt;
-    ...
-  &amp;lt;/div&amp;gt;
-  &amp;lt;!-- If we need pagination --&amp;gt;
-  &amp;lt;div class=&quot;swiper-pagination&quot;&amp;gt;&amp;lt;/div&amp;gt;
-
-  &amp;lt;!-- If we need navigation buttons --&amp;gt;
-  &amp;lt;div class=&quot;swiper-button-prev&quot;&amp;gt;&amp;lt;/div&amp;gt;
-  &amp;lt;div class=&quot;swiper-button-next&quot;&amp;gt;&amp;lt;/div&amp;gt;
-
-  &amp;lt;!-- If we need scrollbar --&amp;gt;
-  &amp;lt;div class=&quot;swiper-scrollbar&quot;&amp;gt;&amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;starbucks-html-swiper&quot;&gt;Starbucks html swiper&lt;/h3&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-wrapper&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-slide&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;크리스마스 &lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt; 연말연시 스타벅스 매장 영업시간&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-slide&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;[당첨자 발표] 2021 스타벅스 플래너 영수증 이벤트&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-slide&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;스타벅스커피 코리아 애플리케이션 버전 업데이트 안내&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-slide&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;[당첨자 발표] 뉴이어 전자영수증 이벤트&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;위와 같은 예시로 설정해야함&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;starbucks-css-swiper&quot;&gt;Starbucks css swiper&lt;/h3&gt;
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__left&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;62px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;flex-grow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__left&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-container&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-slide&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;62px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;              &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;수평으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;쌓음&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;        &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;수직정렬&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;가운데&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__left&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-container&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-slide&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;starbucks-javascript-swiper&quot;&gt;Starbucks javascript swiper&lt;/h3&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// new Swiper(선택자, 옵션)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Swiper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;.notice-line .swiper-container&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;direction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;vertical&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;autoplay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ul&gt;
-  &lt;li&gt;위와 같이 Swiper 객체를 만들면 알아서 작동&lt;/li&gt;
-  &lt;li&gt;이때 요소를 선택할 선택자와 옵션을 설정할 객체를 넣어야함&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Changji Kim</name></author><category term="Startbucks" /><summary type="html">Startbucks Project Study Very Hard Startbucks-Show-Sequential-Elements Startbucks-Notice-design Startbucks-Swiper Startbucks-Element-center</summary></entry><entry><title type="html">Filter Interceptor</title><link href="https://chang-ji.github.io/BackEnd-Spring-Filter-Interceptor" rel="alternate" type="text/html" title="Filter Interceptor" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/BackEnd-Spring-Filter-Interceptor</id><content type="html" xml:base="https://chang-ji.github.io/BackEnd-Spring-Filter-Interceptor">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Exception&quot;&gt;Spring-Exception&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Validation-Exception-Process&quot;&gt;Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Filter-Interceptor&quot;&gt;Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Async&quot;&gt;Spring-Async&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-RestApi-Server-Client&quot;&gt;Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Naver-Api&quot;&gt;Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-JUnit&quot;&gt;Spring-JUnit&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Swagger&quot;&gt;Spring-Swagger&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-RestAPI-Naver-Market-List&quot;&gt;Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 
@@ -262,17 +171,153 @@
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;5-위의-예외처리가-작동하면서-client는-401-error-가-보이게-된다&quot;&gt;5. 위의 예외처리가 작동하면서 Client는 401 Error 가 보이게 된다.&lt;/h4&gt;</content><author><name>Changji Kim</name></author><category term="BackEnd" /><summary type="html">BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger BackEnd-Spring-RestAPI-Naver-Market-List</summary></entry><entry><title type="html">Spring Swagger</title><link href="https://chang-ji.github.io/BackEnd-Spring-Swagger" rel="alternate" type="text/html" title="Spring Swagger" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/BackEnd-Spring-Swagger</id><content type="html" xml:base="https://chang-ji.github.io/BackEnd-Spring-Swagger">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
+&lt;h4 id=&quot;5-위의-예외처리가-작동하면서-client는-401-error-가-보이게-된다&quot;&gt;5. 위의 예외처리가 작동하면서 Client는 401 Error 가 보이게 된다.&lt;/h4&gt;</content><author><name>Changji Kim</name></author><category term="Spring" /><summary type="html">스프링 필터와 인터셉터에 대해서 이해하고 코드를 구현</summary></entry><entry><title type="html">Startbucks Element center</title><link href="https://chang-ji.github.io/Startbucks-Element-center" rel="alternate" type="text/html" title="Startbucks Element center" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/Startbucks-Element-center</id><content type="html" xml:base="https://chang-ji.github.io/Startbucks-Element-center">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Show-Sequential-Elements&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Notice-design&quot;&gt;Startbucks-Notice-design&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Swiper&quot;&gt;Startbucks-Swiper&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Element-center&quot;&gt;Startbucks-Element-center&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;startbucks-element-center&quot;&gt;Startbucks Element center&lt;/h2&gt;
+
+&lt;h3 id=&quot;html&quot;&gt;Html&lt;/h3&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;promotion&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    TEST
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;css&quot;&gt;css&lt;/h3&gt;
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.promotion&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;693px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;#f6f5ef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                              &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기준&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;요소로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;설정&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;/* width: calc(100% -50px) 예시 */&lt;/span&gt; 
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.promotion&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;819px&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;              &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;css에서는&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;calc를&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;통해서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;연산가능&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;553px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;orange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;200px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                             &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;relative&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기준으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;배치&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                                      &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;relative&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기준으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;위에서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;40px&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                                      &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;relative&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기준으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;옆에서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;절반으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;배치&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin-left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;819px&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;절반으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;배치된&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;곳에서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;요소&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;길이만큼&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;빼기하니&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;중앙으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;배치&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Changji Kim</name></author><category term="Startbucks" /><summary type="html">Startbucks Project Study Very Hard Startbucks-Show-Sequential-Elements Startbucks-Notice-design Startbucks-Swiper Startbucks-Element-center</summary></entry><entry><title type="html">Startbucks Swiper</title><link href="https://chang-ji.github.io/Startbucks-Swiper" rel="alternate" type="text/html" title="Startbucks Swiper" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/Startbucks-Swiper</id><content type="html" xml:base="https://chang-ji.github.io/Startbucks-Swiper">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Show-Sequential-Elements&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Notice-design&quot;&gt;Startbucks-Notice-design&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Swiper&quot;&gt;Startbucks-Swiper&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Startbucks-Element-center&quot;&gt;Startbucks-Element-center&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;startbucks-swiper&quot;&gt;Startbucks Swiper&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;swiperjs-설치&quot;&gt;swiperjs 설치&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;주소 : https://swiperjs.com/&lt;/li&gt;
+  &lt;li&gt;예제 : https://swiperjs.com/demos
+~~~html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/swiper/swiper-bundle.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/swiper/swiper-bundle.min.css&quot; /&gt;
+
+&lt;script src=&quot;https://unpkg.com/swiper/swiper-bundle.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://unpkg.com/swiper/swiper-bundle.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+### Add Swiper HTML Layout
+~~~html
+&amp;lt;!-- Slider main container --&amp;gt;
+&amp;lt;div class=&quot;swiper-container&quot;&amp;gt;
+  &amp;lt;!-- Additional required wrapper --&amp;gt;
+  &amp;lt;div class=&quot;swiper-wrapper&quot;&amp;gt;
+    &amp;lt;!-- Slides --&amp;gt;
+    &amp;lt;div class=&quot;swiper-slide&quot;&amp;gt;Slide 1&amp;lt;/div&amp;gt;
+    &amp;lt;div class=&quot;swiper-slide&quot;&amp;gt;Slide 2&amp;lt;/div&amp;gt;
+    &amp;lt;div class=&quot;swiper-slide&quot;&amp;gt;Slide 3&amp;lt;/div&amp;gt;
+    ...
+  &amp;lt;/div&amp;gt;
+  &amp;lt;!-- If we need pagination --&amp;gt;
+  &amp;lt;div class=&quot;swiper-pagination&quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+  &amp;lt;!-- If we need navigation buttons --&amp;gt;
+  &amp;lt;div class=&quot;swiper-button-prev&quot;&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&quot;swiper-button-next&quot;&amp;gt;&amp;lt;/div&amp;gt;
+
+  &amp;lt;!-- If we need scrollbar --&amp;gt;
+  &amp;lt;div class=&quot;swiper-scrollbar&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;starbucks-html-swiper&quot;&gt;Starbucks html swiper&lt;/h3&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-wrapper&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-slide&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;크리스마스 &lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt; 연말연시 스타벅스 매장 영업시간&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-slide&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;[당첨자 발표] 2021 스타벅스 플래너 영수증 이벤트&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-slide&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;스타벅스커피 코리아 애플리케이션 버전 업데이트 안내&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-slide&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;[당첨자 발표] 뉴이어 전자영수증 이벤트&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;위와 같은 예시로 설정해야함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;starbucks-css-swiper&quot;&gt;Starbucks css swiper&lt;/h3&gt;
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__left&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;62px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;flex-grow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__left&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-container&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-slide&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;62px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;              &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;수평으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;쌓음&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;        &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;수직정렬&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;가운데&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.notice-line&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.inner__left&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-container&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-slide&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;starbucks-javascript-swiper&quot;&gt;Starbucks javascript swiper&lt;/h3&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// new Swiper(선택자, 옵션)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Swiper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;.notice-line .swiper-container&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;direction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;vertical&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;autoplay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;위와 같이 Swiper 객체를 만들면 알아서 작동&lt;/li&gt;
+  &lt;li&gt;이때 요소를 선택할 선택자와 옵션을 설정할 객체를 넣어야함&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Changji Kim</name></author><category term="Startbucks" /><summary type="html">Startbucks Project Study Very Hard Startbucks-Show-Sequential-Elements Startbucks-Notice-design Startbucks-Swiper Startbucks-Element-center</summary></entry><entry><title type="html">Spring Swagger</title><link href="https://chang-ji.github.io/Spring-Swagger" rel="alternate" type="text/html" title="Spring Swagger" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/Spring-Swagger</id><content type="html" xml:base="https://chang-ji.github.io/Spring-Swagger">&lt;p&gt;스프링 REST API에 편리한 SWWAGER를 설치하여 편리하게 API 테스트하고 문서화&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Exception&quot;&gt;Spring-Exception&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Validation-Exception-Process&quot;&gt;Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Filter-Interceptor&quot;&gt;Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Async&quot;&gt;Spring-Async&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-RestApi-Server-Client&quot;&gt;Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Naver-Api&quot;&gt;Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-JUnit&quot;&gt;Spring-JUnit&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Swagger&quot;&gt;Spring-Swagger&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-RestAPI-Naver-Market-List&quot;&gt;Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 
@@ -362,17 +407,46 @@
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UserRes&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@RequestBody&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UserReq&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;UserRes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Changji Kim</name></author><category term="BackEnd" /><summary type="html">BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger BackEnd-Spring-RestAPI-Naver-Market-List</summary></entry><entry><title type="html">Spring Naver Open API</title><link href="https://chang-ji.github.io/BackEnd-Spring-Naver-Api" rel="alternate" type="text/html" title="Spring Naver Open API" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/BackEnd-Spring-Naver-Api</id><content type="html" xml:base="https://chang-ji.github.io/BackEnd-Spring-Naver-Api">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Changji Kim</name></author><category term="Spring" /><summary type="html">스프링 REST API에 편리한 SWWAGER를 설치하여 편리하게 API 테스트하고 문서화</summary></entry><entry><title type="html">Spring RestAPI Naver Market List</title><link href="https://chang-ji.github.io/Spring-RestAPI-Naver-Market-List" rel="alternate" type="text/html" title="Spring RestAPI Naver Market List" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/Spring-RestAPI-Naver-Market-List</id><content type="html" xml:base="https://chang-ji.github.io/Spring-RestAPI-Naver-Market-List">&lt;p&gt;정규식과 스웨거 등의 도구를 활용하여 맛집 리스트 만들기&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Exception&quot;&gt;Spring-Exception&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Validation-Exception-Process&quot;&gt;Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Filter-Interceptor&quot;&gt;Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Async&quot;&gt;Spring-Async&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-RestApi-Server-Client&quot;&gt;Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Naver-Api&quot;&gt;Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-JUnit&quot;&gt;Spring-JUnit&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Swagger&quot;&gt;Spring-Swagger&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-RestAPI-Naver-Market-List&quot;&gt;Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;spring-web-restapi-naver-market-list&quot;&gt;Spring Web RestAPI Naver Market List&lt;/h1&gt;
+
+&lt;h2 id=&quot;정규식-만들기-사이트-참고&quot;&gt;정규식 만들기 사이트 참고&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://regex101.com/&quot;&gt;https://regex101.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://highcode.tistory.com/6&quot;&gt;https://highcode.tistory.com/6&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;스웨거-사이트&quot;&gt;스웨거 사이트&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter/3.0.0&quot;&gt;https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter/3.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Changji Kim</name></author><category term="Spring" /><summary type="html">정규식과 스웨거 등의 도구를 활용하여 맛집 리스트 만들기</summary></entry><entry><title type="html">Spring Naver Open API</title><link href="https://chang-ji.github.io/Spring-Naver-Api" rel="alternate" type="text/html" title="Spring Naver Open API" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/Spring-Naver-Api</id><content type="html" xml:base="https://chang-ji.github.io/Spring-Naver-Api">&lt;p&gt;네이버 오픈 API를 통해서 지역 맛집 사이트 구현&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Exception&quot;&gt;Spring-Exception&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Validation-Exception-Process&quot;&gt;Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Filter-Interceptor&quot;&gt;Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Async&quot;&gt;Spring-Async&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-RestApi-Server-Client&quot;&gt;Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Naver-Api&quot;&gt;Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-JUnit&quot;&gt;Spring-JUnit&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Swagger&quot;&gt;Spring-Swagger&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-RestAPI-Naver-Market-List&quot;&gt;Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 
@@ -437,58 +511,345 @@
   &lt;li&gt;Header 를 추가하기 위해서는 RequestEntity 를 생성해야한다.&lt;/li&gt;
   &lt;li&gt;UTF-8 변환할때 2번 변환하지 않게 조심하자&lt;/li&gt;
   &lt;li&gt;http://localhost:9090/api/server/naver 로 요청이 오면 위의 컨트롤러가 응답한다.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ul&gt;</content><author><name>Changji Kim</name></author><category term="Spring" /><summary type="html">네이버 오픈 API를 통해서 지역 맛집 사이트 구현</summary></entry><entry><title type="html">Spring Validation Exception Process</title><link href="https://chang-ji.github.io/Spring-Validation-Exception-Process" rel="alternate" type="text/html" title="Spring Validation Exception Process" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/Spring-Validation-Exception-Process</id><content type="html" xml:base="https://chang-ji.github.io/Spring-Validation-Exception-Process">&lt;p&gt;스프링 유효성과 타당성 검증을 위해서 Validation 사용&lt;/p&gt;
 
-&lt;h4 id=&quot;1-702911-가능&quot;&gt;1. 70.29.11 가능&lt;/h4&gt;
-&lt;h4 id=&quot;2-702602-가능&quot;&gt;2. 70.26.02 가능&lt;/h4&gt;
-
-&lt;h4 id=&quot;3&quot;&gt;3.&lt;/h4&gt;</content><author><name>Changji Kim</name></author><category term="BackEnd" /><summary type="html">BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger BackEnd-Spring-RestAPI-Naver-Market-List</summary></entry><entry><title type="html">Startbucks Element center</title><link href="https://chang-ji.github.io/Startbucks-Element-center" rel="alternate" type="text/html" title="Startbucks Element center" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/Startbucks-Element-center</id><content type="html" xml:base="https://chang-ji.github.io/Startbucks-Element-center">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./Startbucks-Show-Sequential-Elements&quot;&gt;Startbucks-Show-Sequential-Elements&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./Startbucks-Notice-design&quot;&gt;Startbucks-Notice-design&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./Startbucks-Swiper&quot;&gt;Startbucks-Swiper&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./Startbucks-Element-center&quot;&gt;Startbucks-Element-center&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Exception&quot;&gt;Spring-Exception&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Validation-Exception-Process&quot;&gt;Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Filter-Interceptor&quot;&gt;Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Async&quot;&gt;Spring-Async&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-RestApi-Server-Client&quot;&gt;Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Naver-Api&quot;&gt;Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-JUnit&quot;&gt;Spring-JUnit&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Swagger&quot;&gt;Spring-Swagger&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-RestAPI-Naver-Market-List&quot;&gt;Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h1 id=&quot;spring-web-validation-exception-process&quot;&gt;Spring Web Validation Exception Process&lt;/h1&gt;
+
+&lt;h2 id=&quot;window-트리-형태로-파일-구조-출력&quot;&gt;window 트리 형태로 파일 구조 출력&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;트리 주소: https://bustar.tistory.com/231&amp;lt;/br&amp;gt;&lt;/li&gt;
+  &lt;li&gt;현재 위치: https://m.blog.naver.com/superyeoju/221737848729&amp;lt;/br&amp;gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tree %cd% /f /a
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;startbucks-element-center&quot;&gt;Startbucks Element center&lt;/h2&gt;
-
-&lt;h3 id=&quot;html&quot;&gt;Html&lt;/h3&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;promotion&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;swiper-container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    TEST
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;h2 id=&quot;spring-boot-예외처리-파일-구조&quot;&gt;Spring Boot 예외처리 파일 구조&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+---main
+|   +---java
+|   |   \---com
+|   |       \---example
+|   |           \---exception
+|   |               |   ExceptionApplication.java
+|   |               |
+|   |               +---advice
+|   |               |       ApiControllerAdvice.java
+|   |               |
+|   |               +---controller
+|   |               |       ApiController.java
+|   |               |
+|   |               \---dto
+|   |                       Error.java
+|   |                       ErrorResponse.java
+|   |                       User.java
+|   |
+|   \---resources
+|       |   application.properties
+|       |
+|       +---static
+|       \---templates
+\---test
+    \---java
+        \---com
+            \---example
+                \---exception
+                        ExceptionApplicationTests.java
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;css&quot;&gt;css&lt;/h3&gt;
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.promotion&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;693px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;#f6f5ef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                              &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기준&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;요소로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;설정&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;/* width: calc(100% -50px) 예시 */&lt;/span&gt; 
-&lt;span class=&quot;nc&quot;&gt;.notice&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.promotion&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.swiper-container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;819px&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;              &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;css에서는&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;calc를&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;통해서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;연산가능&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;553px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;orange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;200px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                             &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;relative&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기준으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;배치&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                                      &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;relative&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기준으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;위에서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;40px&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                                      &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;relative&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;기준으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;옆에서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;절반으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;배치&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;margin-left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;819px&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;절반으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;배치된&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;곳에서&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;요소&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;길이만큼&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;빼기하니&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;중앙으로&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;배치&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Changji Kim</name></author><category term="Startbucks" /><summary type="html">Startbucks Project Study Very Hard Startbucks-Show-Sequential-Elements Startbucks-Notice-design Startbucks-Swiper Startbucks-Element-center</summary></entry><entry><title type="html">Spring RestApi Server Client</title><link href="https://chang-ji.github.io/BackEnd-Spring-RestApi-Server-Client" rel="alternate" type="text/html" title="Spring RestApi Server Client" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/BackEnd-Spring-RestApi-Server-Client</id><content type="html" xml:base="https://chang-ji.github.io/BackEnd-Spring-RestApi-Server-Client">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Error.java&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;field&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getInvalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setInvalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;invalidValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Error 객체 안에는 field, message, invalidValue 으로 선언&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ErrorResponse.java&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ErrorResponse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;statusCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getStatusCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;statusCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setStatusCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;statusCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;statusCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;statusCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getRequestUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setRequestUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;requestUrl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getResultCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setResultCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;resultCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getErrorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setErrorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;errorList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ErrorResponse 객체 안에는 statusCode, requestUrl, code, message, resultCode, errorList 으로 선언&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ApiControllerAdvice.java&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@RestControllerAdvice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basePackageClasses&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApiController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ApiController에서만 동작&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApiControllerAdvice&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@ExceptionHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ConstraintViolationException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 특정 메소드의 예외를 처리 ConstraintViolationException 대한 예외 처리&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ResponseEntity&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;constraintViolationException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ConstraintViolationException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;httpServletRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ConstraintViolationException 예외 처리&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getConstraintViolations&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nc&quot;&gt;Stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StreamSupport&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getPropertyPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;spliterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;collect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Collectors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+
+            &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalidValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInvalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+            &lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorMessage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;errorMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;errorMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;errorMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setInvalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;invalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;errorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;errorMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
+
+        &lt;span class=&quot;nc&quot;&gt;ErrorResponse&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorResponse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ErrorResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;errorResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setErrorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;errorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;errorResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;errorResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setRequestUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;httpServletRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getRequestURI&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;errorResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setStatusCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;HttpStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;BAD_REQUEST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;errorResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setResultCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;FAIL&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ResponseEntity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;HttpStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;BAD_REQUEST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;errorResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;ApiController.class에서 ConstraintViolationException 에러 발생시 동작&lt;/li&gt;
+  &lt;li&gt;e 의 ConstraintViolations 값 안에 name, message, value 값을 추출&lt;/li&gt;
+  &lt;li&gt;2번의 값을 이용하여 Error 객체를 만들고 errorList 저장&lt;/li&gt;
+  &lt;li&gt;ErrorResponse 객체를 만듬&lt;/li&gt;
+  &lt;li&gt;이때 HttpServletRequest 클래스를 이용하여 url 값을 받아올 수 있음&lt;/li&gt;
+  &lt;li&gt;errorResponse 값을 body에 보내면 클라이언트가 편리하게 오류를 판단할 수 있음&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;위와 같은 것들을 구현 할때 Debug 기능을 이용해서 해당하는 값들을 잘 분석하기 바람&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Spliterator에 대한 링크: &lt;a href=&quot;https://jistol.github.io/java/2019/11/17/spliterator/&quot;&gt;https://jistol.github.io/java/2019/11/17/spliterator/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Changji Kim</name></author><category term="Spring" /><summary type="html">스프링 유효성과 타당성 검증을 위해서 Validation 사용</summary></entry><entry><title type="html">Spring Async</title><link href="https://chang-ji.github.io/Spring-Async" rel="alternate" type="text/html" title="Spring Async" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/Spring-Async</id><content type="html" xml:base="https://chang-ji.github.io/Spring-Async">&lt;p&gt;스프링 비동기 부분에 대한 구현 코드 작성&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Exception&quot;&gt;Spring-Exception&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Validation-Exception-Process&quot;&gt;Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Filter-Interceptor&quot;&gt;Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Async&quot;&gt;Spring-Async&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-RestApi-Server-Client&quot;&gt;Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Naver-Api&quot;&gt;Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-JUnit&quot;&gt;Spring-JUnit&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Swagger&quot;&gt;Spring-Swagger&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-RestAPI-Naver-Market-List&quot;&gt;Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;spring-web-async&quot;&gt;Spring Web Async&lt;/h1&gt;
+
+&lt;h2 id=&quot;비동기-처리-예제&quot;&gt;비동기 처리 예제&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-application-파일-enableasync-추가&quot;&gt;1. Application 파일 EnableAsync 추가&lt;/h3&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@SpringBootApplication&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@EnableAsync&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AsyncApplication&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;nc&quot;&gt;SpringApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;AsyncApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-asyncservice-만들기&quot;&gt;2. AsyncService 만들기&lt;/h3&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Slf4j&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@Service&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AsyncService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Async&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;async-thread&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CompletableFuture&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AsyncResult&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;completable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;nc&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;thread sleep....&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;InterruptedException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;async hello&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;CompletableFuture 를 통해서 async 처리할 수 있음&lt;/li&gt;
+  &lt;li&gt;이때 쓰레드가 다 처리될때 까지 reponse를 지연 시킬 수 있음&lt;/li&gt;
+  &lt;li&gt;비동기를 사용할 함수에는 @Async를 붙여주여야함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3-appconfig-를-만들어서-별도의-쓰레드를-세팅할-수-있음&quot;&gt;3. AppConfig 를 만들어서 별도의 쓰레드를 세팅할 수 있음&lt;/h3&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Configuration&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppConfig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Bean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;async-thread&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 이름 설정&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Executor&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;asyncThread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;ThreadPoolTaskExecutor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threadPoolTaskExecutor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ThreadPoolTaskExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;threadPoolTaskExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMaxPoolSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;threadPoolTaskExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setCorePoolSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// 다차면&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;threadPoolTaskExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setQueueCapacity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// 여기에 큐가 쌓임&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;threadPoolTaskExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setThreadNamePrefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Asnc-&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threadPoolTaskExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;4-apicontroller-서비스를-호출하여서-사용&quot;&gt;4. ApiController 서비스를 호출하여서 사용&lt;/h3&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Slf4j&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@RestController&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/api&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApiController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AsyncService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asyncService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ApiController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;AsyncService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asyncService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;asyncService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asyncService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@GetMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/hello&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CompletableFuture&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;completableFuture init&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asyncService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Changji Kim</name></author><category term="Spring" /><summary type="html">스프링 비동기 부분에 대한 구현 코드 작성</summary></entry><entry><title type="html">Spring RestApi Server Client</title><link href="https://chang-ji.github.io/Spring-RestApi-Server-Client" rel="alternate" type="text/html" title="Spring RestApi Server Client" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/Spring-RestApi-Server-Client</id><content type="html" xml:base="https://chang-ji.github.io/Spring-RestApi-Server-Client">&lt;p&gt;스프링의 기본 요소인 REST API를 구현&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Exception&quot;&gt;Spring-Exception&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Validation-Exception-Process&quot;&gt;Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Filter-Interceptor&quot;&gt;Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Async&quot;&gt;Spring-Async&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-RestApi-Server-Client&quot;&gt;Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Naver-Api&quot;&gt;Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-JUnit&quot;&gt;Spring-JUnit&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-Swagger&quot;&gt;Spring-Swagger&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./Spring-RestAPI-Naver-Market-List&quot;&gt;Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 
@@ -793,507 +1154,4 @@
 &lt;h2 id=&quot;restapi-참고-자료-부분&quot;&gt;RestApi 참고 자료 부분&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://advenoh.tistory.com/46&quot;&gt;https://advenoh.tistory.com/46&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Changji Kim</name></author><category term="BackEnd" /><summary type="html">BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger BackEnd-Spring-RestAPI-Naver-Market-List</summary></entry><entry><title type="html">Spring JUnit</title><link href="https://chang-ji.github.io/BackEnd-Spring-JUnit" rel="alternate" type="text/html" title="Spring JUnit" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/BackEnd-Spring-JUnit</id><content type="html" xml:base="https://chang-ji.github.io/BackEnd-Spring-JUnit">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;spring-web-junit&quot;&gt;Spring Web JUnit&lt;/h1&gt;
-
-&lt;h2 id=&quot;junit으로-테스트-하기&quot;&gt;JUnit으로 테스트 하기&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;TDD (Test-driven Development)
-    &lt;blockquote&gt;
-      &lt;p&gt;테스트 주도 개발에서 사용하지만, 코드의 유지 보수 및 운영 환경에서의 에러를 미리 방지 하기 위해서 단위 별로 검증하는 테스트 프레임 워크&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;단위테스트
-    &lt;blockquote&gt;
-      &lt;p&gt;작성한 코드가 기대하는 대로 동작을 하는지 검증하는 절차&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;JUnit
-    &lt;blockquote&gt;
-      &lt;p&gt;Java 기반의 단위 테스트를 위한 프레임워크
-Annotation 기반으로 테스트를 지원하며, Assert를 통하여, (예상, 실제)를 통해 검증&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Jacoco
-    &lt;blockquote&gt;
-      &lt;p&gt;Java 코드의 코드 커버리지를 체크하는 라이브러리 결과를 html, xml, csv로 확인 가능하다.
-build.gradle 파일에 plugins 에 id ‘jacoco 설정하여 사용가능
-gradle &amp;gt; Task &amp;gt; verification &amp;gt; test 더블클릭으로 실행가능&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;junit-테스트-관련-mockito&quot;&gt;JUnit 테스트 관련 Mockito&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://mvnrepository.com/artifact/org.mockito/mockito-core&quot;&gt;https://mvnrepository.com/artifact/org.mockito/mockito-core&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter&quot;&gt;https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;junit-관련-테스트-코드&quot;&gt;JUnit 관련 테스트 코드&lt;/h2&gt;
-&lt;h3 id=&quot;1-전체-스프링-부트-활성화-시켜서-테스트&quot;&gt;1. 전체 스프링 부트 활성화 시켜서 테스트&lt;/h3&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@SpringBootTest&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// Import 시켜서 MarketApi, DollarCalculator 주입&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@Import&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MarketApi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DollarCalculator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;  
-&lt;span class=&quot;nd&quot;&gt;@ExtendWith&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MockitoExtension&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DollarCalculatorTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// MarketApi를 Bean 등록&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@MockBean&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MarketApi&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;marketApi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;nd&quot;&gt;@Autowired&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Calculator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calculator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dollerCalculatorTest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// marketApi.connect() 이 실행될때 3000 값을 리턴&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;marketApi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;thenReturn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calculator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;minus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calculator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;minus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;c1&quot;&gt;// assertEquals 함수를 통해서 예측치가 맞게 나오는 지 테스트&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;Assertions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;60000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;Assertions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;minus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;2-controller-테스트&quot;&gt;2. Controller 테스트&lt;/h3&gt;
-&lt;h4 id=&quot;기본적인-부분&quot;&gt;기본적인 부분&lt;/h4&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 테스트 할려는 컨트롤러 선택&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@WebMvcTest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;CalculatorApiController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// Controller 테스트시 기본적으로 설정&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@AutoConfigureWebMvc&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// Calculator, DollarCalculator 주입&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@Import&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Calculator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DollarCalculator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CalculatorApiControllerTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// marketApi Bean 등록&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@MockBean&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MarketApi&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;marketApi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// MockMvc를 등록하여 원활하게 Controller 테스터 가능&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@Autowired&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MockMvc&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mockMvc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// marketApi.connect() 실행되면 3000을 반환&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@BeforeEach&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;marketApi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;thenReturn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;get-방식-테스트&quot;&gt;GET 방식 테스트&lt;/h4&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sumTest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// http://localhost:8080/api/sum&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// mockMvc 를 통해서 요청 수행&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// MockMvcRequestBuilders 를 통해서 GET 요청&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;mockMvc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;perform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;MockMvcRequestBuilders&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://localhost:8080/api/sum&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 해당주소&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;queryParam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;x&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;10&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// 쿼리만들기&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;queryParam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;y&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;10&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;// MockMvcResultMatchers 요청에 대한 응답값 중 status 가 200인지 확인&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;MockMvcResultMatchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isOk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; 
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;// MockMvcResultMatchers 요청에 대한 응답값 중 content 값이 60000인지 확인&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;MockMvcResultMatchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;60000&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;andDo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MockMvcResultHandlers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 해당하는 응답값 출력&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;post-방식&quot;&gt;POST 방식&lt;/h4&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;minusTest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// http://localhost:8080/api/minus&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;Req&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setX&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// ObjectMapper를 통해서 JSON 값으로 변경&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// JSON으로 변경&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ObjectMapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;writeValueAsString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// POST 방식으로 요청하여 테스트&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;mockMvc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;perform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;MockMvcRequestBuilders&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://localhost:8080/api/minus&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;contentType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MediaType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;APPLICATION_JSON&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Body 값&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;MockMvcResultMatchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isOk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;MockMvcResultMatchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;jsonPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;$.result&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;andExpect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;// response 객체 안에 resultCode 확인&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;MockMvcResultMatchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;jsonPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;response.resultCode&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;OK&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;andDo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;MockMvcResultHandlers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Changji Kim</name></author><category term="BackEnd" /><summary type="html">BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger BackEnd-Spring-RestAPI-Naver-Market-List</summary></entry><entry><title type="html">Spring Validation Exception Process</title><link href="https://chang-ji.github.io/BackEnd-Spring-Validation-Exception-Process" rel="alternate" type="text/html" title="Spring Validation Exception Process" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/BackEnd-Spring-Validation-Exception-Process</id><content type="html" xml:base="https://chang-ji.github.io/BackEnd-Spring-Validation-Exception-Process">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h1 id=&quot;spring-web-validation-exception-process&quot;&gt;Spring Web Validation Exception Process&lt;/h1&gt;
-
-&lt;h2 id=&quot;window-트리-형태로-파일-구조-출력&quot;&gt;window 트리 형태로 파일 구조 출력&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;트리 주소: https://bustar.tistory.com/231&amp;lt;/br&amp;gt;&lt;/li&gt;
-  &lt;li&gt;현재 위치: https://m.blog.naver.com/superyeoju/221737848729&amp;lt;/br&amp;gt;
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tree %cd% /f /a
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;spring-boot-예외처리-파일-구조&quot;&gt;Spring Boot 예외처리 파일 구조&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;+---main
-|   +---java
-|   |   \---com
-|   |       \---example
-|   |           \---exception
-|   |               |   ExceptionApplication.java
-|   |               |
-|   |               +---advice
-|   |               |       ApiControllerAdvice.java
-|   |               |
-|   |               +---controller
-|   |               |       ApiController.java
-|   |               |
-|   |               \---dto
-|   |                       Error.java
-|   |                       ErrorResponse.java
-|   |                       User.java
-|   |
-|   \---resources
-|       |   application.properties
-|       |
-|       +---static
-|       \---templates
-\---test
-    \---java
-        \---com
-            \---example
-                \---exception
-                        ExceptionApplicationTests.java
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Error.java&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;field&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getInvalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setInvalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;invalidValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Error 객체 안에는 field, message, invalidValue 으로 선언&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;ErrorResponse.java&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ErrorResponse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;statusCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getStatusCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;statusCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setStatusCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;statusCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;statusCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;statusCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getRequestUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setRequestUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;requestUrl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getResultCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setResultCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;resultCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resultCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getErrorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setErrorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;errorList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ErrorResponse 객체 안에는 statusCode, requestUrl, code, message, resultCode, errorList 으로 선언&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;ApiControllerAdvice.java&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@RestControllerAdvice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basePackageClasses&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApiController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ApiController에서만 동작&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApiControllerAdvice&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;nd&quot;&gt;@ExceptionHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ConstraintViolationException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 특정 메소드의 예외를 처리 ConstraintViolationException 대한 예외 처리&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ResponseEntity&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;constraintViolationException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ConstraintViolationException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HttpServletRequest&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;httpServletRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ConstraintViolationException 예외 처리&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getConstraintViolations&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;Stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StreamSupport&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getPropertyPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;spliterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;collect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Collectors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-
-            &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invalidValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInvalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-
-            &lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorMessage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;errorMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;errorMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;errorMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setInvalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;invalidValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-            &lt;span class=&quot;n&quot;&gt;errorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;errorMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
-
-        &lt;span class=&quot;nc&quot;&gt;ErrorResponse&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errorResponse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ErrorResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;errorResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setErrorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;errorList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;errorResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;errorResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setRequestUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;httpServletRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getRequestURI&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;errorResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setStatusCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;HttpStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;BAD_REQUEST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;errorResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setResultCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;FAIL&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ResponseEntity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;HttpStatus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;BAD_REQUEST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;errorResponse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ol&gt;
-  &lt;li&gt;ApiController.class에서 ConstraintViolationException 에러 발생시 동작&lt;/li&gt;
-  &lt;li&gt;e 의 ConstraintViolations 값 안에 name, message, value 값을 추출&lt;/li&gt;
-  &lt;li&gt;2번의 값을 이용하여 Error 객체를 만들고 errorList 저장&lt;/li&gt;
-  &lt;li&gt;ErrorResponse 객체를 만듬&lt;/li&gt;
-  &lt;li&gt;이때 HttpServletRequest 클래스를 이용하여 url 값을 받아올 수 있음&lt;/li&gt;
-  &lt;li&gt;errorResponse 값을 body에 보내면 클라이언트가 편리하게 오류를 판단할 수 있음&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;위와 같은 것들을 구현 할때 Debug 기능을 이용해서 해당하는 값들을 잘 분석하기 바람&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Spliterator에 대한 링크: &lt;a href=&quot;https://jistol.github.io/java/2019/11/17/spliterator/&quot;&gt;https://jistol.github.io/java/2019/11/17/spliterator/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Changji Kim</name></author><category term="BackEnd" /><summary type="html">BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger BackEnd-Spring-RestAPI-Naver-Market-List Spring Web Validation Exception Process</summary></entry><entry><title type="html">Spring Async</title><link href="https://chang-ji.github.io/BackEnd-Spring-Async" rel="alternate" type="text/html" title="Spring Async" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/BackEnd-Spring-Async</id><content type="html" xml:base="https://chang-ji.github.io/BackEnd-Spring-Async">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;spring-web-async&quot;&gt;Spring Web Async&lt;/h1&gt;
-
-&lt;h2 id=&quot;비동기-처리-예제&quot;&gt;비동기 처리 예제&lt;/h2&gt;
-
-&lt;h3 id=&quot;1-application-파일-enableasync-추가&quot;&gt;1. Application 파일 EnableAsync 추가&lt;/h3&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@SpringBootApplication&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@EnableAsync&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AsyncApplication&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;nc&quot;&gt;SpringApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;AsyncApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;2-asyncservice-만들기&quot;&gt;2. AsyncService 만들기&lt;/h3&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Slf4j&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@Service&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AsyncService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;nd&quot;&gt;@Async&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;async-thread&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CompletableFuture&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;AsyncResult&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;completable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;nc&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;thread sleep....&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;InterruptedException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;async hello&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ul&gt;
-  &lt;li&gt;CompletableFuture 를 통해서 async 처리할 수 있음&lt;/li&gt;
-  &lt;li&gt;이때 쓰레드가 다 처리될때 까지 reponse를 지연 시킬 수 있음&lt;/li&gt;
-  &lt;li&gt;비동기를 사용할 함수에는 @Async를 붙여주여야함&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;3-appconfig-를-만들어서-별도의-쓰레드를-세팅할-수-있음&quot;&gt;3. AppConfig 를 만들어서 별도의 쓰레드를 세팅할 수 있음&lt;/h3&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Configuration&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppConfig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;nd&quot;&gt;@Bean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;async-thread&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 이름 설정&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Executor&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;asyncThread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;ThreadPoolTaskExecutor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threadPoolTaskExecutor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ThreadPoolTaskExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;threadPoolTaskExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMaxPoolSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;threadPoolTaskExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setCorePoolSize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// 다차면&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;threadPoolTaskExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setQueueCapacity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// 여기에 큐가 쌓임&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;threadPoolTaskExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setThreadNamePrefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Asnc-&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threadPoolTaskExecutor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;4-apicontroller-서비스를-호출하여서-사용&quot;&gt;4. ApiController 서비스를 호출하여서 사용&lt;/h3&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Slf4j&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@RestController&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/api&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApiController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AsyncService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asyncService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ApiController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;AsyncService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asyncService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;asyncService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asyncService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;nd&quot;&gt;@GetMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/hello&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CompletableFuture&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;completableFuture init&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asyncService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Changji Kim</name></author><category term="BackEnd" /><summary type="html">BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger BackEnd-Spring-RestAPI-Naver-Market-List</summary></entry><entry><title type="html">Spring RestAPI Naver Market List</title><link href="https://chang-ji.github.io/BackEnd-Spring-RestAPI-Naver-Market-List" rel="alternate" type="text/html" title="Spring RestAPI Naver Market List" /><published>2021-08-24T19:18:00+09:00</published><updated>2021-08-24T19:18:00+09:00</updated><id>https://chang-ji.github.io/BackEnd-Spring-RestAPI-Naver-Market-List</id><content type="html" xml:base="https://chang-ji.github.io/BackEnd-Spring-RestAPI-Naver-Market-List">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;spring-web-restapi-naver-market-list&quot;&gt;Spring Web RestAPI Naver Market List&lt;/h1&gt;
-
-&lt;h2 id=&quot;정규식-만들기-사이트-참고&quot;&gt;정규식 만들기 사이트 참고&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://regex101.com/&quot;&gt;https://regex101.com/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://highcode.tistory.com/6&quot;&gt;https://highcode.tistory.com/6&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;스웨거-사이트&quot;&gt;스웨거 사이트&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter/3.0.0&quot;&gt;https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter/3.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Changji Kim</name></author><category term="BackEnd" /><summary type="html">BackEnd 기본 요소에 대해서 학습합니다. BackEnd-Spring-Exception BackEnd-Spring-Validation-Exception-Process BackEnd-Spring-Filter-Interceptor BackEnd-Spring-Async BackEnd-Spring-RestApi-Server-Client BackEnd-Spring-Naver-Api BackEnd-Spring-JUnit BackEnd-Spring-Swagger BackEnd-Spring-RestAPI-Naver-Market-List</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Changji Kim</name></author><category term="Spring" /><summary type="html">스프링의 기본 요소인 REST API를 구현</summary></entry></feed>

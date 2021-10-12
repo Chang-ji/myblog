@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Linux</title>
+        
+          <description>&lt;p&gt;Linux Command Line And Linux CLI Learn&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 12 Oct 2021 09:00:00 +0900</pubDate>
+        <link>
+        https://Chang-ji.github.io/Linux-Command</link>
+        <guid isPermaLink="true">https://Chang-ji.github.io/Linux-Command</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Startbucks Swiper</title>
         
           <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Startbucks Project Study Very Hard&lt;/span&gt;&lt;/p&gt;
@@ -52,26 +67,14 @@
       <item>
         <title>Spring Swagger</title>
         
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
+          <description>&lt;p&gt;스프링 REST API에 편리한 SWWAGER를 설치하여 편리하게 API 테스트하고 문서화&lt;/p&gt;
 
 </description>
         
         <pubDate>Tue, 24 Aug 2021 19:18:00 +0900</pubDate>
         <link>
-        https://Chang-ji.github.io/BackEnd-Spring-Swagger</link>
-        <guid isPermaLink="true">https://Chang-ji.github.io/BackEnd-Spring-Swagger</guid>
+        https://Chang-ji.github.io/Spring-Swagger</link>
+        <guid isPermaLink="true">https://Chang-ji.github.io/Spring-Swagger</guid>
       </item>
       
     
@@ -79,26 +82,14 @@
       <item>
         <title>Spring RestApi Server Client</title>
         
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
+          <description>&lt;p&gt;스프링의 기본 요소인 REST API를 구현&lt;/p&gt;
 
 </description>
         
         <pubDate>Tue, 24 Aug 2021 19:18:00 +0900</pubDate>
         <link>
-        https://Chang-ji.github.io/BackEnd-Spring-RestApi-Server-Client</link>
-        <guid isPermaLink="true">https://Chang-ji.github.io/BackEnd-Spring-RestApi-Server-Client</guid>
+        https://Chang-ji.github.io/Spring-RestApi-Server-Client</link>
+        <guid isPermaLink="true">https://Chang-ji.github.io/Spring-RestApi-Server-Client</guid>
       </item>
       
     
@@ -106,26 +97,14 @@
       <item>
         <title>Spring RestAPI Naver Market List</title>
         
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
+          <description>&lt;p&gt;정규식과 스웨거 등의 도구를 활용하여 맛집 리스트 만들기&lt;/p&gt;
 
 </description>
         
         <pubDate>Tue, 24 Aug 2021 19:18:00 +0900</pubDate>
         <link>
-        https://Chang-ji.github.io/BackEnd-Spring-RestAPI-Naver-Market-List</link>
-        <guid isPermaLink="true">https://Chang-ji.github.io/BackEnd-Spring-RestAPI-Naver-Market-List</guid>
+        https://Chang-ji.github.io/Spring-RestAPI-Naver-Market-List</link>
+        <guid isPermaLink="true">https://Chang-ji.github.io/Spring-RestAPI-Naver-Market-List</guid>
       </item>
       
     
@@ -133,26 +112,14 @@
       <item>
         <title>Spring Naver Open API</title>
         
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
+          <description>&lt;p&gt;네이버 오픈 API를 통해서 지역 맛집 사이트 구현&lt;/p&gt;
 
 </description>
         
         <pubDate>Tue, 24 Aug 2021 19:18:00 +0900</pubDate>
         <link>
-        https://Chang-ji.github.io/BackEnd-Spring-Naver-Api</link>
-        <guid isPermaLink="true">https://Chang-ji.github.io/BackEnd-Spring-Naver-Api</guid>
+        https://Chang-ji.github.io/Spring-Naver-Api</link>
+        <guid isPermaLink="true">https://Chang-ji.github.io/Spring-Naver-Api</guid>
       </item>
       
     
@@ -160,26 +127,14 @@
       <item>
         <title>Spring JUnit</title>
         
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
+          <description>&lt;p&gt;스프링 테스트 도구 Junit에 대해서 학습하고 코드 구현&lt;/p&gt;
 
 </description>
         
         <pubDate>Tue, 24 Aug 2021 19:18:00 +0900</pubDate>
         <link>
-        https://Chang-ji.github.io/BackEnd-Spring-JUnit</link>
-        <guid isPermaLink="true">https://Chang-ji.github.io/BackEnd-Spring-JUnit</guid>
+        https://Chang-ji.github.io/Spring-JUnit</link>
+        <guid isPermaLink="true">https://Chang-ji.github.io/Spring-JUnit</guid>
       </item>
       
     
@@ -187,26 +142,14 @@
       <item>
         <title>Filter Interceptor</title>
         
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
+          <description>&lt;p&gt;스프링 필터와 인터셉터에 대해서 이해하고 코드를 구현&lt;/p&gt;
 
 </description>
         
         <pubDate>Tue, 24 Aug 2021 19:18:00 +0900</pubDate>
         <link>
-        https://Chang-ji.github.io/BackEnd-Spring-Filter-Interceptor</link>
-        <guid isPermaLink="true">https://Chang-ji.github.io/BackEnd-Spring-Filter-Interceptor</guid>
+        https://Chang-ji.github.io/Spring-Filter-Interceptor</link>
+        <guid isPermaLink="true">https://Chang-ji.github.io/Spring-Filter-Interceptor</guid>
       </item>
       
     
@@ -214,26 +157,14 @@
       <item>
         <title>Spring Async</title>
         
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
+          <description>&lt;p&gt;스프링 비동기 부분에 대한 구현 코드 작성&lt;/p&gt;
 
 </description>
         
         <pubDate>Tue, 24 Aug 2021 19:18:00 +0900</pubDate>
         <link>
-        https://Chang-ji.github.io/BackEnd-Spring-Async</link>
-        <guid isPermaLink="true">https://Chang-ji.github.io/BackEnd-Spring-Async</guid>
+        https://Chang-ji.github.io/Spring-Async</link>
+        <guid isPermaLink="true">https://Chang-ji.github.io/Spring-Async</guid>
       </item>
       
     
@@ -241,27 +172,14 @@
       <item>
         <title>Spring Validation Exception Process</title>
         
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h1 id=&quot;spring-web-validation-exception-process&quot;&gt;Spring Web Validation Exception Process&lt;/h1&gt;
+          <description>&lt;p&gt;스프링 유효성과 타당성 검증을 위해서 Validation 사용&lt;/p&gt;
 
 </description>
         
         <pubDate>Tue, 24 Aug 2021 19:18:00 +0900</pubDate>
         <link>
-        https://Chang-ji.github.io/BackEnd-Spring-Validation-Exception-Process</link>
-        <guid isPermaLink="true">https://Chang-ji.github.io/BackEnd-Spring-Validation-Exception-Process</guid>
+        https://Chang-ji.github.io/Spring-Validation-Exception-Process</link>
+        <guid isPermaLink="true">https://Chang-ji.github.io/Spring-Validation-Exception-Process</guid>
       </item>
       
     
@@ -329,27 +247,14 @@
       <item>
         <title>Spring Exception</title>
         
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;BackEnd 기본 요소에 대해서 학습합니다.&lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Exception&quot;&gt;BackEnd-Spring-Exception&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Validation-Exception-Process&quot;&gt;BackEnd-Spring-Validation-Exception-Process&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Filter-Interceptor&quot;&gt;BackEnd-Spring-Filter-Interceptor&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Async&quot;&gt;BackEnd-Spring-Async&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestApi-Server-Client&quot;&gt;BackEnd-Spring-RestApi-Server-Client&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Naver-Api&quot;&gt;BackEnd-Spring-Naver-Api&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-JUnit&quot;&gt;BackEnd-Spring-JUnit&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-Swagger&quot;&gt;BackEnd-Spring-Swagger&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./BackEnd-Spring-RestAPI-Naver-Market-List&quot;&gt;BackEnd-Spring-RestAPI-Naver-Market-List&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h1 id=&quot;spring-web-exception&quot;&gt;Spring Web Exception&lt;/h1&gt;
+          <description>&lt;p&gt;스프링 예외처리 구조와 서비스 구현 코드를 작성&lt;/p&gt;
 
 </description>
         
         <pubDate>Sun, 22 Aug 2021 19:18:00 +0900</pubDate>
         <link>
-        https://Chang-ji.github.io/BackEnd-Spring-Exception</link>
-        <guid isPermaLink="true">https://Chang-ji.github.io/BackEnd-Spring-Exception</guid>
+        https://Chang-ji.github.io/Spring-Exception</link>
+        <guid isPermaLink="true">https://Chang-ji.github.io/Spring-Exception</guid>
       </item>
       
     

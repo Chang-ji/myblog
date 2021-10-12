@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://Chang-ji.github.io/Linux-Command.html</loc>
+        
+        <lastmod>2021-10-12T09:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>https://Chang-ji.github.io/Startbucks-Swiper.html</loc>
         
         <lastmod>2021-08-24T19:18:00+09:00</lastmod>
@@ -36,7 +52,7 @@
     </url>
     
     <url>
-        <loc>https://Chang-ji.github.io/BackEnd-Spring-Swagger.html</loc>
+        <loc>https://Chang-ji.github.io/Spring-Swagger.html</loc>
         
         <lastmod>2021-08-24T19:18:00+09:00</lastmod>
         
@@ -52,7 +68,7 @@
     </url>
     
     <url>
-        <loc>https://Chang-ji.github.io/BackEnd-Spring-RestApi-Server-Client.html</loc>
+        <loc>https://Chang-ji.github.io/Spring-RestApi-Server-Client.html</loc>
         
         <lastmod>2021-08-24T19:18:00+09:00</lastmod>
         
@@ -68,7 +84,7 @@
     </url>
     
     <url>
-        <loc>https://Chang-ji.github.io/BackEnd-Spring-RestAPI-Naver-Market-List.html</loc>
+        <loc>https://Chang-ji.github.io/Spring-RestAPI-Naver-Market-List.html</loc>
         
         <lastmod>2021-08-24T19:18:00+09:00</lastmod>
         
@@ -84,7 +100,7 @@
     </url>
     
     <url>
-        <loc>https://Chang-ji.github.io/BackEnd-Spring-Naver-Api.html</loc>
+        <loc>https://Chang-ji.github.io/Spring-Naver-Api.html</loc>
         
         <lastmod>2021-08-24T19:18:00+09:00</lastmod>
         
@@ -100,7 +116,7 @@
     </url>
     
     <url>
-        <loc>https://Chang-ji.github.io/BackEnd-Spring-JUnit.html</loc>
+        <loc>https://Chang-ji.github.io/Spring-JUnit.html</loc>
         
         <lastmod>2021-08-24T19:18:00+09:00</lastmod>
         
@@ -116,7 +132,7 @@
     </url>
     
     <url>
-        <loc>https://Chang-ji.github.io/BackEnd-Spring-Filter-Interceptor.html</loc>
+        <loc>https://Chang-ji.github.io/Spring-Filter-Interceptor.html</loc>
         
         <lastmod>2021-08-24T19:18:00+09:00</lastmod>
         
@@ -132,7 +148,7 @@
     </url>
     
     <url>
-        <loc>https://Chang-ji.github.io/BackEnd-Spring-Async.html</loc>
+        <loc>https://Chang-ji.github.io/Spring-Async.html</loc>
         
         <lastmod>2021-08-24T19:18:00+09:00</lastmod>
         
@@ -148,7 +164,7 @@
     </url>
     
     <url>
-        <loc>https://Chang-ji.github.io/BackEnd-Spring-Validation-Exception-Process.html</loc>
+        <loc>https://Chang-ji.github.io/Spring-Validation-Exception-Process.html</loc>
         
         <lastmod>2021-08-24T19:18:00+09:00</lastmod>
         
@@ -212,7 +228,7 @@
     </url>
     
     <url>
-        <loc>https://Chang-ji.github.io/BackEnd-Spring-Exception.html</loc>
+        <loc>https://Chang-ji.github.io/Spring-Exception.html</loc>
         
         <lastmod>2021-08-22T19:18:00+09:00</lastmod>
         
