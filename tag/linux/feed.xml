@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://chang-ji.github.io/tag/linux/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://chang-ji.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-10-13T08:21:04+09:00</updated>
+  <updated>2021-10-20T15:53:14+09:00</updated>
   <id>https://chang-ji.github.io/tag/linux/feed.xml</id>
 
   
@@ -42,7 +42,209 @@
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./Linux-Command&quot;&gt;Linux Command Line Learn&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;윈도우-linux-사용하기&quot;&gt;윈도우 Linux 사용하기&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;리눅스 배포판 중 하나를 운영 체제로 컴퓨터에 설치한 상태이거나,&lt;br /&gt;
+macOS가 깔린 맥(Mac)이 있어야 합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;유사-유닉스-virtualbox-설치&quot;&gt;유사 유닉스 VirtualBox 설치&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;VirtualBox 설치 파일을 다운로드하겠습니다. 일단 VirtualBox 다운로드 페이지로 가세요. 그 다음, 아래 그림처럼 Windows hosts를 클릭해서 설치 파일을 다운로드하세요.&lt;/li&gt;
+  &lt;li&gt;다운로드한 설치 파일을 실행하면 아래와 같은 창이 뜹니다. Next 또는 Yes 버튼을 눌러서 쭉 진행하세요&lt;/li&gt;
+  &lt;li&gt;마지막으로 Install 버튼을 눌러 설치를 시작하세요.&lt;/li&gt;
+  &lt;li&gt;설치가 완료되면 Finish 버튼을 눌러 창을 닫으세요.&lt;/li&gt;
+  &lt;li&gt;그럼 VirtualBox의 화면이 나타납니다. 이제 VirtualBox로 가상 머신을 생성할 수 있습니다. 가상 머신을 생성하는 방법과 그 가상 머신에 우분투를 설치하는 방법은 다음 노트에서 설명해드릴게요.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;date : 날짜&lt;/li&gt;
+  &lt;li&gt;cal : 달력&lt;/li&gt;
+  &lt;li&gt;인자: Arugement&lt;/li&gt;
+  &lt;li&gt;인자를 여러개 줄수도 있다&lt;/li&gt;
+  &lt;li&gt;옵션: 커맨드의 구체적 동작방식 설정&lt;/li&gt;
+  &lt;li&gt;인자와 옵션은 정해진 형식이 있으니 사용법을 알아서 사용하자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cal &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+cal 2020
+cal &lt;span class=&quot;nt&quot;&gt;-B&lt;/span&gt; 2
+cal &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; 3
+cal &lt;span class=&quot;nt&quot;&gt;-B&lt;/span&gt; 2
+cal &lt;span class=&quot;nt&quot;&gt;-B&lt;/span&gt; 2 &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; 3
+cal &lt;span class=&quot;nt&quot;&gt;-B&lt;/span&gt; 2 &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; 3 &lt;span class=&quot;nt&quot;&gt;-j&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;커맨드에-관한-공식메뉴얼-확인하자&quot;&gt;커맨드에 관한 공식메뉴얼 확인하자&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;man cal
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;화면 올리기 : b
+화면 내리기 : space
+창 나가기 : q&lt;/p&gt;
+
+&lt;p&gt;현재 위치
+~: 현재 사용자 지금 컴퓨터를 사용하고 있는 사용자
+홈 디렉토리: 사용자 필요로 하는 파일을 저장 자신이 필요한 것을 저장하는 디렉토리&lt;/p&gt;
+
+&lt;p&gt;pwd : 현재 작업중인 디렉토리를 출력하라&lt;/p&gt;
+
+&lt;p&gt;가장 상위에 있는 디렉토리 : 루트 디렉토리
+디렉토리가 디렉토리르 포함하고 있는 관계 / 부모 디렉토리 / 자식 디렉토리
+경로: 디렉토리 위치, 파일의 위치&lt;/p&gt;
+
+&lt;p&gt;cd: change directory&lt;/p&gt;
+
+&lt;p&gt;절대경로: 루트 디렉토리 기준으로 고유한 경로 
+상대경로: 나의 현재위치를 기준으로 나타낸 경로
+.: 현재 디렉토리
+..: 부모 디렉토리&lt;/p&gt;
+
+&lt;p&gt;절대경로는 그대로 이지만 상대경로는 현재 작업중인 위치에 따라서 바뀐다.&lt;/p&gt;
+
+&lt;p&gt;상대경로 현재디렉토리, 부모디렉토리를 사용할 때 편리하게 이용할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;루트 디렉토리 가기
+홈디렉토리
+이전 디렉토리로 가기&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /home/changji
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;디렉토리 내부 살펴보기
+-l 리스트 형식으로 보여주기
+-a 모든 디렉토리 보여주기 -&amp;gt; 나타나지 않는 숨겨진 파일을 볼수 있다.
+-d 디렉토리 자체의 정보를 보여준다.
+파일에 대한 정보를 볼수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;ls
+ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;파일이름]
+&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;파일이름]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;디렉토리 만들기
+새로운 파일 만들기&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;parent
+&lt;span class=&quot;nb&quot;&gt;touch test&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;디렉토리 파일 이동시키기
+디렉토리 파일 이름바꾸기&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mv test &lt;/span&gt;child
+&lt;span class=&quot;nb&quot;&gt;mv test &lt;/span&gt;sample
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;디렉토리 파일 복사 붙여넣기
+파일 복사-붙여넣기 할때 같은 이름의 파일이 있는지 확인해야한다.
+디렉토리 복사 붙어넣을 때 자식 디렉토리가 있을 수 있고 함께 복사해야 해서 -r 옵션이 필요하다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cp &lt;/span&gt;first second
+&lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; first second
+&lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; kid baby
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;파일 디렉토리 삭제하기 rm
+디렉토리 삭제할 때는 -r 옵션이 필요하다.
+-i 옵션을 통해 삭제하기 전에 확인하자.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;rm &lt;/span&gt;second
+&lt;span class=&quot;nb&quot;&gt;rm &lt;/span&gt;baby
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;파일 출력하기&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;Twice
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;Zico
+less Twice
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;b, space, G, g, q, :n, :p 단축키 활용하자&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cat&lt;/code&gt;: concatenate, 이어 붙이다 파일들의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;내용을 이어서 출력&lt;/code&gt; 봐야 할 내용이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;단순할 때&lt;/code&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;less&lt;/code&gt;: 한 화면에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;하나&lt;/code&gt;의 파일을 보여줌 봐야할 내용이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;많거나 하나씩&lt;/code&gt; 봐야 할때
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;head&lt;/code&gt;: 파일의 맨앞부분을 출력 -n 20 옵션 인자 넣어주면 된다.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tail&lt;/code&gt;: 파일의 뒤 부분을 출력하는 것&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;history&lt;/code&gt;: 사용한 커맨드의 내역을 보여줌 그리고 !221 이렇게 숫자 넣어서 쓰면 됨&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ctrl+a&lt;/code&gt;: 그 행에 맨앞으로 이동
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ctrl+e&lt;/code&gt;: 그 행에 맨뒤으로 이동&lt;/p&gt;
+
+&lt;p&gt;mkdir happy programming 폴더가 두개 만들어 진다.
+mkdir ‘happy programming’ 으로 만들어야 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;vim-사용법&quot;&gt;Vim 사용법&lt;/h2&gt;
+
+&lt;h3 id=&quot;vi&quot;&gt;vi&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;빌조이 브람 믈레나르 vim 향상된 vi&lt;/li&gt;
+  &lt;li&gt;마우스 없이 키보드로만 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;모드
+일반 모드(Normal Mode) 
+입력 모드(Insert Mode)
+비주얼 모드(Visual Mode)
+명령 모드(Command Mode)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;처음 일반모드&lt;/dt&gt;
+  &lt;dt&gt;  a A 입력 &lt;/dt&gt;
+  &lt;dt&gt;  대문자I 첫번째 줄 맨앞으로 이동하면서 입력모드&lt;/dt&gt;
+  &lt;dt&gt;  o 다음 문장으로 이동하면서 엽력모드&lt;/dt&gt;
+  &lt;dt&gt;  v V 비주얼&lt;/dt&gt;
+  &lt;dd&gt;/ 명령 모드
+  esc 일반 모드&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;명령모드 내용 저장하기
+  :w exercise 자동으로 일반모드로 돌아온다&lt;/p&gt;
+
+&lt;p&gt;입력 -&amp;gt; 일반 -&amp;gt; 명령 가서 저장한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:q!&lt;/code&gt;: 경고 무시하고 실행해라&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt;: 텍스트 검색 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; 다음으로 이동 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N&lt;/code&gt; 이전으로 이동&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:%s/!/#/g&lt;/code&gt;: 모든 단어를 변경 ! -&amp;gt; #
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:%s/!/#/gc&lt;/code&gt;: 원하는 부분만 교체 가능하다 단어를 변경 ! -&amp;gt; #&lt;/p&gt;
+
+&lt;p&gt;일반모드 단축키 h,j,k,l ctrl+g 정보 확인, 0 맨앞, $ 맨뒤, gg 맨처음, G 맨 마지막&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;: 한칸씩 삭제
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;숫자 + x&lt;/code&gt;: 여러칸 삭제
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dd&lt;/code&gt;: 한줄 지우기
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;숫자 + dd&lt;/code&gt;: 여러줄 지우기
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;u&lt;/code&gt;: 이전 작업 취소&lt;/p&gt;
+
+&lt;p&gt;비주얼 모드 블록지정 삭제 복사 붙여넣기
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt;: 복사하다
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt;: 붙여넣기
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;V&lt;/code&gt;: 비주얼 모드로 전환 줄 단위로 블록 지정
+  ``: 잘라내기&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Vim 공식 사용 설명서: &lt;a href=&quot;https://vimhelp.org/#help.txt&quot;&gt;https://vimhelp.org/#help.txt&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Vim을 게임처럼 재미있게 배울 수 있는 사이트: &lt;a href=&quot;https://vim-adventures.com/&quot;&gt;https://vim-adventures.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets\built\images\vim_normal.PNG&quot; alt=&quot;기본모드&quot; /&gt;
+&lt;img src=&quot;/assets\built\images\vim_insert.PNG&quot; alt=&quot;입력모드&quot; /&gt;
+&lt;img src=&quot;/assets\built\images\vim_command.PNG&quot; alt=&quot;명령모드&quot; /&gt;
+&lt;img src=&quot;/assets\built\images\vim_visual.PNG&quot; alt=&quot;비주얼모드&quot; /&gt;&lt;/p&gt;</content>
 
       
       

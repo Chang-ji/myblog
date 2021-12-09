@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Goggle Settings -->
+    <meta name="google-site-verification" content="7yR-TCX2OMUAt8Kfo5Y0xtm_jAjZsJ1LK5gy_RWivA4" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>SQL</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+
+    <!-- custom.css -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- 웹폰트 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+    <!-- syntax.css 추가 -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="작업 향상 개선을 위한 블로그" />
+    <link rel="shortcut icon" href="https://Chang-ji.github.io/assets/built/images/favicon.jpg" type="image/png" />
+    <link rel="canonical" href="https://Chang-ji.github.io/SQL-JOIN" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Code Training" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SQL" />
+    <meta property="og:description" content="✹ MySQL DB 부분에 대해서 학습합니다. SQL-JOIN ✽ MySQL 단축키 Ctrl + Enter: 세미클론(;)으로 분리된 쿼리 실행 Ctrl + Shift + Enter: 마우스로 선택된 분리된 쿼리를 여러개 실행 Ctrl + T: 새로운 쿼리 에디터 열기 Ctrl + Shift + O: 저장된 스크립트파일(*.sql) 열기 Ctrl + B: 쿼리 정렬 Ctrl +" />
+    <meta property="og:url" content="https://Chang-ji.github.io/SQL-JOIN" />
+    <meta property="og:image" content="https://Chang-ji.github.io/assets/built/images/bus.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2021-10-19T09:00:00+09:00" />
+    <meta property="article:modified_time" content="2021-10-19T09:00:00+09:00" />
+    <meta property="article:tag" content="Sql" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SQL" />
+    <meta name="twitter:description" content="✹ MySQL DB 부분에 대해서 학습합니다. SQL-JOIN ✽ MySQL 단축키 Ctrl + Enter: 세미클론(;)으로 분리된 쿼리 실행 Ctrl + Shift + Enter: 마우스로 선택된 분리된 쿼리를 여러개 실행 Ctrl + T: 새로운 쿼리 에디터 열기 Ctrl + Shift + O: 저장된 스크립트파일(*.sql) 열기 Ctrl + B: 쿼리 정렬 Ctrl +" />
+    <meta name="twitter:url" content="https://Chang-ji.github.io/" />
+    <meta name="twitter:image" content="https://Chang-ji.github.io/assets/built/images/bus.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Code Training" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Sql" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Code Training",
+        "logo": "https://Chang-ji.github.io/"
+    },
+    "url": "https://Chang-ji.github.io/SQL-JOIN",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://Chang-ji.github.io/assets/built/images/bus.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://Chang-ji.github.io/SQL-JOIN"
+    },
+    "description": "✹ MySQL DB 부분에 대해서 학습합니다. SQL-JOIN ✽ MySQL 단축키 Ctrl + Enter: 세미클론(;)으로 분리된 쿼리 실행 Ctrl + Shift + Enter: 마우스로 선택된 분리된 쿼리를 여러개 실행 Ctrl + T: 새로운 쿼리 에디터 열기 Ctrl + Shift + O: 저장된 스크립트파일(*.sql) 열기 Ctrl + B: 쿼리 정렬 Ctrl +"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="SQL" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="https://Chang-ji.github.io/">Code Training</a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-markdown" role="menuitem"><a href="/tag/markdown/">markdown</a></li>
+    <li class="nav-vue" role="menuitem"><a href="/tag/vue/">vue</a></li>
+    <li class="nav-vue" role="menuitem"><a href="/tag/FrontEnd/">FrontEnd</a></li>
+    <li class="nav-vue" role="menuitem"><a href="/tag/Spring/">Spring</a></li>
+    <li class="nav-vue" role="menuitem"><a href="/tag/Startbucks/">Startbucks</a></li>
+    <li class="nav-vue" role="menuitem"><a href="/tag/Linux/">Linux</a></li>
+    <li class="nav-vue" role="menuitem"><a href="/tag/SQL/">SQL</a></li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/archive.html">All Posts</a>
+    </li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/author_archive.html">Tag별 Posts</a>
+    </li>
+</ul>
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+            <a class="subscribe-button" href="#subscribe">Search</a>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-sql post ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="19 October 2021">19 October 2021</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/sql/'>SQL</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">SQL</h1>
+            </header>
+            
+            <!--
+            
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/bus.jpg)">
+            </figure>
+            
+            -->
+
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <h2 id="-mysql-db-부분에-대해서-학습합니다">✹ MySQL DB 부분에 대해서 학습합니다.</h2>
+
+<p><span class="table-of-contents-list"></span></p>
+<ul class="table-of-contents-list">
+    <li><a href="./SQL-JOIN">SQL-JOIN</a></li>
+</ul>
+
+<h3 id="-mysql-단축키">✽ MySQL 단축키</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Enter</code>: 세미클론(;)으로 분리된 쿼리 실행</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + Enter</code>: 마우스로 선택된 분리된 쿼리를 여러개 실행</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + T</code>: 새로운 쿼리 에디터 열기</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + O</code>: 저장된 스크립트파일(*.sql) 열기</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + B</code>: 쿼리 정렬</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + R</code>: Reverse Engineer DATABASE</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl + /</code>: 쿼리 주석</li>
+</ul>
+
+<h3 id="-데이터베이스-생성하기">✽ 데이터베이스 생성하기</h3>
+
+<p>쿼리창에 작성하자</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">copang_main</span>
+</code></pre></div></div>
+
+<h3 id="-sys-데이터-베이스">✽ sys 데이터 베이스</h3>
+<ul>
+  <li>MySQL 서버의 성능 관련 정보들을 갖고 있는 데이터베이스</li>
+  <li>DBMS가 성능 저하 없이 효율적으로 작업을 처리하고 있는 지 체크</li>
+</ul>
+
+<h3 id="-데이터-베이스-테이블-생성하기">✽ 데이터 베이스 테이블 생성하기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">USE</span> <span class="n">copang_main</span><span class="p">;</span> <span class="c1">-- 특정 데이터베이스 사용</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="nv">`member`</span> <span class="p">(</span> <span class="c1">-- 데이터베이스에 테이블 생성</span>
+  <span class="nv">`id`</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="nv">`email`</span> <span class="nb">text</span><span class="p">,</span>
+  <span class="nv">`age`</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="nv">`gender`</span> <span class="nb">text</span><span class="p">,</span>
+  <span class="nv">`height`</span> <span class="nb">double</span><span class="p">,</span>
+  <span class="nv">`weight`</span> <span class="nb">double</span><span class="p">,</span>
+  <span class="nv">`birthday`</span> <span class="nb">date</span><span class="p">,</span>
+  <span class="nv">`sign_up_day`</span> <span class="nb">date</span><span class="p">,</span>
+  <span class="nv">`address`</span> <span class="nb">text</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="nv">`id`</span><span class="p">)</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span> <span class="k">COLLATE</span><span class="o">=</span><span class="n">utf8mb4_0900_ai_ci</span><span class="p">;</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="nv">`member`</span> <span class="p">(</span><span class="nv">`id`</span><span class="p">,</span> <span class="nv">`email`</span><span class="p">,</span> <span class="nv">`age`</span><span class="p">,</span> <span class="nv">`gender`</span><span class="p">,</span> <span class="nv">`height`</span><span class="p">,</span> <span class="nv">`weight`</span><span class="p">,</span> <span class="nv">`birthday`</span><span class="p">,</span> <span class="nv">`sign_up_day`</span><span class="p">,</span> <span class="nv">`address`</span><span class="p">)</span> <span class="k">VALUES</span> 
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">'codeit@naver.com'</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="s1">'m'</span><span class="p">,</span><span class="mi">178</span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="s1">'1992-01-03'</span><span class="p">,</span><span class="s1">'2019-03-26'</span><span class="p">,</span><span class="s1">'서울특별시 중구 삼일대로 343 103호'</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">'korin02@google.com'</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="s1">'m'</span><span class="p">,</span><span class="mi">165</span><span class="p">.</span><span class="mi">7</span><span class="p">,</span><span class="mi">67</span><span class="p">.</span><span class="mi">3</span><span class="p">,</span><span class="s1">'1992-08-13'</span><span class="p">,</span><span class="s1">'2019-02-27'</span><span class="p">,</span><span class="s1">'서울특별시 중구 세종대로 110 502호'</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s1">'cowboy@codeit.kr'</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="s1">'m'</span><span class="p">,</span><span class="k">NULL</span><span class="p">,</span><span class="mi">70</span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="s1">'1990-01-03'</span><span class="p">,</span><span class="s1">'2019-01-05'</span><span class="p">,</span><span class="s1">'경기도 고양시 일산서구 고양대로 633 204동 203호'</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">'get_flower@naver.com'</span><span class="p">,</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="s1">'f'</span><span class="p">,</span><span class="mi">183</span><span class="p">.</span><span class="mi">5</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="s1">'1975-03-12'</span><span class="p">,</span><span class="s1">'2018-11-29'</span><span class="p">,</span><span class="k">NULL</span><span class="p">)</span> <span class="c1">-- 테이블에 값 삽입</span>
+</code></pre></div></div>
+
+<h3 id="-생성된-테이블-살펴보기">✽ 생성된 테이블 살펴보기</h3>
+
+<blockquote>
+  <p>데이터 타입<br />
+<code class="language-plaintext highlighter-rouge">INT</code> : 정수형<br />
+<code class="language-plaintext highlighter-rouge">DOUBLE</code> : 실수형<br />
+<code class="language-plaintext highlighter-rouge">TEXT</code> : 문자형</p>
+</blockquote>
+
+<h3 id="-primary-key-설정하기">✽ Primary Key 설정하기</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">primary key</code> : 테이블에서 하나의 row를 고유하게 식별할 수 있도록 해주는 column</li>
+  <li><code class="language-plaintext highlighter-rouge">Not Null</code> : 이 컬럼에는 반드시 어떤 값이 들어있어야 한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">Auto Increment</code> : row가 추가될 때마다 id 컬럼에 이전보다 1이 더 큰 정수를 자동으로 넣어주는 기능</li>
+  <li>날짜 관련 타입은 DATE 타입으로 설정하자</li>
+</ul>
+
+<h3 id="-데이터-조회의-핵심-select와-where">✽ 데이터 조회의 핵심, SELECT와 WHERE</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">email</span><span class="p">,</span> <span class="n">age</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">where</span> <span class="n">email</span> <span class="o">=</span> <span class="s1">'taehos@hanmail.net'</span><span class="p">;</span> <span class="c1">-- 이메일 주소가 같은 row 조회</span>
+</code></pre></div></div>
+
+<h3 id="-sql-작성-형식에-관한-이야기">✽ SQL 작성 형식에 관한 이야기</h3>
+<ul>
+  <li>SQL 문 끝에는 항상 세미콜론을 써줘야합니다.</li>
+  <li>SQL 문 안에는 공백이나 개행 등을 자유롭게 넣을 수 있습니다.</li>
+  <li>SQL 문의 대소문자 구분 문자(예약어는 대문자)</li>
+  <li>데이터베이스 이름과 테이블 이름을 함께 쓰자</li>
+</ul>
+
+<h3 id="-조건을-나타내는-다양한-방법">✽ 조건을 나타내는 다양한 방법</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">age</span> <span class="k">BETWEEN</span> <span class="mi">30</span> <span class="k">AND</span> <span class="mi">39</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">age</span> <span class="k">NOT</span> <span class="k">BETWEEN</span> <span class="mi">30</span> <span class="k">AND</span> <span class="mi">39</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">sign_up_day</span> <span class="o">&gt;</span> <span class="s1">'2019-01-01'</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">sign_up_day</span> <span class="k">BETWEEN</span> <span class="s1">'2018-01-01'</span> <span class="k">AND</span> <span class="s1">'2018-12-31'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-문자열-패턴-매칭-조건">✽ 문자열 패턴 매칭 조건</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">address</span> <span class="k">LIKE</span> <span class="s1">'서울%'</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">address</span> <span class="k">LIKE</span> <span class="s1">'%고양시%'</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">address</span> <span class="k">LIKE</span> <span class="s1">'%103호'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-그밖에-알아야할-조건-표현식">✽ 그밖에 알아야할 조건 표현식</h3>
+<ol>
+  <li>같지 않음(!=, &lt;&gt;)</li>
+  <li>이 중에 있는~ (IN) 연속된 범위가 아님</li>
+  <li>한 글자를 나타내는_</li>
+</ol>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">gender</span> <span class="o">!=</span><span class="s1">'m'</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">age</span> <span class="k">IN</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">email</span> <span class="k">LIKE</span> <span class="s1">'c_____@%'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-data-데이터-타입-관련-함수">✽ DATA 데이터 타입 관련 함수</h3>
+
+<ul>
+  <li>연도, 월, 일 추출하기
+    <ul>
+      <li>1992년에 태어난 회원들만 조회하기
+        <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="nb">YEAR</span><span class="p">(</span><span class="n">birthday</span><span class="p">)</span> <span class="o">=</span> <span class="s1">'1992'</span><span class="p">;</span>
+</code></pre></div>        </div>
+      </li>
+      <li>여름(6, 7, 8월)에 가입한 회원들만 조회하기
+        <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="k">MONTH</span><span class="p">(</span><span class="n">sign_up_day</span><span class="p">)</span> <span class="k">IN</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">);</span>
+</code></pre></div>        </div>
+      </li>
+      <li>각 달의 후반부(15일~31일)에 가입했던 회원들만 조회하기
+        <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">DAYOFMONTH</span><span class="p">(</span><span class="n">sign_up_day</span><span class="p">)</span> <span class="k">BETWEEN</span> <span class="mi">15</span> <span class="k">AND</span> <span class="mi">31</span><span class="p">;</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>날짜 간의 차이 구하기</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">email</span><span class="p">,</span> <span class="n">sign_up_day</span><span class="p">,</span> <span class="n">DATEDIFF</span><span class="p">(</span><span class="n">sign_up_day</span><span class="p">,</span> <span class="s1">'2019-01-01'</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="n">email</span><span class="p">,</span> <span class="n">sign_up_day</span><span class="p">,</span> <span class="n">CURDATE</span><span class="p">(),</span> <span class="n">DATEDIFF</span><span class="p">(</span><span class="n">sign_up_day</span><span class="p">,</span> <span class="n">CURDATE</span><span class="p">())</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="n">email</span><span class="p">,</span> <span class="n">sign_up_day</span><span class="p">,</span> <span class="n">DATEDIFF</span><span class="p">(</span><span class="n">sign_up_day</span><span class="p">,</span> <span class="n">birthday</span><span class="p">)</span> <span class="o">/</span><span class="mi">365</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>날짜 더하기 빼기</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">email</span><span class="p">,</span> <span class="n">sign_up_day</span><span class="p">,</span> <span class="n">DATE_ADD</span><span class="p">(</span><span class="n">sign_up_day</span><span class="p">,</span> <span class="n">INTERVAL</span> <span class="mi">300</span> <span class="k">DAY</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="n">email</span><span class="p">,</span> <span class="n">sign_up_day</span><span class="p">,</span> <span class="n">DATE_SUB</span><span class="p">(</span><span class="n">sign_up_day</span><span class="p">,</span> <span class="n">INTERVAL</span> <span class="mi">250</span> <span class="k">DAY</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div></div>
+<ul>
+  <li>UNIX Timestamp 값(1970년 1월 1일 기준으로 몇초가 지났는지)</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">email</span><span class="p">,</span> <span class="n">sign_up_day</span><span class="p">,</span> <span class="n">UNIX_TIMESTAMP</span><span class="p">(</span><span class="n">sign_up_day</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="n">email</span><span class="p">,</span> <span class="n">sign_up_day</span><span class="p">,</span> <span class="n">FROM_UNIXTIME</span><span class="p">(</span><span class="n">UNIX_TIMESTAMP</span><span class="p">(</span><span class="n">sign_up_day</span><span class="p">))</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-여러-개의-조건-걸기">✽ 여러 개의 조건 걸기</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> 
+<span class="k">WHERE</span> <span class="n">gender</span> <span class="o">=</span> <span class="s1">'m'</span> 
+	<span class="k">AND</span> <span class="n">address</span> <span class="k">LIKE</span> <span class="s1">'서울%'</span> 
+    <span class="k">AND</span> <span class="n">age</span> <span class="k">BETWEEN</span> <span class="mi">25</span> <span class="k">AND</span> <span class="mi">29</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> 
+<span class="k">WHERE</span> <span class="k">MONTH</span><span class="p">(</span><span class="n">sign_up_day</span><span class="p">)</span> <span class="k">BETWEEN</span> <span class="mi">3</span> <span class="k">AND</span> <span class="mi">5</span> 
+	<span class="k">OR</span> <span class="k">MONTH</span><span class="p">(</span><span class="n">sign_up_day</span><span class="p">)</span> <span class="k">BETWEEN</span> <span class="mi">9</span> <span class="k">AND</span> <span class="mi">11</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span>
+<span class="k">WHERE</span> <span class="p">(</span><span class="n">gender</span> <span class="o">=</span> <span class="s1">'m'</span> <span class="k">AND</span> <span class="n">height</span> <span class="o">&gt;=</span> <span class="mi">180</span><span class="p">)</span> 
+	<span class="k">OR</span> <span class="p">(</span><span class="n">gender</span> <span class="o">=</span> <span class="s1">'f'</span> <span class="k">AND</span> <span class="n">height</span> <span class="o">&gt;=</span> <span class="mi">170</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="or를-사용할-때의-주의사항">✽OR를 사용할 때의 주의사항</h3>
+<ol>
+  <li>OR를 사용할 때의 주의사항
+    <blockquote>
+      <p>SELECT * FROM copang_main.member WHERE id = 1 OR id =2;<br />
+SELECT * FROM copang_main.member WHERE id = 1 OR 2;<br />
+<code class="language-plaintext highlighter-rouge">위의 두 식이 의미하는 바는 틀리다</code><br />
+<strong>MySQL에서는 0을 False, 0 이외의 숫자는 모두 True</strong></p>
+    </blockquote>
+  </li>
+  <li>AND와 OR 간의 우선순위
+    <ul>
+      <li>AND가 OR보다 우선순위가 높다는 사실</li>
+      <li>아래의 두 식이 의미하는 바가 틀리다</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> 
+<span class="k">WHERE</span> <span class="n">gender</span> <span class="o">=</span> <span class="s1">'f'</span> <span class="k">OR</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">30</span> <span class="k">AND</span> <span class="n">height</span> <span class="o">&gt;</span> <span class="mi">180</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> 
+<span class="k">WHERE</span> <span class="p">(</span><span class="n">gender</span> <span class="o">=</span> <span class="s1">'f'</span> <span class="k">OR</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">)</span> <span class="k">AND</span> <span class="n">height</span> <span class="o">&gt;</span> <span class="mi">180</span>
+</code></pre></div></div>
+
+<h3 id="-문자열-패턴-매칭-조건을-사용할-때-주의할-점">✽ 문자열 패턴 매칭 조건을 사용할 때 주의할 점</h3>
+<ol>
+  <li>이스케이핑(escaping) 문제
+    <blockquote>
+      <p>백슬래시() + 표현식(%, /, ‘, “)로 입력시 문자열로 인식<br />
+표현식만 사용하면 문자열로 인식되지 않는다.</p>
+    </blockquote>
+  </li>
+  <li>대소문자 구분 문제
+    <blockquote>
+      <p>문자열의 대소문자 구분할려면 BINARY를 붙이자</p>
+    </blockquote>
+  </li>
+</ol>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">address</span> <span class="k">LIKE</span> <span class="nb">BINARY</span> <span class="s1">'%g%'</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">address</span> <span class="k">LIKE</span> <span class="nb">BINARY</span> <span class="s1">'%G%'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-데이터-정렬해서-보기">✽ 데이터 정렬해서 보기</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">height</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">height</span> <span class="k">ASC</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">height</span> <span class="k">DESC</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span>
+<span class="k">WHERE</span> <span class="n">gender</span> <span class="o">=</span> <span class="s1">'m'</span>
+	<span class="k">AND</span> <span class="n">weight</span> <span class="o">&gt;=</span> <span class="mi">70</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">height</span> <span class="k">ASC</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="n">sign_up_day</span><span class="p">,</span> <span class="n">email</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="nb">YEAR</span><span class="p">(</span><span class="n">sign_up_day</span><span class="p">)</span> <span class="k">DESC</span><span class="p">,</span> <span class="n">email</span> <span class="k">ASC</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-각절의-작성-순서를-꼭-지켜주세요">✽ 각절의 작성 순서를 꼭 지켜주세요</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span>
+    <span class="p">[</span><span class="k">ALL</span> <span class="o">|</span> <span class="k">DISTINCT</span> <span class="o">|</span> <span class="n">DISTINCTROW</span> <span class="p">]</span>
+    <span class="p">[</span><span class="n">HIGH_PRIORITY</span><span class="p">]</span>
+    <span class="p">[</span><span class="n">STRAIGHT_JOIN</span><span class="p">]</span>
+    <span class="p">[</span><span class="n">SQL_SMALL_RESULT</span><span class="p">]</span> <span class="p">[</span><span class="n">SQL_BIG_RESULT</span><span class="p">]</span> <span class="p">[</span><span class="n">SQL_BUFFER_RESULT</span><span class="p">]</span>
+    <span class="p">[</span><span class="n">SQL_NO_CACHE</span><span class="p">]</span> <span class="p">[</span><span class="n">SQL_CALC_FOUND_ROWS</span><span class="p">]</span>
+    <span class="n">select_expr</span> <span class="p">[,</span> <span class="n">select_expr</span><span class="p">]</span> <span class="p">...</span>
+    <span class="p">[</span><span class="n">into_option</span><span class="p">]</span>
+    <span class="p">[</span><span class="k">FROM</span> <span class="n">table_references</span>
+      <span class="p">[</span><span class="n">PARTITION</span> <span class="n">partition_list</span><span class="p">]]</span>
+    <span class="p">[</span><span class="k">WHERE</span> <span class="n">where_condition</span><span class="p">]</span>
+    <span class="p">[</span><span class="k">GROUP</span> <span class="k">BY</span> <span class="err">{</span><span class="n">col_name</span> <span class="o">|</span> <span class="n">expr</span> <span class="o">|</span> <span class="k">position</span><span class="err">}</span><span class="p">,</span> <span class="p">...</span> <span class="p">[</span><span class="k">WITH</span> <span class="k">ROLLUP</span><span class="p">]]</span>
+    <span class="p">[</span><span class="k">HAVING</span> <span class="n">where_condition</span><span class="p">]</span>
+    <span class="p">[</span><span class="n">WINDOW</span> <span class="n">window_name</span> <span class="k">AS</span> <span class="p">(</span><span class="n">window_spec</span><span class="p">)</span>
+        <span class="p">[,</span> <span class="n">window_name</span> <span class="k">AS</span> <span class="p">(</span><span class="n">window_spec</span><span class="p">)]</span> <span class="p">...]</span>
+    <span class="p">[</span><span class="k">ORDER</span> <span class="k">BY</span> <span class="err">{</span><span class="n">col_name</span> <span class="o">|</span> <span class="n">expr</span> <span class="o">|</span> <span class="k">position</span><span class="err">}</span>
+      <span class="p">[</span><span class="k">ASC</span> <span class="o">|</span> <span class="k">DESC</span><span class="p">],</span> <span class="p">...</span> <span class="p">[</span><span class="k">WITH</span> <span class="k">ROLLUP</span><span class="p">]]</span>
+    <span class="p">[</span><span class="k">LIMIT</span> <span class="err">{</span><span class="p">[</span><span class="k">offset</span><span class="p">,]</span> <span class="k">row_count</span> <span class="o">|</span> <span class="k">row_count</span> <span class="k">OFFSET</span> <span class="k">offset</span><span class="err">}</span><span class="p">]</span>
+    <span class="p">[</span><span class="n">into_option</span><span class="p">]</span>
+    <span class="p">[</span><span class="k">FOR</span> <span class="err">{</span><span class="k">UPDATE</span> <span class="o">|</span> <span class="k">SHARE</span><span class="err">}</span>
+        <span class="p">[</span><span class="k">OF</span> <span class="n">tbl_name</span> <span class="p">[,</span> <span class="n">tbl_name</span><span class="p">]</span> <span class="p">...]</span>
+        <span class="p">[</span><span class="n">NOWAIT</span> <span class="o">|</span> <span class="n">SKIP</span> <span class="n">LOCKED</span><span class="p">]</span>
+      <span class="o">|</span> <span class="k">LOCK</span> <span class="k">IN</span> <span class="k">SHARE</span> <span class="k">MODE</span><span class="p">]</span>
+    <span class="p">[</span><span class="n">into_option</span><span class="p">]</span>
+
+<span class="n">into_option</span><span class="p">:</span> <span class="err">{</span>
+    <span class="k">INTO</span> <span class="n">OUTFILE</span> <span class="s1">'file_name'</span>
+        <span class="p">[</span><span class="nb">CHARACTER</span> <span class="k">SET</span> <span class="n">charset_name</span><span class="p">]</span>
+        <span class="n">export_options</span>
+  <span class="o">|</span> <span class="k">INTO</span> <span class="n">DUMPFILE</span> <span class="s1">'file_name'</span>
+  <span class="o">|</span> <span class="k">INTO</span> <span class="n">var_name</span> <span class="p">[,</span> <span class="n">var_name</span><span class="p">]</span> <span class="p">...</span>
+<span class="err">}</span>
+</code></pre></div></div>
+<blockquote>
+  <p>SELECT -&gt; FROM -&gt; WHERE -&gt; GROUP BY -&gt; HAVING -&gt; WINDOW -&gt; ORDER BY -&gt; LIMIT -&gt; FOR<br />
+SQL문은 위의 순서를 지켜주어야 한다.</p>
+</blockquote>
+
+<h3 id="-정렬할-때-주의할-점">✽ 정렬할 때 주의할 점</h3>
+<ul>
+  <li>정렬할 때 타입이 숫자형(INT), 문자형(TEXT) 인지 인지하고 정렬해야한다.</li>
+  <li>타입이 맞지 않을 때는 CAST() 함수를 사용하여 일시적 타입변환한 것을 기준을 정렬한다.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">FOR_TEST</span><span class="p">.</span><span class="n">ordering_test</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="k">data</span> <span class="k">ASC</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">FOR_TEST</span><span class="p">.</span><span class="n">ordering_test</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="k">data</span> <span class="k">ASC</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">FOR_TEST</span><span class="p">.</span><span class="n">ordering_test</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="k">CAST</span><span class="p">(</span><span class="k">data</span> <span class="k">AS</span> <span class="nb">signed</span><span class="p">)</span> <span class="k">ASC</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-데이터-일부만-추려보기">✽ 데이터 일부만 추려보기</h3>
+<ul>
+  <li>row는 0번째부터 카운터 된다.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">sign_up_day</span> <span class="k">DESC</span>
+<span class="k">LIMIT</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">-- 10개 추려내기</span>
+
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">sign_up_day</span> <span class="k">DESC</span>
+<span class="k">LIMIT</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">-- 8번째 부터 2개 추려내기</span>
+</code></pre></div></div>
+
+<h3 id="-limit과-pagination심화">✽ LIMIT과 Pagination(심화)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1페이지 : SELECT * FROM db.search_result ~ ORDER BY registration_date DESC LIMIT 0, 10
+
+2페이지 : SELECT * FROM db.search_result ~ ORDER BY registration_date DESC LIMIT 10, 10
+
+3페이지 : SELECT * FROM db.search_result ~ ORDER BY registration_date DESC LIMIT 20, 10
+
+4페이지 : SELECT * FROM db.search_result ~ ORDER BY registration_date DESC LIMIT 30, 10
+</code></pre></div></div>
+<ul>
+  <li>우리가 새로운 페이지를 누르면 그때마다, 10개의 새로운 내용들을 로드(load)할 텐데요. 이런 걸 전문 용어로 ‘페이지네이션(Pagination)’이라고 합니다.</li>
+  <li>전체 결과를 한번에 로드하는 게 아니라 이렇게 페이지 단위로 쪼개서 그때그때 요청이 있을 때마다 부분 결과를 조금씩 로드하는 방식을 말하죠.</li>
+</ul>
+
+<h3 id="-데이터의-특성-구하기">✽ 데이터의 특성 구하기</h3>
+<ul>
+  <li>행의 개수 구하기(COUNT())</li>
+  <li>최댓값 구하기(MAX())</li>
+  <li>최솟값 구하기(MIN())</li>
+  <li>평균값 구하기(AVG())</li>
+  <li>Null 인 행렬은 포함하지 않는다.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">email</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">address</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="k">MAX</span><span class="p">(</span><span class="n">height</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="k">MIN</span><span class="p">(</span><span class="n">weight</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">weight</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-null을-다루는-방법">✽ NULL을 다루는 방법</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- address colum에 Null 있는 부분만 조회</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">address</span> <span class="k">IS</span> <span class="k">NULL</span><span class="p">;</span>
+
+<span class="c1">-- address colum에 Null 있지 않은 부분만 조회</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">address</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">;</span>
+
+<span class="c1">-- height, weight, address colum에 Null 있는 부분만 조회</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> 
+<span class="k">WHERE</span> <span class="n">address</span> <span class="k">IS</span> <span class="k">NULL</span>
+	<span class="k">OR</span> <span class="n">weight</span> <span class="k">IS</span> <span class="k">NULL</span>
+    <span class="k">OR</span> <span class="n">address</span> <span class="k">IS</span> <span class="k">NULL</span><span class="p">;</span>
+
+<span class="c1">-- COALESCE()를 사용하여 값이 null일때 다른 값으로 변경</span>
+<span class="k">SELECT</span>
+	<span class="n">COALESCE</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="s1">'####'</span><span class="p">),</span>
+    <span class="n">COALESCE</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span> <span class="s1">'---'</span><span class="p">),</span>
+    <span class="n">COALESCE</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="s1">'@@@'</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-null에-관해-알아야하는-사실">✽ NULL에 관해 알아야하는 사실</h3>
+<ul>
+  <li>IS NULL과 = NULL 은 다르다.</li>
+  <li>NULL은 어떤 값이 아니기 때문에 애초에 등호(=)를 사용해서 어떤 값과 비교할 수 있는 대상이 아닙니다.</li>
+  <li>반드시 IS NULL, IS NOT NULL로 사용하여야 한다.</li>
+  <li>NULL에는 어떤 연산을 해도 결국 NULL이다.</li>
+</ul>
+
+<h3 id="-이상한-값을-제외">✽ 이상한 값을 제외</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 이상값 제외하고 평균 구하기</span>
+<span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">age</span> <span class="k">BETWEEN</span> <span class="mi">5</span> <span class="k">AND</span> <span class="mi">100</span><span class="p">;</span>
+
+<span class="c1">-- 정상인 주소들만 추출</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">WHERE</span> <span class="n">address</span> <span class="k">LIKE</span> <span class="s1">'%호'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-컬럼끼리-계산하기">✽ 컬럼끼리 계산하기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- BMI 계산하여 추가하기</span>
+<span class="c1">-- 계산하는 값 중에 Null 이 있으면 계산된 것도 NUll</span>
+<span class="k">SELECT</span> <span class="n">email</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">weight</span> <span class="o">/</span> <span class="p">((</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">))</span> <span class="k">AS</span> <span class="n">BMI</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-컬럼에-alias-붙이기">✽ 컬럼에 alias 붙이기</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- Alias 추가하기</span>
+<span class="k">SELECT</span> 
+	<span class="n">email</span><span class="p">,</span> 
+    <span class="n">height</span> <span class="k">AS</span> <span class="err">키</span><span class="p">,</span> 
+    <span class="n">weight</span> <span class="k">AS</span> <span class="err">몸무게</span><span class="p">,</span> 
+    <span class="n">weight</span> <span class="o">/</span> <span class="p">((</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">))</span> <span class="k">AS</span> <span class="n">BMI</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="c1">-- AS를 안붙혀도 적용되지만 붙이는 것이 좋다.</span>
+<span class="k">SELECT</span> 
+	<span class="n">email</span><span class="p">,</span> 
+    <span class="n">height</span> <span class="err">키</span><span class="p">,</span> 
+    <span class="n">weight</span> <span class="err">몸무게</span><span class="p">,</span> 
+    <span class="n">weight</span> <span class="o">/</span> <span class="p">((</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">))</span> <span class="n">BMI</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="c1">-- CONCAT 함수를 사용하여서 값과 문자를 연결 시킬수 있다.</span>
+<span class="k">SELECT</span> 
+	<span class="n">email</span><span class="p">,</span> 
+    <span class="n">CONCAT</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="s1">'cm'</span><span class="p">,</span> <span class="s1">', '</span> <span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="s1">'kg'</span><span class="p">)</span> <span class="k">AS</span> <span class="s1">'키와 몸무게'</span><span class="p">,</span>
+    <span class="n">weight</span> <span class="o">/</span> <span class="p">((</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">))</span> <span class="n">BMI</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-컬럼의-값-변환해서-보기">✽ 컬럼의 값 변환해서 보기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- CASE 문을 통해서 새로운 컬럼을 만들어서 표시하였음</span>
+<span class="c1">-- CASE 문으로 만든 컬럼을 기준으로 정렬하였음</span>
+<span class="k">SELECT</span> 
+	<span class="n">email</span><span class="p">,</span> 
+    <span class="n">height</span> <span class="k">AS</span> <span class="err">키</span><span class="p">,</span> 
+    <span class="n">weight</span> <span class="k">AS</span> <span class="err">몸무게</span><span class="p">,</span> 
+    <span class="n">weight</span> <span class="o">/</span> <span class="p">((</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">))</span> <span class="k">AS</span> <span class="n">BMI</span><span class="p">,</span>
+<span class="p">(</span><span class="k">CASE</span>
+	<span class="k">WHEN</span> <span class="n">weight</span> <span class="k">IS</span> <span class="k">NULL</span> <span class="k">OR</span> <span class="n">height</span> <span class="k">is</span> <span class="k">NULL</span> <span class="k">THEN</span> <span class="s1">'비만 여부 알 수 없음'</span>
+    <span class="k">WHEN</span> <span class="n">weight</span> <span class="o">/</span> <span class="p">((</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">))</span> <span class="o">&gt;=</span> <span class="mi">25</span> <span class="k">THEN</span> <span class="s1">'과체중 또는 비만'</span>
+    <span class="k">WHEN</span> <span class="n">weight</span> <span class="o">/</span> <span class="p">((</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">))</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">.</span><span class="mi">5</span> <span class="k">AND</span> <span class="n">weight</span> <span class="o">/</span> <span class="p">((</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">25</span> <span class="k">THEN</span> <span class="s1">'정상'</span>
+    <span class="k">ELSE</span> <span class="s1">'저체중'</span>
+<span class="k">END</span><span class="p">)</span> <span class="k">AS</span> <span class="n">obesity_check</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">obesity_check</span> <span class="k">ASC</span><span class="p">;</span>
+
+
+<span class="c1">-- CASE 문으로 age 29, 30일때 변경</span>
+<span class="k">SELECT</span>
+	<span class="n">email</span><span class="p">,</span>
+    <span class="p">(</span><span class="k">CASE</span> <span class="n">age</span>
+		<span class="k">WHEN</span> <span class="mi">29</span> <span class="k">THEN</span> <span class="s1">'스물 아홉 살'</span>
+        <span class="k">WHEN</span> <span class="mi">30</span> <span class="k">THEN</span> <span class="s1">'서른 살'</span>
+        <span class="k">ELSE</span> <span class="n">age</span>
+	<span class="k">END</span><span class="p">)</span> <span class="k">AS</span> <span class="err">나이</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-null을-다른-값으로-변환하는-다양한-함수">✽ NULL을 다른 값으로 변환하는 다양한 함수</h3>
+<ul>
+  <li>COALESCE 함수</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">COALESCE</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="s1">'N/A'</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="c1">-- height, weight 둘다 Null 경우만 대체된다.</span>
+<span class="k">SELECT</span> <span class="n">COALESCE</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">weight</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s1">'N/A'</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>IFNULL 함수</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">--  height 컬럼이 NULL이면 'N/A'를 출력하고, NULL이 아니면 height 컬럼의 값 출력</span>
+<span class="k">SELECT</span> <span class="n">IFNULL</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="s1">'N/A'</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>IF 함수</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">--  IF 함수는 첫번째 인자 True라면 두 번째 인자를 리턴하고, False라면 세 번째 인자를 리턴합니다.</span>
+<span class="k">SELECT</span> <span class="n">IF</span><span class="p">(</span><span class="n">height</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span><span class="s1">'N/A'</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>CASE 함수</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">--  CASE 함수로도 NULL을 적절한 값으로 변환해서 나타낼 수 있습니다. </span>
+<span class="k">SELECT</span>
+	<span class="k">CASE</span>
+		<span class="k">WHEN</span> <span class="n">height</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">THEN</span> <span class="n">height</span>
+        <span class="k">ELSE</span> <span class="s1">'N/A'</span>
+	<span class="k">END</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-alias를-붙이고-바로-쓸-수-없는-이유">✽ alias를 붙이고 바로 쓸 수 없는 이유</h3>
+
+<ul>
+  <li>띄어쓰기(스페이스)가 포함된 aliase에는 따옴표를 붙여줘야 합니다.</li>
+  <li>SELECT 절에서 설정한 alias를 바로 사용할 수 없습니다.</li>
+</ul>
+
+<h3 id="-고유값만-보기distinct-함수-이용">✽ 고유값만 보기(DISTINCT 함수 이용)</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 고유한 값들 확인(중복되는 값 제외)</span>
+<span class="k">SELECT</span> <span class="k">DISTINCT</span><span class="p">(</span><span class="n">gender</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="c1">-- 특정 문자 기준으로 고유값(앞에 문자 2개 추출)</span>
+<span class="k">SELECT</span> <span class="k">DISTINCT</span><span class="p">(</span><span class="k">SUBSTRING</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="c1">-- 고유값의 개수 구하기(COUNT 함수 활용)</span>
+<span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="p">(</span><span class="n">gender</span><span class="p">))</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="p">(</span><span class="k">SUBSTRING</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-문자열에-관한-함수들">✽ 문자열에 관한 함수들</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- LENGTH 함수: 문자의 길이를 구해준다.</span>
+<span class="k">SELECT</span> <span class="o">*</span><span class="p">,</span> <span class="k">LENGTH</span><span class="p">(</span><span class="n">address</span><span class="p">)</span> <span class="k">AS</span> <span class="n">address_len</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="c1">-- UPPER 함수: 문자열을 모두 대문자로 바꿔준다.</span>
+<span class="k">SELECT</span> <span class="n">email</span><span class="p">,</span> <span class="k">UPPER</span><span class="p">(</span><span class="n">email</span><span class="p">)</span> <span class="k">AS</span> <span class="n">upper_email</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="c1">-- LOWER 함수: 문자열을 모두 소문자로 바꿔준다.</span>
+<span class="k">SELECT</span> <span class="n">email</span><span class="p">,</span> <span class="k">LOWER</span><span class="p">(</span><span class="n">email</span><span class="p">)</span> <span class="k">AS</span> <span class="n">lower_email</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="c1">-- LPAD 함수: 왼쪽 채우기</span>
+<span class="k">SELECT</span> <span class="n">email</span><span class="p">,</span> <span class="n">LPAD</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">'0'</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="c1">-- RPAD 함수: 오른쪽 채우기</span>
+<span class="k">SELECT</span> <span class="n">email</span><span class="p">,</span> <span class="n">RPAD</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">'!'</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="c1">-- TRIM 함수: 양쪽 공백 제거</span>
+<span class="k">SELECT</span> <span class="k">TRIM</span><span class="p">(</span><span class="n">address</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="c1">-- LTRIM 함수: 왼쪽 공백 제거</span>
+<span class="k">SELECT</span> <span class="n">LTRIM</span><span class="p">(</span><span class="n">address</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+
+<span class="c1">-- RTRIM  함수: 오른쪽 공백 제거</span>
+<span class="k">SELECT</span> <span class="n">RTRIM</span><span class="p">(</span><span class="n">address</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-그루핑해서-보기">✽ 그루핑해서 보기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- GROUP BY를 사용하면 각각의 row는 여러개의 row를 나타내게 된다.</span>
+<span class="c1">-- 함수는 그룹별로 작동하게 된다.</span>
+<span class="c1">-- 테이블 전체가 아니라 각 그룹에 대해서 함수가 작동하게 된다.</span>
+<span class="k">SELECT</span> 
+	<span class="n">gender</span><span class="p">,</span> 
+    <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> 
+    <span class="k">AVG</span><span class="p">(</span><span class="n">height</span><span class="p">),</span>
+    <span class="k">MIN</span><span class="p">(</span><span class="n">weight</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> 
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">gender</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- GROUP BY를 통해서 그룹에 대한 기준을 정할 수 있다.</span>
+<span class="c1">-- 그룹핑 기준은 2개이상 이여도 된다.</span>
+<span class="c1">-- 더 세부적으로 그룹을 나눌 수 있다.</span>
+<span class="k">SELECT</span> 
+	<span class="k">SUBSTRING</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">AS</span> <span class="n">region</span><span class="p">,</span>
+	<span class="n">gender</span><span class="p">,</span> 
+    <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> 
+    <span class="k">AVG</span><span class="p">(</span><span class="n">height</span><span class="p">),</span>
+    <span class="k">MIN</span><span class="p">(</span><span class="n">weight</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> 
+<span class="k">GROUP</span> <span class="k">BY</span> 
+	<span class="k">SUBSTRING</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+	<span class="n">gender</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- HAVING 통해서 선별하여 조회할 수 있다.</span>
+<span class="c1">-- GROUP BY 이후에는 WHERE 사용하지 못하고 HAVING을 사용하여서 조회해야한다.</span>
+<span class="k">SELECT</span> 
+	<span class="k">SUBSTRING</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">AS</span> <span class="n">region</span><span class="p">,</span>
+	<span class="n">gender</span><span class="p">,</span> 
+    <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> 
+    <span class="k">AVG</span><span class="p">(</span><span class="n">height</span><span class="p">),</span>
+    <span class="k">MIN</span><span class="p">(</span><span class="n">weight</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> 
+<span class="k">GROUP</span> <span class="k">BY</span> 
+	<span class="k">SUBSTRING</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+	<span class="n">gender</span>
+<span class="k">HAVING</span> 
+	<span class="n">region</span> <span class="o">=</span> <span class="s1">'서울'</span>
+    <span class="k">AND</span> <span class="n">gender</span> <span class="o">=</span> <span class="s1">'m'</span><span class="p">;</span>
+
+<span class="c1">-- HAVING 뒤에 ORDER BY 사용해서 정렬 가능하다.    </span>
+<span class="k">SELECT</span> 
+	<span class="k">SUBSTRING</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">AS</span> <span class="n">region</span><span class="p">,</span>
+	<span class="n">gender</span><span class="p">,</span> 
+    <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> 
+    <span class="k">AVG</span><span class="p">(</span><span class="n">height</span><span class="p">),</span>
+    <span class="k">MIN</span><span class="p">(</span><span class="n">weight</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> 
+<span class="k">GROUP</span> <span class="k">BY</span> 
+	<span class="k">SUBSTRING</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+	<span class="n">gender</span>
+<span class="k">HAVING</span> 
+	<span class="n">region</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span>
+    <span class="k">AND</span> <span class="n">region</span> <span class="o">!=</span> <span class="s1">'어린'</span>
+<span class="k">ORDER</span> <span class="k">BY</span>
+	<span class="n">region</span> <span class="k">ASC</span><span class="p">,</span>
+    <span class="n">gender</span> <span class="k">DESC</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- WITH ROLLUP을 사용하면 부분 총계 ROW를 얻을 수 있다.</span>
+<span class="c1">-- GROUP BY 의 순서에 따라서 기준이 틀려져서 값이 다르게 나올 수도 있다.</span>
+<span class="c1">-- GROUPING 함수를 사용하여서 NULL 값이 WITH ROLLUP 의해서 나타나는 NULL 인지 판단할 수 있다.</span>
+<span class="k">SELECT</span> 
+	<span class="k">SUBSTRING</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">AS</span> <span class="n">region</span><span class="p">,</span>
+	<span class="n">gender</span><span class="p">,</span> 
+    <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> 
+    <span class="k">AVG</span><span class="p">(</span><span class="n">height</span><span class="p">),</span>
+    <span class="k">MIN</span><span class="p">(</span><span class="n">weight</span><span class="p">),</span>
+    <span class="k">GROUPING</span><span class="p">(</span><span class="n">gender</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> 
+<span class="k">GROUP</span> <span class="k">BY</span> 
+	<span class="k">SUBSTRING</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+	<span class="n">gender</span>
+<span class="k">WITH</span> <span class="k">ROLLUP</span>
+<span class="k">HAVING</span> 
+	<span class="n">region</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span>
+    <span class="k">AND</span> <span class="n">region</span> <span class="o">!=</span> <span class="s1">'어린'</span>
+<span class="k">ORDER</span> <span class="k">BY</span>
+	<span class="n">region</span> <span class="k">ASC</span><span class="p">,</span>
+    <span class="n">gender</span> <span class="k">DESC</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-select-문의-실행-순서">✽ SELECT 문의 실행 순서</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#  작성순서
+1. SELECT
+2. FROM
+3. WHERE
+4. GROUP BY
+5. HAVING
+6. ORDER BY
+7. LIMIT
+
+#  실행순서
+1. FROM
+2. WHERE
+3. GROUP BY
+4. HAVING
+5. SELECT
+6. ORDER BY
+7. LIMIT
+</code></pre></div></div>
+
+<h3 id="-foreign-key-개념">✽ Foreign Key 개념</h3>
+<ul>
+  <li>현재 테이블에서 다른 테이블을 식별할 수 있는 요소</li>
+  <li>다른 테이블에 없는 값을 현재 테이블에 추가 되는 것을 방지</li>
+  <li>참조하는 테이블에서 Foreign Key 설정</li>
+</ul>
+
+<h3 id="-다른-종류의-테이블-조인하기">✽ 다른 종류의 테이블 조인하기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- LEFT OUTER JOIN 왼쪽테이블 기준으로 stock 테이블을 합쳐라</span>
+<span class="c1">-- ON을 기준을 왼쪽으로 합친다.</span>
+<span class="c1">-- 조회된 값을 보면 id컬럼과 item_id컬럼은 같다.</span>
+<span class="c1">-- item_id가 null 값이 생긴다.</span>
+<span class="k">SELECT</span>
+	<span class="n">item</span><span class="p">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">item</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">stock</span><span class="p">.</span><span class="n">item_id</span><span class="p">,</span>
+    <span class="n">stock</span><span class="p">.</span><span class="n">inventory_count</span>
+<span class="k">FROM</span> <span class="n">item</span> <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">stock</span>
+<span class="k">ON</span> <span class="n">item</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">stock</span><span class="p">.</span><span class="n">item_id</span><span class="p">;</span>
+
+<span class="c1">-- RIGHT OUTER JOIN 오른쪽 테이블 기준으로 합친다.</span>
+<span class="k">SELECT</span>
+	<span class="n">item</span><span class="p">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">item</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">stock</span><span class="p">.</span><span class="n">item_id</span><span class="p">,</span>
+    <span class="n">stock</span><span class="p">.</span><span class="n">inventory_count</span>
+<span class="k">FROM</span> <span class="n">item</span> <span class="k">RIGHT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">stock</span>
+<span class="k">ON</span> <span class="n">item</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">stock</span><span class="p">.</span><span class="n">item_id</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 테이블도 alias 가능하다. FROM이 제일 먼저 실행</span>
+<span class="c1">-- 테이블 alias 할때 테이블 사용한 모든 값을 alias로 변경해야한다.</span>
+<span class="k">SELECT</span>
+	<span class="n">i</span><span class="p">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">i</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">s</span><span class="p">.</span><span class="n">item_id</span><span class="p">,</span>
+    <span class="n">s</span><span class="p">.</span><span class="n">inventory_count</span>
+<span class="k">FROM</span> <span class="n">item</span> <span class="k">AS</span> <span class="n">i</span> <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">stock</span> <span class="k">AS</span> <span class="n">s</span>
+<span class="k">ON</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">item_id</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- INNER JOIN 두 테이블 간에 교집합</span>
+<span class="c1">-- Null 인값이 나타나지 않는다.</span>
+<span class="c1">-- Foreign Key 설정되어 있으므로 OUTER JOIN(LEFT 또는 RIGHT)의 결과와 INNER JOIN의 결과가 같을 수 있다</span>
+<span class="k">SELECT</span>
+	<span class="n">i</span><span class="p">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="n">i</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="n">s</span><span class="p">.</span><span class="n">item_id</span><span class="p">,</span>
+    <span class="n">s</span><span class="p">.</span><span class="n">inventory_count</span>
+<span class="k">FROM</span> <span class="n">item</span> <span class="k">AS</span> <span class="n">i</span> <span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">stock</span> <span class="k">AS</span> <span class="n">s</span>
+<span class="k">ON</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">item_id</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-결합-연산과-집합-연산">✽ 결합 연산과 집합 연산</h3>
+<ul>
+  <li>결합 연산
+    <ul>
+      <li>LEFT OUTER JOIN</li>
+      <li>RIGHT OUTER JOIN</li>
+      <li>INNER JOIN</li>
+    </ul>
+  </li>
+  <li>집합 연산
+    <ul>
+      <li>A ∩ B (INTERSECT 연산자 사용)</li>
+      <li>A - B (MINUS 연산자 또는 EXCEPT 연산자 사용)</li>
+      <li>B - A (MINUS 연산자 또는 EXCEPT 연산자 사용)</li>
+      <li>A U B (UNION 연산자 사용)(MySQL에서는 이것만 가능)
+~~~sql
+– A ∩ B
+SELECT * FROM member_A 
+INTERSECT 
+SELECT * FROM member_B;</li>
+    </ul>
+  </li>
+</ul>
+
+<p>– A - B
+SELECT * FROM member_A 
+MINUS
+SELECT * FROM member_B;</p>
+
+<p>– B - A
+SELECT * FROM member_B
+MINUS
+SELECT * FROM member_A;</p>
+
+<p>– A U B
+SELECT * FROM member_A
+UNION
+SELECT * FROM member_B;
+~~~</p>
+
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            <!--
+            
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to Code Training</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+                </section>
+            
+            -->
+
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/built/images/water.jpg" alt="Chanji" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/Chanji">Changji Kim</a></h4>
+                                
+                                    <p>Clean Code</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/Chanji">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            var this_page_url = 'https://Chang-ji.github.io/SQL-JOIN';
+                            var this_page_identifier = '/SQL-JOIN';
+                            var this_page_title = 'SQL';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://xxxxxxxx.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/Linux-Command">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/summit.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Linux-Command">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Linux</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Linux</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Linux Command Line And Linux CLI Learn
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/water.jpg" alt="Changji Kim" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/Chanji/">Changji Kim</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      3 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://Chang-ji.github.io/">
+            
+            <span>Code Training</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">SQL</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=SQL&amp;url=https://Chang-ji.github.io/SQL-JOIN"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://Chang-ji.github.io/SQL-JOIN"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://Chang-ji.github.io/">Code Training</a> &copy; 2021</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+        <div id="subscribe" class="subscribe-overlay">
+            <a class="subscribe-overlay-close" href="#"></a>
+            <div class="subscribe-overlay-content">
+                
+                <h1 class="subscribe-overlay-title">Search Code Training</h1>
+                <p class="subscribe-overlay-description">
+                lunr.js를 이용한 posts 검색 </p>
+                <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+            </div>
+        </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-xxxxxxxx-x', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>
