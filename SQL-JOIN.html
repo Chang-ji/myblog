@@ -938,11 +938,1170 @@ SELECT * FROM member_B
 MINUS
 SELECT * FROM member_A;</p>
 
-<p>– A U B
+<p>– A U B(MySQL에서는 이것만 가능)
 SELECT * FROM member_A
 UNION
-SELECT * FROM member_B;
-~~~</p>
+SELECT * FROM member_B;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+### &amp;#10045; 같은 종류의 테이블 조인하기
+
+~~~sql
+-- LEFT OUTER JOIN을 통해서 old 테이블을 기준으로 new 테이블에 없는 값을 조회할 수 있다.
+SELECT
+	old.id AS old_id,
+    old.name AS old_name,
+    new.id AS new_id,
+    new.name AS new_name
+FROM item AS old LEFT OUTER JOIN item_new AS new
+ON old.id = new.id
+WHERE new.id IS NULL;
+
+-- RIGHT OUTER JOIN을 통해서 new 테이블을 기준으로 old 테이블에 없는 값을 조회할 수 있다.
+SELECT
+	old.id AS old_id,
+    old.name AS old_name,
+    new.id AS new_id,
+    new.name AS new_name
+FROM item AS old RIGHT OUTER JOIN item_new AS new
+ON old.id = new.id
+WHERE old.id IS NULL;
+
+--  JOIN을 통해서 new 테이블과 old 테이블의 공통된 부분을 조회할 수 있습니다.
+SELECT
+	old.id AS old_id,
+    old.name AS old_name,
+    new.id AS new_id,
+    new.name AS new_name
+FROM item AS old INNER JOIN item_new AS new
+ON old.id = new.id;
+
+-- UNION 두 조회 결과를 합쳐준다.
+SELECT * FROM item
+UNION
+SELECT * FROM item_new;
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- ON 대신해서 두 테이블에 컬럼이름이 같은 경우 USING을 사용한다.</span>
+<span class="k">SELECT</span>
+	<span class="k">old</span><span class="p">.</span><span class="n">id</span> <span class="k">AS</span> <span class="n">old_id</span><span class="p">,</span>
+    <span class="k">old</span><span class="p">.</span><span class="n">name</span> <span class="k">AS</span> <span class="n">old_name</span><span class="p">,</span>
+    <span class="k">new</span><span class="p">.</span><span class="n">id</span> <span class="k">AS</span> <span class="n">new_id</span><span class="p">,</span>
+    <span class="k">new</span><span class="p">.</span><span class="n">name</span> <span class="k">AS</span> <span class="n">new_name</span>
+<span class="k">FROM</span> <span class="n">item</span> <span class="k">AS</span> <span class="k">old</span> <span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">item_new</span> <span class="k">AS</span> <span class="k">new</span>
+<span class="k">USING</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="-union-더-알아-보기">✽ UNION 더 알아 보기</h3>
+<ul>
+  <li>UNION 두 테이블 합친 후에 중복을 제거한다.</li>
+  <li>UNION ALL 두 테이블 합친 후에 중복을 제거하지 않는다.</li>
+</ul>
+
+<h3 id="-세-테이블-조인한-후-의미있는-데이터-추출">✽ 세 테이블 조인한 후 의미있는 데이터 추출</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- LEFT OUTER JOIN 조인이 순서대로 실행된다.</span>
+<span class="c1">-- 세 개의 테이블 합치기</span>
+<span class="c1">-- 그 이후 유의미한 컬럼 추출</span>
+<span class="c1">-- GROUP BY 그룹을 나눈 이후 AVG(star) 평균값 도출</span>
+<span class="c1">-- 테이블 예약어와 같은면 백틱(`)을 붙혀주자</span>
+<span class="c1">-- 평균, 개수를 구해서 사용하자</span>
+<span class="c1">-- 여성 인기 상품</span>
+<span class="k">SELECT</span> 
+    <span class="n">i</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="k">AVG</span><span class="p">(</span><span class="n">star</span><span class="p">),</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="k">FROM</span>
+    <span class="n">item</span> <span class="k">AS</span> <span class="n">i</span>
+        <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span>
+    <span class="n">review</span> <span class="k">AS</span> <span class="n">r</span> <span class="k">ON</span> <span class="n">r</span><span class="p">.</span><span class="n">item_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span>
+        <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span>
+    <span class="nv">`member`</span> <span class="k">AS</span> <span class="n">m</span> <span class="k">ON</span> <span class="n">r</span><span class="p">.</span><span class="n">mem_id</span> <span class="o">=</span> <span class="n">m</span><span class="p">.</span><span class="n">id</span>
+<span class="k">WHERE</span>
+    <span class="n">m</span><span class="p">.</span><span class="n">gender</span> <span class="o">=</span> <span class="s1">'f'</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span> <span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">name</span>
+<span class="k">HAVING</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="k">AVG</span><span class="p">(</span><span class="n">star</span><span class="p">)</span> <span class="k">DESC</span> <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">DESC</span><span class="p">;</span>
+
+<span class="c1">-- 남성회원이 좋게 평가한 것들</span>
+<span class="k">SELECT</span> 
+    <span class="n">i</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="k">AVG</span><span class="p">(</span><span class="n">star</span><span class="p">),</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="k">FROM</span>
+    <span class="n">item</span> <span class="k">AS</span> <span class="n">i</span>
+        <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span>
+    <span class="n">review</span> <span class="k">AS</span> <span class="n">r</span> <span class="k">ON</span> <span class="n">r</span><span class="p">.</span><span class="n">item_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span>
+        <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span>
+    <span class="nv">`member`</span> <span class="k">AS</span> <span class="n">m</span> <span class="k">ON</span> <span class="n">r</span><span class="p">.</span><span class="n">mem_id</span> <span class="o">=</span> <span class="n">m</span><span class="p">.</span><span class="n">id</span>
+<span class="k">WHERE</span>
+    <span class="n">m</span><span class="p">.</span><span class="n">gender</span> <span class="o">=</span> <span class="s1">'m'</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span> <span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">name</span>
+<span class="k">HAVING</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="k">AVG</span><span class="p">(</span><span class="n">star</span><span class="p">)</span> <span class="k">DESC</span> <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">DESC</span><span class="p">;</span>
+
+<span class="c1">-- 불만 있는 제품 comment 조회</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">review</span> <span class="k">WHERE</span> <span class="n">item_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-다른-종류의-조인들">✽ 다른 종류의 조인들</h3>
+
+<ol>
+  <li>NATURAL JOIN : ON 이 필요가 없이 자동으로 기준을 설정해준다.</li>
+  <li>CROSS JOIN : 한 테이블의 하나의 row에 다른 테이블의 모든 row들을 매칭통해서 두 테이블의 row들의 모든 조합을 보여주는 조인</li>
+  <li>SELF JOIN : 자기 자신과 조인을 하는 경우를 말합니다.(새로운 조인이 아님)</li>
+  <li>FULL OUTER JOIN : UNION ALL과 같이 똑같다. 중복제거할려면 UNION을 사용하자</li>
+  <li>Non-Equi 조인: 동등 조건이 아닌 다른 조건으로 사용</li>
+</ol>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- NATURAL JOIN</span>
+<span class="k">SELECT</span> <span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="n">player_name</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="n">team_name</span><span class="p">,</span> <span class="n">t</span><span class="p">.</span><span class="n">team_name</span><span class="p">,</span> <span class="n">t</span><span class="p">.</span><span class="n">region</span>
+<span class="k">FROM</span> <span class="n">player</span> <span class="k">AS</span> <span class="n">p</span> <span class="k">NATURAL</span> <span class="k">JOIN</span> <span class="n">team</span> <span class="k">AS</span> <span class="n">t</span><span class="p">;</span>
+
+<span class="c1">-- CROSS JOIN</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">member</span> <span class="k">CROSS</span> <span class="k">JOIN</span> <span class="n">stock</span><span class="p">;</span>
+
+<span class="c1">-- SELF JOIN(새로운 조인이 아님)</span>
+<span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">employee</span> <span class="k">AS</span> <span class="n">e1</span> <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">employee</span> <span class="k">AS</span> <span class="n">e2</span>
+<span class="k">ON</span> <span class="n">e1</span><span class="p">.</span><span class="n">boss</span> <span class="o">=</span> <span class="n">e2</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+
+<span class="c1">-- FULL OUTER JOIN(오라클에서만 사용가능)</span>
+<span class="k">SELECT</span> <span class="o">*</span> 
+<span class="k">FROM</span> <span class="n">player</span> <span class="k">AS</span> <span class="n">p</span> <span class="k">FULL</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">team</span> <span class="k">AS</span> <span class="n">t</span>
+<span class="k">ON</span> <span class="n">p</span><span class="p">.</span><span class="n">team_name</span> <span class="o">=</span> <span class="n">t</span><span class="p">.</span><span class="n">team_name</span><span class="p">;</span>
+
+<span class="c1">-- Non-Equi 조인(새로운 조인이 아님)</span>
+<span class="k">SELECT</span> <span class="n">m</span><span class="p">.</span><span class="n">email</span><span class="p">,</span> <span class="n">m</span><span class="p">.</span><span class="n">sign_up_day</span><span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">registration_date</span>
+<span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span> <span class="k">AS</span> <span class="n">m</span> <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">item</span> <span class="k">AS</span> <span class="n">i</span> 
+<span class="k">ON</span> <span class="n">m</span><span class="p">.</span><span class="n">sign_up_day</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">.</span><span class="n">registration_date</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">m</span><span class="p">.</span><span class="n">sign_up_day</span> <span class="k">ASC</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-서브쿼리란">✽ 서브쿼리란?</h3>
+
+<ul>
+  <li>SQL 문 안에 ‘부품’처럼 들어가는 SELECT 문</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 쿼리문 안에 쿼리문 설정(서브쿼리)</span>
+<span class="c1">-- 전체 sql문에서 일부의 요소</span>
+<span class="c1">-- 서브쿼리 사용시 () 필수</span>
+<span class="k">SELECT</span> 
+    <span class="n">i</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="k">AVG</span><span class="p">(</span><span class="n">star</span><span class="p">)</span> <span class="k">AS</span> <span class="n">avg_star</span>
+<span class="k">FROM</span>
+    <span class="n">item</span> <span class="k">AS</span> <span class="n">i</span>
+        <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span>
+    <span class="n">review</span> <span class="k">AS</span> <span class="n">r</span> <span class="k">ON</span> <span class="n">r</span><span class="p">.</span><span class="n">item_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span> <span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">name</span>
+<span class="k">HAVING</span> <span class="n">avg_star</span> <span class="o">&lt;</span> <span class="p">(</span><span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">star</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">review</span><span class="p">)</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">avg_star</span> <span class="k">DESC</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- SELECT 절에 있는 서브쿼리</span>
+<span class="c1">-- 특정 컬럼의 특징을 찾아주는 서브쿼리를 많이 사용한다.</span>
+<span class="k">SELECT</span> 
+    <span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span>
+    <span class="p">(</span><span class="k">SELECT</span> <span class="k">MAX</span><span class="p">(</span><span class="n">price</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">item</span><span class="p">)</span> <span class="k">AS</span> <span class="n">max_price</span><span class="p">,</span>
+    <span class="p">(</span><span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">price</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">item</span><span class="p">)</span> <span class="k">AS</span> <span class="n">avg_price</span> 
+<span class="k">FROM</span>
+    <span class="n">copang_main</span><span class="p">.</span><span class="n">item</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- WHERE절에서 서브 쿼리</span>
+<span class="c1">-- 특정 컬럼의 특징을 찾아주는 서브쿼리를 많이 사용한다.</span>
+<span class="c1">-- 서브쿼리는 alias 값 활용하기 어렵다.</span>
+<span class="k">SELECT</span> 
+    <span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span>
+    <span class="p">(</span><span class="k">SELECT</span> <span class="k">MAX</span><span class="p">(</span><span class="n">price</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">item</span><span class="p">)</span> <span class="k">AS</span> <span class="n">max_price</span><span class="p">,</span>
+    <span class="p">(</span><span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">price</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">item</span><span class="p">)</span> <span class="k">AS</span> <span class="n">avg_price</span> 
+<span class="k">FROM</span>
+    <span class="n">copang_main</span><span class="p">.</span><span class="n">item</span>
+<span class="k">WHERE</span> <span class="n">price</span> <span class="o">=</span> <span class="p">(</span><span class="k">SELECT</span> <span class="k">MIN</span><span class="p">(</span><span class="n">price</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">item</span><span class="p">);</span>
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- JOIN을 이용하여서 조회 가능</span>
+<span class="k">SELECT</span> 
+    <span class="o">*</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="k">FROM</span>
+    <span class="n">item</span> <span class="k">AS</span> <span class="n">i</span>
+        <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span>
+    <span class="n">review</span> <span class="k">AS</span> <span class="n">r</span> <span class="k">ON</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">r</span><span class="p">.</span><span class="n">item_id</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span>
+<span class="k">HAVING</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">;</span>
+
+<span class="c1">-- 위에 것과 같은 부분</span>
+<span class="c1">-- 서브쿼리가 하나이상의 정보를 리턴할 때 사용</span>
+<span class="k">SELECT</span> 
+    <span class="o">*</span>
+<span class="k">FROM</span>
+    <span class="n">item</span>
+<span class="k">WHERE</span>
+    <span class="n">id</span> <span class="k">IN</span> <span class="p">(</span><span class="k">SELECT</span> 
+            <span class="n">item_id</span>
+        <span class="k">FROM</span>
+            <span class="n">review</span>
+        <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">item_id</span>
+        <span class="k">HAVING</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="-서브쿼리-anysome-all">✽ 서브쿼리 ANY(SOME), ALL</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- ANY안에 서브쿼리가 리턴하는 값 중에서 view_count 값이 하나라도 크면 조건을 만족한다.</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">FOR_TEST</span><span class="p">.</span><span class="n">codeit_theater</span>
+    <span class="k">WHERE</span> <span class="n">view_count</span> <span class="o">&gt;</span> <span class="k">ANY</span><span class="p">(</span><span class="k">SELECT</span> <span class="n">view_count</span> <span class="k">FROM</span> <span class="n">FOR_TEST</span><span class="p">.</span><span class="n">codeit_theater</span> <span class="k">WHERE</span> <span class="n">category</span> <span class="o">=</span> <span class="s1">'ACTION'</span><span class="p">);</span>
+
+<span class="c1">-- SOME과 ANY는 같은 역할이다.</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">FOR_TEST</span><span class="p">.</span><span class="n">codeit_theater</span>
+    <span class="k">WHERE</span> <span class="n">view_count</span> <span class="o">&gt;</span> <span class="k">SOME</span><span class="p">(</span><span class="k">SELECT</span> <span class="n">view_count</span> <span class="k">FROM</span> <span class="n">FOR_TEST</span><span class="p">.</span><span class="n">codeit_theater</span> <span class="k">WHERE</span> <span class="n">category</span> <span class="o">=</span> <span class="s1">'ACTION'</span><span class="p">);</span>
+
+<span class="c1">-- ALL 안에 모든 조건을 만족한다면 해당조건을 만족하게된다.</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">FOR_TEST</span><span class="p">.</span><span class="n">codeit_theater</span>
+    <span class="k">WHERE</span> <span class="n">view_count</span> <span class="o">&gt;</span> <span class="k">ALL</span><span class="p">(</span><span class="k">SELECT</span> <span class="n">view_count</span> <span class="k">FROM</span> <span class="n">FOR_TEST</span><span class="p">.</span><span class="n">codeit_theater</span> <span class="k">WHERE</span> <span class="n">category</span> <span class="o">=</span> <span class="s1">'ACTION'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="-서브쿼리의-종류-총정리">✽ 서브쿼리의 종류 총정리</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 단일값을 리턴하는 서브쿼리</span>
+<span class="k">SELECT</span> <span class="k">MAX</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="k">FROM</span> <span class="nv">`member`</span><span class="p">;</span>
+
+<span class="c1">-- 하나의 column에 여러 row들이 있는 형태의 결과를 리턴하는 서브쿼리</span>
+<span class="k">SELECT</span> <span class="n">SUBSTR</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">FROM</span> <span class="nv">`member`</span><span class="p">;</span>
+
+<span class="c1">-- 하나의 테이블 형태의 결과(여러 column, 여러 row)를 리턴하는 서브쿼리</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="nv">`member`</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 비상관 서브쿼리 :  서브쿼리를 독립적으로 실행해도 실행가능한 서브쿼리</span>
+<span class="k">SELECT</span> 
+    <span class="o">*</span>
+<span class="k">FROM</span>
+    <span class="n">item</span>
+<span class="k">WHERE</span>
+    <span class="n">id</span> <span class="k">IN</span> <span class="p">(</span><span class="k">SELECT</span> 
+            <span class="n">item_id</span>
+        <span class="k">FROM</span>
+            <span class="n">review</span>
+        <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">item_id</span>
+        <span class="k">HAVING</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">);</span>
+        
+<span class="c1">-- 상관 서브쿼리 outer query와 상관 관계가 있는 서브쿼리</span>
+<span class="c1">-- EXISTS 안 쿼리문이 row가 조회되서 안에 존재하면 최종 결과 바구니에 담깁니다.</span>
+<span class="c1">-- 해당 작동조건의 review.item_id = item.id 만족할 때 해당 결과가 테이블에 담깁니다.</span>
+<span class="k">SELECT</span> 
+    <span class="o">*</span>
+<span class="k">FROM</span>
+    <span class="n">item</span>
+<span class="k">WHERE</span>
+    <span class="k">NOT</span> <span class="k">EXISTS</span><span class="p">(</span> <span class="k">SELECT</span> 
+            <span class="o">*</span>
+        <span class="k">FROM</span>
+            <span class="n">review</span>
+        <span class="k">WHERE</span>
+            <span class="n">review</span><span class="p">.</span><span class="n">item_id</span> <span class="o">=</span> <span class="n">item</span><span class="p">.</span><span class="n">id</span><span class="p">);</span>
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- SELECT문에서 alias 붙이고 바로 쓸수 없지만 서브쿼리를 통해서 해결가능하다</span>
+<span class="k">SELECT</span> 
+	<span class="n">email</span><span class="p">,</span> 
+    <span class="n">height</span> <span class="k">AS</span> <span class="err">키</span><span class="p">,</span> 
+    <span class="n">weight</span> <span class="k">AS</span> <span class="err">몸무게</span><span class="p">,</span> 
+    <span class="n">BMI</span><span class="p">,</span>
+<span class="p">(</span><span class="k">CASE</span>
+	<span class="k">WHEN</span> <span class="n">weight</span> <span class="k">IS</span> <span class="k">NULL</span> <span class="k">OR</span> <span class="n">height</span> <span class="k">is</span> <span class="k">NULL</span> <span class="k">THEN</span> <span class="s1">'비만 여부 알 수 없음'</span>
+    <span class="k">WHEN</span> <span class="n">BMI</span> <span class="o">&gt;=</span> <span class="mi">25</span> <span class="k">THEN</span> <span class="s1">'과체중 또는 비만'</span>
+    <span class="k">WHEN</span> <span class="n">BMI</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">.</span><span class="mi">5</span> <span class="k">AND</span> <span class="n">BMI</span> <span class="o">&lt;</span> <span class="mi">25</span> <span class="k">THEN</span> <span class="s1">'정상'</span>
+    <span class="k">ELSE</span> <span class="s1">'저체중'</span>
+<span class="k">END</span><span class="p">)</span> <span class="k">AS</span> <span class="n">obesity_check</span>
+<span class="k">FROM</span> 
+<span class="p">(</span><span class="k">SELECT</span> <span class="o">*</span><span class="p">,</span> <span class="n">weight</span> <span class="o">/</span> <span class="p">((</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">))</span> <span class="k">AS</span> <span class="n">BMI</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">member</span><span class="p">)</span> <span class="k">AS</span> <span class="n">subquery_for_BMI</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">obesity_check</span> <span class="k">ASC</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-서브쿼리의-중첩과-그-문제점">✽ 서브쿼리의 중첩과 그 문제점</h3>
+<ul>
+  <li>서브쿼리 안에 서브쿼리를 사용하는 것이 가능하다.</li>
+  <li>서브쿼리 중첩이 가능하다.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+    <span class="n">i</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="k">AVG</span><span class="p">(</span><span class="n">star</span><span class="p">)</span> <span class="k">AS</span> <span class="n">avg_star</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">count_star</span>
+<span class="k">FROM</span>
+    <span class="n">item</span> <span class="k">AS</span> <span class="n">i</span>
+        <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span>
+    <span class="n">review</span> <span class="k">AS</span> <span class="n">r</span> <span class="k">ON</span> <span class="n">r</span><span class="p">.</span><span class="n">item_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span>
+        <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span>
+    <span class="n">member</span> <span class="k">AS</span> <span class="n">m</span> <span class="k">ON</span> <span class="n">r</span><span class="p">.</span><span class="n">mem_id</span> <span class="o">=</span> <span class="n">m</span><span class="p">.</span><span class="n">id</span>
+<span class="k">WHERE</span>
+    <span class="n">m</span><span class="p">.</span><span class="n">gender</span> <span class="o">=</span> <span class="s1">'f'</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span> <span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">name</span>
+<span class="k">HAVING</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span>
+    <span class="k">AND</span> <span class="n">avg_star</span> <span class="o">=</span> <span class="p">(</span><span class="k">SELECT</span> 
+        <span class="k">MAX</span><span class="p">(</span><span class="n">avg_star</span><span class="p">)</span>
+    <span class="k">FROM</span>
+        <span class="p">(</span><span class="k">SELECT</span> 
+            <span class="n">i</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="k">AVG</span><span class="p">(</span><span class="n">star</span><span class="p">)</span> <span class="k">AS</span> <span class="n">avg_star</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">count_star</span>
+        <span class="k">FROM</span>
+            <span class="n">item</span> <span class="k">AS</span> <span class="n">i</span>
+        <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">review</span> <span class="k">AS</span> <span class="n">r</span> <span class="k">ON</span> <span class="n">r</span><span class="p">.</span><span class="n">item_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span>
+        <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">member</span> <span class="k">AS</span> <span class="n">m</span> <span class="k">ON</span> <span class="n">r</span><span class="p">.</span><span class="n">mem_id</span> <span class="o">=</span> <span class="n">m</span><span class="p">.</span><span class="n">id</span>
+        <span class="k">WHERE</span>
+            <span class="n">m</span><span class="p">.</span><span class="n">gender</span> <span class="o">=</span> <span class="s1">'f'</span>
+        <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span> <span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">name</span>
+        <span class="k">HAVING</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span>
+        <span class="k">ORDER</span> <span class="k">BY</span> <span class="k">AVG</span><span class="p">(</span><span class="n">star</span><span class="p">)</span> <span class="k">DESC</span> <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">DESC</span><span class="p">)</span> <span class="k">AS</span> <span class="k">final</span><span class="p">)</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="k">AVG</span><span class="p">(</span><span class="n">star</span><span class="p">)</span> <span class="k">DESC</span> <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">DESC</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-데이터-분석가의-자산-뷰">✽ 데이터 분석가의 자산, 뷰</h3>
+<ul>
+  <li>조인 등의 작업을 해서 만든 <code class="language-plaintext highlighter-rouge">결과 테이블</code>이 <code class="language-plaintext highlighter-rouge">가상으로</code> 저장된 형태</li>
+  <li>복잡한 sql을 짧게 만들어 줄 수 있다.</li>
+  <li>중복된 테이블를 저장하여 사용할 수 있다.</li>
+  <li>자주 사용하는 테이블을 VIEW로 저장하자</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- Views데이터 베이스에 저장(가상 테이블) </span>
+<span class="k">CREATE</span> <span class="k">VIEW</span> <span class="n">three_tables_joined</span> <span class="k">AS</span>
+    <span class="k">SELECT</span> 
+        <span class="n">i</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="k">AVG</span><span class="p">(</span><span class="n">star</span><span class="p">)</span> <span class="k">AS</span> <span class="n">avg_star</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">count_star</span>
+    <span class="k">FROM</span>
+        <span class="n">item</span> <span class="k">AS</span> <span class="n">i</span>
+            <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span>
+        <span class="n">review</span> <span class="k">AS</span> <span class="n">r</span> <span class="k">ON</span> <span class="n">r</span><span class="p">.</span><span class="n">item_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span>
+            <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span>
+        <span class="nv">`member`</span> <span class="k">AS</span> <span class="n">m</span> <span class="k">ON</span> <span class="n">r</span><span class="p">.</span><span class="n">mem_id</span> <span class="o">=</span> <span class="n">m</span><span class="p">.</span><span class="n">id</span>
+    <span class="k">WHERE</span>
+        <span class="n">m</span><span class="p">.</span><span class="n">gender</span> <span class="o">=</span> <span class="s1">'f'</span>
+    <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">i</span><span class="p">.</span><span class="n">id</span> <span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">name</span>
+    <span class="k">HAVING</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span>
+    <span class="k">ORDER</span> <span class="k">BY</span> <span class="k">AVG</span><span class="p">(</span><span class="n">star</span><span class="p">)</span> <span class="k">DESC</span> <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">DESC</span><span class="p">;</span>
+
+<span class="c1">-- 가상 테이블을 조회</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">three_tables_joined</span>
+<span class="k">WHERE</span> <span class="n">avg_star</span> <span class="o">=</span> <span class="p">(</span>
+	<span class="k">SELECT</span> <span class="k">MAX</span><span class="p">(</span><span class="n">avg_star</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">three_tables_joined</span>
+<span class="p">)</span> <span class="k">AND</span> <span class="n">count_star</span> <span class="o">=</span> <span class="p">(</span>
+	<span class="k">SELECT</span> <span class="k">MAX</span><span class="p">(</span><span class="n">count_star</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">copang_main</span><span class="p">.</span><span class="n">three_tables_joined</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>뷰는 사용자에게 높은 편의성을 제공해줍니다.</li>
+  <li>각 직무별 데이터 수요에 알맞은, 다양한 구조의 데이터 분석 기반을 구축해둘 수 있습니다.</li>
+  <li>뷰는 데이터 보안을 제공합니다.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 특정 컬럼만 보여주고 싶을 때</span>
+<span class="k">CREATE</span> <span class="k">VIEW</span> <span class="n">emp_view</span> <span class="k">AS</span> <span class="k">SELECT</span> <span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">department</span> <span class="k">FROM</span> <span class="n">employee</span><span class="p">;</span>
+
+<span class="c1">-- 특정 조건의 정보만 보여주고 싶을 때</span>
+<span class="k">CREATE</span> <span class="k">VIEW</span> <span class="n">emp_view2</span> <span class="k">AS</span> <span class="k">SELECT</span> <span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">department</span> <span class="k">FROM</span> <span class="n">employee</span> <span class="k">WHERE</span> <span class="n">department</span> <span class="o">!=</span> <span class="s1">'secret'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-실무에서-첫-번째로-해야할-일">✽ 실무에서 첫 번째로 해야할 일</h3>
+<ol>
+  <li>어떤 데이터베이스들이 있는지</li>
+  <li>각 데이터베이스 안에 어떤 테이블들이 있는지</li>
+  <li>각 테이블의 컬럼 구조는 어떻게 되는지</li>
+  <li>테이블들 간의 Foreign Key 관계는 어떤지</li>
+</ol>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 존재하는 데이터 베이스들 파악</span>
+<span class="k">SHOW</span> <span class="n">DATABASES</span><span class="p">;</span>
+
+<span class="c1">-- 한 데이터베이스 안의 테이블(뷰도 포함)들 파악</span>
+<span class="k">SHOW</span> <span class="k">FULL</span> <span class="n">TABLES</span> <span class="k">IN</span> <span class="n">copang_main</span><span class="p">;</span>
+
+<span class="c1">-- 한 테이블의 컬럼 구조 파악</span>
+<span class="k">DESCRIBE</span> <span class="n">item</span><span class="p">;</span>
+
+<span class="c1">-- 데이터 information_schema 데이터 베이스 조회</span>
+<span class="n">USE</span> <span class="n">information_schema</span><span class="p">;</span>
+<span class="k">SHOW</span> <span class="n">TABLES</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="k">user</span><span class="p">();</span>
+<span class="k">SELECT</span> <span class="k">system_user</span><span class="p">();</span>
+
+<span class="c1">-- Foreign Key(외래키) 파악</span>
+<span class="k">SELECT</span>
+    <span class="n">i</span><span class="p">.</span><span class="n">CONSTRAINT_TYPE</span><span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="k">CONSTRAINT_NAME</span><span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">TABLE_SCHEMA</span><span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="k">TABLE_NAME</span>
+<span class="k">FROM</span> 
+    <span class="n">information_schema</span><span class="p">.</span><span class="n">TABLE_CONSTRAINTS</span> <span class="k">AS</span> <span class="n">i</span>
+    <span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">information_schema</span><span class="p">.</span><span class="n">KEY_COLUMN_USAGE</span> <span class="k">AS</span> <span class="n">k</span> <span class="k">ON</span> <span class="n">i</span><span class="p">.</span><span class="k">CONSTRAINT_NAME</span> <span class="o">=</span> <span class="n">k</span><span class="p">.</span><span class="k">CONSTRAINT_NAME</span>
+<span class="k">WHERE</span>
+	<span class="n">i</span><span class="p">.</span><span class="n">CONSTRAINT_TYPE</span> <span class="o">=</span> <span class="s1">'FOREIGN KEY'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-데이터베이스-생성하기-1">✽ 데이터베이스 생성하기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 데이터 베이스 생성</span>
+<span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">course_rating</span><span class="p">;</span>
+
+<span class="c1">-- 같은 이름의 데이터 테이블 존재여부 확인</span>
+<span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">course_rating</span><span class="p">;</span>
+
+<span class="c1">-- course_rating 데이터 베이스를 사용하겠다.</span>
+<span class="n">USE</span> <span class="n">course_rating</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-컬럼의-데이터-타입에-관하여">✽ 컬럼의 데이터 타입에 관하여</h3>
+
+<ul>
+  <li>정수형 타입
+    <ul>
+      <li>TINYINT(SIGNED, UNSIGNED) : -128 ~ 127, 0 ~ 255</li>
+      <li>SMALLINT(SIGNED, UNSIGNED) : -32768 ~ 32767, 0 ~ 65535</li>
+      <li>MEDIUMINT(SIGNED, UNSIGNED) : -8388608 ~ 8388607, 0 ~ 16777215</li>
+      <li>INT(SIGNED, UNSIGNED) : -2147483648 ~ 2147483647, 0 ~ 4294967295</li>
+      <li>BIGINT(SIGNED, UNSIGNED) : -9223372036854775808 ~ 9223372036854775807, 0 ~ 18446744073709551615</li>
+    </ul>
+  </li>
+  <li>실수형 타입
+    <ul>
+      <li>DECIMAL : 보통 DECIMAL(M, D)의 형식으로 나타냄</li>
+      <li>FLOAT</li>
+      <li>DOUBLE</li>
+    </ul>
+  </li>
+  <li>날짜 및 시간 타입(Date and Time Types)
+    <ul>
+      <li>DATE :  ’2020-03-26’ 이런 형식의 연, 월, 일 순</li>
+      <li>DATETIME :  ’2020-03-26 09:30:27’ 이런 식으로 연, 월, 일, 시, 분, 초</li>
+      <li>TIMESTAMP : ’2020-03-26 09:30:27’ 이런 식으로 연, 월, 일, 시, 분, 초 UTC(Coordinated Universal Time) 정보를 함께 저장한다.</li>
+    </ul>
+  </li>
+  <li>문자열 타입(String type)
+    <ul>
+      <li>CHAR : 고정 길이 타입</li>
+      <li>VARCHAR : 가변 길이 타입</li>
+      <li>TEXT : 긴 문자열을 저장</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="-테이블-생성">✽ 테이블 생성</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 테이블 생성</span>
+<span class="c1">-- AUTO_INCREMENT, PRIMARY KEY 설정</span>
+<span class="c1">-- 백틱은 해당 단어가 identifier임을 나타내는 기호</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="nv">`course_rating`</span><span class="p">.</span> <span class="nv">`student`</span> <span class="p">(</span>
+	<span class="nv">`id`</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+    <span class="nv">`name`</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="nv">`student_number`</span> <span class="nb">INT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="nv">`major`</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="nv">`email`</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="nv">`phone`</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="nv">`admission_date`</span> <span class="nb">DATE</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="nv">`id`</span><span class="p">));</span>
+</code></pre></div></div>
+
+<h3 id="-테이블에-row-추가하기">✽ 테이블에 row 추가하기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 테이블의 row를 하나 추가</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">course_rating</span><span class="p">.</span><span class="n">student</span>
+	<span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">student_number</span><span class="p">,</span> <span class="n">major</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">phone</span><span class="p">,</span> <span class="n">admission_date</span><span class="p">)</span>
+    <span class="k">VALUES</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'성태후'</span><span class="p">,</span> <span class="mi">20142947</span><span class="p">,</span> <span class="s1">'컴퓨터공학과'</span><span class="p">,</span> <span class="s1">'taehos@naver.com'</span><span class="p">,</span> <span class="s1">'010-4728-3813'</span><span class="p">,</span> <span class="s1">'2014-03-12'</span><span class="p">);</span>
+
+<span class="c1">-- 모든 부분에 값을 추가 한다면 컬럼 부분 생략해도 된다.</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">course_rating</span><span class="p">.</span><span class="n">student</span>
+    <span class="k">VALUES</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'성태후'</span><span class="p">,</span> <span class="mi">20142947</span><span class="p">,</span> <span class="s1">'컴퓨터공학과'</span><span class="p">,</span> <span class="s1">'taehos@naver.com'</span><span class="p">,</span> <span class="s1">'010-4728-3813'</span><span class="p">,</span> <span class="s1">'2014-03-12'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 특정 컬럼에 값을 추가 하기</span>
+<span class="c1">-- 값을 추가하지 않는 다른 컬럼에는 null 값이 된다.</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">course_rating</span><span class="p">.</span><span class="n">student</span> 
+	<span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">student_number</span><span class="p">,</span> <span class="n">major</span><span class="p">,</span> <span class="n">admission_date</span><span class="p">)</span>
+	<span class="k">VALUES</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">'이현승'</span><span class="p">,</span> <span class="mi">20111025</span><span class="p">,</span> <span class="s1">'법학과'</span><span class="p">,</span> <span class="s1">'2011-03-02'</span><span class="p">);</span>
+
+<span class="c1">-- id 값 AutoIncrement이기 때문에 값을 추가 해도 null 할당되지 않고 이전 row 보다 1 큰값 추가</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">course_rating</span><span class="p">.</span><span class="n">student</span>
+	<span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">student_number</span><span class="p">,</span> <span class="n">major</span><span class="p">,</span> <span class="n">admission_date</span><span class="p">)</span>
+    <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'정유진'</span><span class="p">,</span> <span class="mi">20160843</span><span class="p">,</span> <span class="s1">'빅데이터학과'</span><span class="p">,</span> <span class="s1">'2016-03-15'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="-컬럼값-기존-값-기준으로-갱신하기">✽ 컬럼값 기존 값 기준으로 갱신하기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 갱신하기(WHERE 절이 중요하다)</span>
+<span class="k">UPDATE</span> <span class="n">course_rating</span><span class="p">.</span><span class="n">student</span> <span class="k">SET</span> <span class="n">major</span> <span class="o">=</span> <span class="s1">'멀티미디어학과'</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- id 기준으로 갱신하기</span>
+<span class="k">UPDATE</span> <span class="n">final_exam_result</span> <span class="k">SET</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">100</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">UPDATE</span> <span class="n">final_exam_result</span> <span class="k">SET</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">63</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">UPDATE</span> <span class="n">final_exam_result</span> <span class="k">SET</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">18</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+<span class="c1">-- 기존값 활용하여 갱신하기</span>
+<span class="k">UPDATE</span> <span class="n">final_exam_result</span> <span class="k">SET</span> <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">3</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-데이터-삭제하기">✽ 데이터 삭제하기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 삭제 종류</span>
+<span class="c1">-- 물리 삭제 : DELETE 문으로 값을 실제 삭제</span>
+<span class="k">DELETE</span> <span class="k">FROM</span> <span class="nv">`order`</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> 
+
+<span class="c1">-- 논리 삭제 : 실제 삭제 하지 않고 삭제관련 컬럼을 UPDATE</span>
+<span class="k">UPDATE</span> <span class="nv">`order`</span> <span class="k">SET</span> <span class="n">is_cancelled</span> <span class="o">=</span> <span class="err">‘</span><span class="n">Y</span><span class="err">’</span><span class="p">;</span>
+
+<span class="c1">-- 둘다 장단점이 존재 하므로 두개를 혼용해서 사용한다.</span>
+<span class="c1">-- 논리 삭제 이후 데이터 보유기간이 지나면 물리삭제</span>
+</code></pre></div></div>
+
+<h3 id="-컬럼-정보를-한-눈에-보여주는-describe">✽ 컬럼 정보를 한 눈에 보여주는 DESCRIBE</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 컬럼 정보를 보여줌</span>
+<span class="k">DESCRIBE</span> <span class="n">student</span><span class="p">;</span>
+<span class="k">DESC</span> <span class="n">student</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-컬럼-추가와-컬럼의-이름-변경">✽ 컬럼 추가와 컬럼의 이름 변경</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- student 테이블에 gender 컬럼 추가 [컬럼 이름, 데이터 타입, 속성]</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">student</span> <span class="k">ADD</span> <span class="n">gender</span> <span class="nb">CHAR</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">NULL</span><span class="p">;</span>
+
+<span class="c1">-- student 테이블에 컬럼 이름 변경</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">student</span> 
+	<span class="k">RENAME</span> <span class="k">COLUMN</span> <span class="n">student_number</span> <span class="k">TO</span> <span class="n">registration_number</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-컬럼-삭제와-데이터-타입-변경">✽ 컬럼 삭제와 데이터 타입 변경</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 컬럼 삭제(DROP COLUMN)</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">student</span> <span class="k">DROP</span> <span class="k">COLUMN</span> <span class="n">admission_date</span>
+
+<span class="c1">-- 컬럼의 테이터 타입 변경(MODIFY)</span>
+<span class="c1">-- major 컬럼값 정수값으로 변경 후에 컬럼 타입 변경</span>
+<span class="k">UPDATE</span> <span class="n">student</span> <span class="k">SET</span> <span class="n">major</span> <span class="o">=</span> <span class="mi">8</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="k">UPDATE</span> <span class="n">student</span> <span class="k">SET</span> <span class="n">major</span> <span class="o">=</span> <span class="mi">12</span> <span class="k">WHERE</span> <span class="n">major</span> <span class="o">=</span> <span class="s1">'멀티미디어학과'</span><span class="p">;</span>
+<span class="k">UPDATE</span> <span class="n">student</span> <span class="k">SET</span> <span class="n">major</span> <span class="o">=</span> <span class="mi">7</span> <span class="k">WHERE</span> <span class="n">major</span> <span class="o">=</span> <span class="s1">'법학과'</span><span class="p">;</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">student</span> <span class="k">MODIFY</span> <span class="n">major</span> <span class="nb">INT</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-컬럼에-not-null-속성-주기">✽ 컬럼에 NOT NULL 속성 주기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 컬럼의 속성 변경하기 [컬럼이름, 데이터타입, 속성]</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">student</span> <span class="k">MODIFY</span> <span class="n">name</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">;</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">student</span> <span class="k">MODIFY</span> <span class="n">registration_number</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">;</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">student</span> <span class="k">MODIFY</span> <span class="n">major</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-컬럼에-default-속성-주기">✽ 컬럼에 DEFAULT 속성 주기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 기본값을 설정하는 부분</span>
+<span class="c1">-- 값이 할당되지 않을 때 기본 값이 들어감</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">student</span> <span class="k">MODIFY</span> <span class="n">major</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="mi">101</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-datetime-timestamp-타입의-컬럼에-값을-넣는-2가지-방식">✽ DATETIME, TIMESTAMP 타입의 컬럼에 값을 넣는 2가지 방식</h3>
+
+<ul>
+  <li>NOW() 함수 사용하기</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 값을 삽입하기</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">post</span> <span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">upload_time</span><span class="p">,</span> <span class="n">recent_modified_time</span><span class="p">)</span>
+    <span class="k">VALUES</span> <span class="p">(</span><span class="nv">"기분좋은 날이에요"</span><span class="p">,</span> <span class="nv">"오늘은 경주불국사에 갔어요"</span><span class="p">,</span> <span class="nv">"파란하는과.."</span><span class="p">,</span> <span class="n">NOW</span><span class="p">(),</span> <span class="n">NOW</span><span class="p">());</span>
+
+<span class="c1">-- 값을 갱신하기</span>
+<span class="k">UPDATE</span> <span class="n">post</span>
+    <span class="k">SET</span> <span class="n">content</span> <span class="o">=</span> <span class="s1">'오늘 제가 간 곳은 어디일까요?'</span><span class="p">,</span>
+        <span class="n">recent_modified_time</span> <span class="o">=</span> <span class="n">NOW</span><span class="p">()</span>
+    <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>컬럼에 DEFAULT CURRENT_TIMESTAMP / ON UPDATE CURRENT_TIMESTAMP 속성 설정하기</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 컬럼의 속성을 변경하기</span>
+<span class="c1">-- DEFAULT생성하면 INSERT시에 초기값 생성</span>
+<span class="c1">-- ON UPDATE 속성 추가시 UPDATE 하면 초기값 갱신</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">post</span>
+    <span class="k">MODIFY</span> <span class="n">upload_time</span> <span class="nb">DATETIME</span> <span class="k">DEFAULT</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+    <span class="k">MODIFY</span> <span class="n">recent_modified_time</span> <span class="nb">TIMESTAMP</span> <span class="k">DEFAULT</span> <span class="k">CURRENT_TIMESTAMP</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-컬럼에-unique-속성-주기">✽ 컬럼에 UNIQUE 속성 주기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 유니크 속성 설정하기</span>
+<span class="c1">-- 유니크 속성 설정하기 위해서는 해당 컬럼의 값들이 고유한 값이 여야 한다.</span>
+<span class="c1">-- DESCRIBE로 테이블 조회하면 Key 값이 UNI으로 변경된다.</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">course_rating</span><span class="p">.</span><span class="n">student</span> <span class="k">MODIFY</span> <span class="n">registration_number</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">UNIQUE</span><span class="p">;</span>
+
+<span class="c1">-- column 값이 중복되면은 추가할 수 없다.</span>
+<span class="c1">-- 각 row마다 고유한 값을 가져야한다면 UNI 속성을 주자</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">student</span> <span class="p">(</span><span class="nv">`name`</span><span class="p">,</span> <span class="n">registration_number</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">'최태웅'</span><span class="p">,</span> <span class="mi">20112405</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="-테이블에-constraint-걸기">✽ 테이블에 CONSTRAINT 걸기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 테이블에 이상한 ROW가 추가되는 것을 막아야 합니다.</span>
+<span class="c1">-- 테이블에 CONSTRAINT를 적용해야한다.</span>
+<span class="c1">-- st_rule 제약사항을 추가한다.</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">student</span>
+	<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">st_rule</span> <span class="k">CHECK</span> <span class="p">(</span><span class="n">registration_number</span> <span class="o">&lt;</span> <span class="mi">30000000</span><span class="p">);</span>
+
+<span class="c1">-- 제약사항 위반 조건 추가하기</span>
+<span class="c1">-- 제약사항을 위반 하면 해당하는 값은 추가되지 않는다.</span>
+<span class="c1">-- Error Code: 3819. Check constraint 'st_rule' is violated.</span>
+<span class="c1">-- 여러개의 조건을 가는 것도 가능하다.</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">student</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">registration_number</span><span class="p">)</span>
+	<span class="k">VALUES</span> <span class="p">(</span><span class="s1">'이대위'</span><span class="p">,</span> <span class="mi">30000000</span><span class="p">);</span>
+    
+    
+<span class="c1">-- 제약사항 삭제</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">student</span> <span class="k">DROP</span> <span class="k">CONSTRAINT</span> <span class="n">st_rule</span><span class="p">;</span>
+
+<span class="c1">-- 두 개 이상의 제약사항 만들기</span>
+<span class="c1">-- email 값안에 @ 존재, gender 값은 m, f 둘중하나</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">student</span>
+	<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">st_rule</span>
+    <span class="k">CHECK</span> <span class="p">(</span><span class="n">email</span> <span class="k">LIKE</span> <span class="s1">'%@%'</span> <span class="k">AND</span> <span class="n">gender</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">'m'</span><span class="p">,</span><span class="s1">'f'</span><span class="p">));</span>
+
+<span class="c1">-- 제약사항을 세심하게 걸수록 제대로된 데이터가 들어온다.    </span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">student</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">registration_number</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">gender</span><span class="p">)</span>
+	<span class="k">VALUES</span><span class="p">(</span><span class="s1">'김준성'</span><span class="p">,</span> <span class="s1">'20130827'</span><span class="p">,</span> <span class="s1">'kjs@naver.com'</span> <span class="p">,</span> <span class="s1">'m'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="-그밖의-컬럼-관련-작업들">✽ 그밖의 컬럼 관련 작업들</h3>
+
+<ul>
+  <li>컬럼 가장 앞으로 당기기</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 컬럼 순서 컬럼 젤 앞으로 보내기</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">student</span>
+	<span class="k">MODIFY</span> <span class="n">id</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="n">AUTO_INCREMENT</span> <span class="k">FIRST</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>컬럼 간의 순서 바꾸기</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 컬럼 간에 순서 바꾸기</span>
+<span class="c1">-- gender 컬럼값 phone컬럼 뒤로 보내기</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">student</span>
+	<span class="k">MODIFY</span> <span class="n">gender</span> <span class="nb">CHAR</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">NULL</span> <span class="k">AFTER</span> <span class="n">phone</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>컬럼의 이름과 컬럼의 데이터 타입 및 속성 동시에 수정하기</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 컬럼 이름 수정 RENAME COLUMN TO</span>
+<span class="c1">-- 컬럼 타입 속성 수정 MODIFY</span>
+<span class="c1">-- CHANGE를 사용하여서 둘다 동시에 가능</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">student</span>
+	<span class="n">CHANGE</span> <span class="n">phone</span> <span class="n">phone_num</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">NULL</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>여러 작업 동시에 수행하기</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- name 컬럼의 이름을 rename으로 수정</span>
+<span class="c1">-- email 컬럼의 타입을 VARCHAR(50) 속성을 NULL로 수정</span>
+<span class="c1">-- gender 컬럼을 삭제</span>
+<span class="c1">-- 새로운 컬럼 2개(height, weight) 추가</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">student</span>
+	<span class="k">RENAME</span> <span class="k">COLUMN</span> <span class="nv">`name`</span> <span class="k">TO</span> <span class="nv">`rename`</span><span class="p">,</span>
+    <span class="k">MODIFY</span> <span class="n">email</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="k">DROP</span> <span class="k">COLUMN</span> <span class="n">gender</span><span class="p">,</span>
+    <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="n">height</span> <span class="nb">DOUBLE</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="n">weight</span> <span class="nb">DOUBLE</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-테이블-이름-변경-복사본-만들기-삭제">✽ 테이블 이름 변경, 복사본 만들기, 삭제</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 테이블이름 변경</span>
+<span class="k">RENAME</span> <span class="k">TABLE</span> <span class="n">student</span> <span class="k">TO</span> <span class="n">undergraduate</span><span class="p">;</span>
+
+<span class="c1">-- 테이블 복사하는 방법 똑같은 구조의 테이블 만들기</span>
+<span class="c1">-- 기존 테이블에 작업하기 힘들때에는 복사해서 테스트한다.</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">copy_of_undergraduate</span> <span class="k">AS</span> <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">undergraduate</span><span class="p">;</span>
+
+<span class="c1">-- 테이블 삭제하기</span>
+<span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">copy_of_undergraduate</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-테이블-컬럼-구조만-복사하기">✽ 테이블 컬럼 구조만 복사하기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 테이블 구조만 복사하기(테이블안에 데이터는 없음)</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">copy_of_undergraduate</span> <span class="k">LIKE</span> <span class="n">undergraduate</span><span class="p">;</span>
+
+<span class="c1">-- 테이블 구조만 있는데 값을 넣기</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">copy_of_undergraduate</span> <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">undergraduate</span><span class="p">;</span>
+
+<span class="c1">-- 데이터 값 삽이 쿼리문 활용(복사한 구조에 특정 row만 삽입 가능)</span>
+<span class="c1">-- 이를 활용해서 원래테이블을 분할한 테이블로 만들수 있음</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">copy_of_undergraduate</span> <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">undergraduate</span> <span class="k">WHERE</span> <span class="n">major</span> <span class="o">=</span> <span class="mi">101</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-truncate으로-데이터-한-번에-날리기">✽ TRUNCATE으로 데이터 한 번에 날리기</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 해당 TRUNCATE를 사용하면 테이터 값이 모두 날라간다.</span>
+<span class="k">TRUNCATE</span> <span class="n">copy_of_undergraduate</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-course-테이블과-review-테이블-만들기">✽ course 테이블과 review 테이블 만들기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- course 테이블 만들기</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">course_rating</span><span class="p">.</span><span class="n">course</span> <span class="p">(</span>
+	<span class="nv">`id`</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+    <span class="nv">`title`</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="nv">`semester`</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="nv">`maximum`</span> <span class="nb">INT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="nv">`professor`</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">(</span><span class="nv">`id`</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="c1">-- review 테이블 만들기</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">course_rating</span><span class="p">.</span><span class="n">review</span> <span class="p">(</span>
+	<span class="nv">`id`</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+    <span class="nv">`course_id`</span> <span class="nb">INT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="nv">`star`</span> <span class="nb">INT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="nv">`comment`</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">(</span><span class="nv">`id`</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="-foreign-key-설정하기">✽ Foreign Key 설정하기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- Foreign Key 테이블 간의 참조 무결성을 지키기 위해 필요</span>
+<span class="c1">-- Foreign Key 설정</span>
+<span class="c1">-- Foreign Key 도 제약 사항</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="nv">`course_rating`</span><span class="p">.</span><span class="nv">`review`</span> 
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="nv">`fk_review_table`</span>
+  <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="nv">`course_id`</span><span class="p">)</span>
+  <span class="k">REFERENCES</span> <span class="nv">`course_rating`</span><span class="p">.</span><span class="nv">`course`</span> <span class="p">(</span><span class="nv">`id`</span><span class="p">)</span>
+  <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">RESTRICT</span>
+  <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">RESTRICT</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-show-create-table-문으로-현재-테이블-어떻게-만들수-있는지-보기">✽ SHOW CREATE TABLE 문으로 현재 테이블 어떻게 만들수 있는지 보기</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- SHOW를 통해서 CREATE TABLE 만들기</span>
+<span class="k">SHOW</span> <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">review</span><span class="p">;</span>
+
+<span class="c1">-- 현재 만들어진 review 테이블 구조를 만드는 SQL문 입니다.</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="nv">`review`</span> <span class="p">(</span>
+  <span class="nv">`id`</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="nv">`course_id`</span> <span class="nb">int</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="nv">`star`</span> <span class="nb">int</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="nv">`comment`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="nv">`id`</span><span class="p">),</span>
+  <span class="k">KEY</span> <span class="nv">`fk_review_table`</span> <span class="p">(</span><span class="nv">`course_id`</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="nv">`fk_review_table`</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="nv">`course_id`</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="nv">`course`</span> <span class="p">(</span><span class="nv">`id`</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">RESTRICT</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">RESTRICT</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="n">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">37</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span> <span class="k">COLLATE</span><span class="o">=</span><span class="n">utf8mb4_0900_ai_ci</span>
+</code></pre></div></div>
+
+<h3 id="-foreign-key로-보장되는-참조-무결성">✽ Foreign Key로 보장되는 참조 무결성</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 참조 무결성</span>
+<span class="c1">-- 부모테이블에 없는 엉뚱한 값이 면 오류가 뜨면서 추가되지 않는다.</span>
+<span class="n">USE</span> <span class="n">course_rating</span><span class="p">;</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">review</span> <span class="p">(</span><span class="n">course_id</span><span class="p">,</span> <span class="n">star</span><span class="p">,</span> <span class="k">comment</span><span class="p">)</span>
+	<span class="k">VALUES</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">'정말 좋은 수업이에요!'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="-부모테이블의-row가-삭제될-때---restrict-정책">✽ 부모테이블의 row가 삭제될 때 - RESTRICT 정책</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- RESTRICT 정책</span>
+<span class="c1">-- 부모테이블 입장에서 생각, 자식테이블에 입장에서 생각</span>
+<span class="c1">-- 부모테이블이 삭제되면 자식테이블 row 어떻게 처리되어야 할지?</span>
+<span class="c1">-- ON DELETE RESTRICT 참조하고 있는 자식테이블이 있는 경우 부모테이블을 삭제하지 못한다.</span>
+<span class="c1">-- 삭제하고 싶으면 자식테이블의 연관된 ROW를 모두 삭제한 후 에 가능하다.</span>
+
+<span class="n">USE</span> <span class="n">course_rating</span><span class="p">;</span>
+<span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">course</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="c1">-- Error Code: 1451. Cannot delete or update a parent row: a foreign key constraint fails (`course_rating`.`review`, CONSTRAINT `fk_review_table` FOREIGN KEY (`course_id`) REFERENCES `course` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)</span>
+</code></pre></div></div>
+<ul>
+  <li>NO ACTION 정책은 RESTRICT 정책과 같은 정책이다.</li>
+</ul>
+
+<h3 id="-부모-테이블의-row가-삭제될-때---cascade-정책">✽ 부모 테이블의 ROW가 삭제될 때 - CASCADE 정책</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 현재 Foreign Key를 삭제하는 부분</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="nv">`course_rating`</span><span class="p">.</span><span class="nv">`review`</span> 
+<span class="k">DROP</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="nv">`fk_review_table`</span><span class="p">;</span>
+
+<span class="c1">-- 다시 Foreign Key를 추가하는 부분</span>
+<span class="c1">-- Foregin Key를 다시 설정할때 원래 Foregin Key를 제거하고 다시 설정한다.</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="nv">`course_rating`</span><span class="p">.</span><span class="nv">`review`</span> 
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="nv">`fk_review_table`</span>
+  <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="nv">`course_id`</span><span class="p">)</span>
+  <span class="k">REFERENCES</span> <span class="nv">`course_rating`</span><span class="p">.</span><span class="nv">`course`</span> <span class="p">(</span><span class="nv">`id`</span><span class="p">)</span>
+  <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span>
+  <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">RESTRICT</span><span class="p">;</span>
+  
+<span class="c1">-- CASCADE : '폭포수처럼 떨어지다', '연쇄 작용을 일으키다'</span>
+<span class="c1">-- 부모테이블의 ROW를 삭제할때 그것을 참조하고 있는 자식 테이블도 함께 삭제된다.</span>
+<span class="c1">-- CASCADE 는 부모테이블을 삭제하면 자식테이블도 함께 삭제되므로 설정할때 명심하고 설정해야한다.</span>
+<span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">course</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-부모-테이블의-row가-삭제될때---set-null-정책">✽ 부모 테이블의 ROW가 삭제될때 - SET NULL 정책</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- 현재의 Foreign Key 설정하는 제약 조건을 없애는 부분</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="nv">`course_rating`</span><span class="p">.</span><span class="nv">`review`</span> 
+<span class="k">DROP</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="nv">`fk_review_table`</span><span class="p">;</span>
+
+<span class="c1">-- 다시 Foregin Key 제약조건을 추가하는 부분</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="nv">`course_rating`</span><span class="p">.</span><span class="nv">`review`</span> 
+<span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="nv">`fk_review_table`</span>
+  <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="nv">`course_id`</span><span class="p">)</span>
+  <span class="k">REFERENCES</span> <span class="nv">`course_rating`</span><span class="p">.</span><span class="nv">`course`</span> <span class="p">(</span><span class="nv">`id`</span><span class="p">)</span>
+  <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">SET</span> <span class="k">NULL</span>
+  <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">RESTRICT</span><span class="p">;</span>
+  
+<span class="c1">-- SET NULL일 때 부모테이블 ROW를 삭제한다면 자식테이블의 Foregin Key 값은 모두 Null로 변경</span>
+<span class="n">USE</span> <span class="n">course_rating</span><span class="p">;</span>
+<span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">course</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-부모-테이블의-row에서-참조당하는-컬럼이-갱신될-때는">✽ 부모 테이블의 row에서 참조당하는 컬럼이 갱신될 때는?</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- RESTRICT 문에서 값 갱신할 경우</span>
+<span class="c1">-- 갱신 되지 않고 Error 메세지가 나온다.</span>
+<span class="k">UPDATE</span> <span class="n">course</span> <span class="k">SET</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">100</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="c1">-- Error Code: 1451. Cannot delete or update a parent row: </span>
+<span class="c1">-- a foreign key constraint fails (`course_rating`.`review`, CONSTRAINT `fk_review_table` FOREIGN KEY (`course_id`) REFERENCES `course` (`id`) ON DELETE SET NULL ON UPDATE RESTRICT)</span>
+
+<span class="c1">-- CASCADE 문에 값 갱신할 경우</span>
+<span class="c1">-- 값이 잘 갱신되고 자식테이블에 있는 값 모두가 갱신된다.</span>
+<span class="n">USE</span> <span class="n">course_rating</span><span class="p">;</span>
+<span class="k">UPDATE</span> <span class="n">course</span> <span class="k">SET</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">100</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+
+
+<span class="c1">-- SET NULL 문에 값을 갱신할 경우</span>
+<span class="c1">-- 부모테이블은 잘 갱신 된다.</span>
+<span class="c1">-- 자식테이블에서는 부모테이블을 참조하는 Foregin Key 값을 Null로 변경된다.</span>
+<span class="k">UPDATE</span> <span class="n">course</span> <span class="k">SET</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">200</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span><span class="mi">100</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-논리적-foreign-key-물리적-foregin-key">✽ 논리적 Foreign Key, 물리적 Foregin Key</h3>
+
+<ol>
+  <li>성능 문제: DBMS에서 참조무결성을 한번 더 확인해줘야한다.</li>
+  <li>레거시(Legacy) 데이터의 참조 무결성이 이미 깨진 상태라면 참조 무결성이 깨지더라도 데이터를 삭제하지 말자</li>
+</ol>
+
+<ul>
+  <li>SHOW 문을 통해서 Foregin Key를 확인할 수 있다.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SHOW</span> <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">review</span><span class="p">;</span>
+
+<span class="c1">-- 걸려져 있는 제약사항</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="nv">`review`</span> <span class="p">(</span>
+  <span class="nv">`id`</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="nv">`course_id`</span> <span class="nb">int</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="nv">`star`</span> <span class="nb">int</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="nv">`comment`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="nv">`id`</span><span class="p">),</span>
+  <span class="k">KEY</span> <span class="nv">`fk_review_table`</span> <span class="p">(</span><span class="nv">`course_id`</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="nv">`fk_review_table`</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="nv">`course_id`</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="nv">`course`</span> <span class="p">(</span><span class="nv">`id`</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">SET</span> <span class="k">NULL</span> <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">SET</span> <span class="k">NULL</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="n">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">39</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span> <span class="k">COLLATE</span><span class="o">=</span><span class="n">utf8mb4_0900_ai_ci</span><span class="p">;</span>
+
+<span class="c1">-- 현재의 Foreign Key 설정하는  없애는 부분</span>
+<span class="c1">-- 현재 설정된 fk_review_table 의 제약조건을 없앨 수 있다.</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="nv">`course_rating`</span><span class="p">.</span><span class="nv">`review`</span> 
+	<span class="k">DROP</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="nv">`fk_review_table`</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="-데이터베이스의-설계사항-스키마">✽ 데이터베이스의 설계사항, 스키마</h3>
+<ol>
+  <li>개념적 스키마 : 하나의 조직, 하나의 기관, 하나의 서비스 등에서 필요로 하는 데이터 베이스 설계사항을 의미한</li>
+  <li>물리적 스키마 : 데이터를 실제로 컴퓨터의 저장장치에 어떤 방식으로 저장할지 결정하는 스키마</li>
+</ol>
+
+<h3 id="-데이터-모델링">✽ 데이터 모델링</h3>
+<ul>
+  <li>데이터를 어떻게 저장할 지 계획해야한다.</li>
+  <li>특정 이름과 데이터 타입을 결정해야 한다.</li>
+  <li>데이터 모델링 개념적 구조를 정하는 것 논리적 모델링</li>
+  <li>데이터베이스 구축에 필요한 걸 정하는 것 물리적 모델링</li>
+  <li>정리되지 않는 데이터를 인간이 이해할 수 있는 데이터로 정리하는 과정 데이터 모델링</li>
+</ul>
+
+<h3 id="-entity-개체">✽ Entity (개체)</h3>
+<ul>
+  <li>저장하고 싶은 데이터의 대상</li>
+  <li>실제 대상 하나하나(ROW)</li>
+  <li>Entity Type: 일반화한 Entity 종류(테이블)</li>
+</ul>
+
+<h3 id="-attribute-속성">✽ Attribute (속성)</h3>
+<ul>
+  <li>Entity에 대해서 저장하려는 내용</li>
+</ul>
+
+<h3 id="-relationship-관계">✽ Relationship (관계)</h3>
+<ul>
+  <li>Entity들 사이 연결점</li>
+</ul>
+
+<h3 id="-constraint-제약-조건">✽ Constraint (제약 조건)</h3>
+<ul>
+  <li>각 데이터 간의 일정한 규칙</li>
+</ul>
+
+<h3 id="-데이터-모델링의-목적">✽ 데이터 모델링의 목적</h3>
+<ul>
+  <li>저장하고자하는 데이터에서 Entity, Attribute, Relationship, Constraint 파악</li>
+  <li>데이터베이스를 구축할 때 기반이 될 모델 만들기</li>
+</ul>
+
+<h3 id="-relational-모델">✽ Relational 모델</h3>
+<ul>
+  <li>테이블을 의미하는 수학적 표현</li>
+  <li>Relationship : 테이블들 사이 맺어지는 관계</li>
+  <li>테이블 사이의 관계를 한눈에 알아보기 힘들다</li>
+</ul>
+
+<h3 id="-entity-relationship-modelerm">✽ Entity Relationship Model(ERM)</h3>
+<ul>
+  <li>ERM을 잘 파악하는 것이 중요하다.</li>
+  <li>Entity 간의 관계에 대해서 나타 낼 수 있다.</li>
+  <li>선의 대해서 관계들의 특징을 나타낼 수 있다.</li>
+  <li>관계의 특징에 따라 모델링하는 방법이 바뀜</li>
+</ul>
+
+<h3 id="-데이터-모델-스펙트럼">✽ 데이터 모델 스펙트럼</h3>
+
+<ul>
+  <li>개념 모델 : 추상적인 모델 Entity들과 Entity들 사이에 대략적인 관계</li>
+  <li>논리 모델(Logical Model) : 테이블 간의 관계를 간략적으로 나타낸 모델</li>
+  <li>물리 모델(Physical Model) : 실제로 데이터베이스를 구축할 수 있도록 나타낸 데이터 모델</li>
+</ul>
+
+<h3 id="-데이터-모델">✽ 데이터 모델</h3>
+
+<ol>
+  <li>우리가 데이터를 저장하려고 하는 대상 : Entity(개체)</li>
+  <li>Entity에 대해서 저장하려고 하는 특징 : Attribute(속성)</li>
+  <li>Entity들 사이 생기는 연결점 : Relationship(관계)</li>
+  <li>여러 데이터 요소들에 있는 규칙 : Constraint(제약 조건)</li>
+</ol>
+
+<h3 id="-좋은-데이터-베이스">✽ 좋은 데이터 베이스</h3>
+
+<ul>
+  <li>나쁜 데이터 베이스
+    <ul>
+      <li>데이터 중복저장, NULL이 많음</li>
+      <li>연산 실행이 너무 오래 걸림</li>
+      <li>원하는 정보를 찾을 수 없음</li>
+      <li>틀린 데이터를 저장하고 있음</li>
+    </ul>
+  </li>
+  <li>좋은 데이터 베이스
+    <ul>
+      <li>중복, 틀린 데이터 없음</li>
+      <li>빠르고 정확하게 데이터를 다룰 수 있음</li>
+      <li>중복되는 데이터가 저장되지 않는다</li>
+      <li>NULL이 생기지 않는다</li>
+      <li>데이터가 늘어날 때 테이블 구조가 변하지 않는다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="-비즈니스-룰">✽ 비즈니스 룰</h3>
+
+<ul>
+  <li>특정 조직이 운영되기 위해 따라야 하는 정책, 절차, 원칙들에 대한 간단명료한 설명
+    <ul>
+      <li>유저는 상품을 주문할 수 있다</li>
+      <li>동일한 주문 내역은 한 번의 배달로, 3인안에 유저가 지정한 배송지에 전달돼야 한다. 만약 그렇지 못할 시, 유저에게 최대한 빨리 알려줘야한다.</li>
+      <li>유저는 상품에 대한 평가를 줄 수 있다. 평가는 두 종류의 데이터: 1~5 사이 자연수의 별점, 그리고 200자 이내 줄 글을 통해 할수 있다.</li>
+      <li>웹사이트면, 페이지에서 제공하는 모든 기능에 관한 규칙</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="-entity-attribute-relationship-후보-찾기">✽ Entity, Attribute, Relationship 후보 찾기</h3>
+
+<ul>
+  <li>모든 명사는 entity 후보다</li>
+  <li>모든 동사는 relationship 후보다</li>
+  <li>하나의 값으로 표현할 수 있는 명사는 attribute 후보다</li>
+  <li>attribute과 relationship들의 특성에 따라서 모델링이 바뀔 수 있다.</li>
+</ul>
+
+<h3 id="-여러-값을-갖는-attribute">✽ 여러 값을 갖는 Attribute</h3>
+
+<ul>
+  <li>만약 여러개의 컬럼을 만들면 Null이 많아지고, 컬럼이 몇개 만들어야하는지 애매하다.</li>
+  <li>두개의 테이블과 Foregin Key로 설정하여 만들어야 한다.</li>
+  <li>하나의 값으로 표현되면 Attribute, 여러개의 값이면 Entity</li>
+</ul>
+
+<h3 id="-카디널리티cardinality">✽ 카디널리티(Cardinality)</h3>
+
+<ul>
+  <li>Entity type A와 B사이에서 A Entity 한개가 B Entity 몇개와 연결될 수 있고, B Entity 한개가 A Entity 몇개와 연결될 수 있는지</li>
+  <li>일대일, 일대다, 다대다</li>
+  <li>1:1(일대일)
+    <ul>
+      <li>법적 부부관계</li>
+      <li>주민등록증</li>
+    </ul>
+  </li>
+  <li>1:N(일대다)
+    <ul>
+      <li>유저의 평가(한명의 유저는 여러개의 평가)</li>
+      <li>선생님과 수업의 관계</li>
+    </ul>
+  </li>
+  <li>N:N(다대다)
+    <ul>
+      <li>쿠팡의 찜하기 기능</li>
+      <li>학생과 수업의 관계</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="-카디널리티-erm에서-표현하기">✽ 카디널리티 ERM에서 표현하기</h3>
+
+<ul>
+  <li>일대일, 일대다 관계에서는 Foregin Key 사용해서 만들어 줄수 있음</li>
+  <li>일대다 관계에서는 다에 해당하는 테이블에 Foregin Key를 추가한다.</li>
+  <li>다대다 관계에서는 두 Entity 만으로 표현할 수 없다. 연결 테이블(Junction Table)을 활용한다.</li>
+  <li>연결테이블은 두개의 일대다 관계를 통해서 모델링 할수 있다.</li>
+</ul>
+
+<h3 id="-데이터베이스-이상-현상">✽ 데이터베이스 이상 현상</h3>
+
+<ul>
+  <li>데이터베이스에서 삽입, 업데이트, 삭제를 제대로 할 수 없게 되는 경우</li>
+  <li>삽입 이상 : 새로운 데이터를 자연스럽게 저장할 수 없는 경우</li>
+  <li>업데이트 이상 : 데이터를 업데이트했을 때, 정확성을 지키기 어려워지는 경우</li>
+  <li>삭제 이상 : 원하는 데이터만 자연스럽게 삭제할 수 없는 경우</li>
+  <li>데이터 모델링을 제대로 하지 않았기 때문에 발생한다</li>
+</ul>
+
+<h3 id="-정규화normalization">✽ 정규화(Normalization)</h3>
+
+<ul>
+  <li>데이터베이스의 테이블이 잘 만들어졌는지 평가하고, 잘 만들지 못한 테이블을 고쳐나가는 과정</li>
+  <li>테이블을 정규형(normal form)이라고 불리는 형태에 부합하게 만들어나감</li>
+  <li>1NF, 2NF, 3NF</li>
+  <li>순서에 따라 규칙이 누적된다</li>
+  <li>데이터베이스에서 삽입, 업데이트, 삭제 이상을 없앨 수 있다</li>
+  <li>새로운 종류의 데이터를 추가할 때 테이블 구조 수정을 많이 하지 않아도 된다</li>
+  <li>데이터베이스 구조를 단순화해서 사용자가 더 쉽게 이해할 수 있다</li>
+  <li>구현하기 전에 반영하는 것이 좋다</li>
+</ul>
+
+<h3 id="-1nf">✽ 1NF</h3>
+
+<ul>
+  <li>테이블 안 모든 로우의 모든 컬럼 값들은 나눌 수 없는 단일 값이어야 한다</li>
+  <li>한 컬럼에 여러개의 값이 있으면 안된다.</li>
+  <li>한 컬럼에 여러개의 값이 있다면 컬럼 테이블을 만들고 Foregin key 로 저장한다</li>
+</ul>
+
+<h3 id="-함수-종속성functional-dependency">✽ 함수 종속성(Functional Dependency)</h3>
+
+<ul>
+  <li>x의 값에 따라서 y의 이 결정될 때, y는 x에 함수 종속성이 있다고 한다</li>
+  <li>name, age, gender는 email에 함수 종속성이 있다</li>
+  <li>이행적 함수 종속성 : 함수 종속성이 2번이상 있는 관계</li>
+</ul>
+
+<h3 id="-candidate-key">✽ Candidate Key</h3>
+
+<ul>
+  <li>하나의 로우를 특정 지을 수 있는 attribute들의 최소 집합</li>
+  <li>prime atttribute : Candidate key 포함된 column</li>
+</ul>
+
+<h3 id="-2nf">✽ 2NF</h3>
+
+<ul>
+  <li>1NF에 부합해야 한다. (테이블 안 모든 값이 나눌 수 없는 단일 값이어야 한다)</li>
+  <li>테이블에 candidate key의 일부분에 대해서만 함수 종속성이 있는 non-prime attribute가 없어야 한다</li>
+  <li>non-prime attribute 들을 적절한 테이블에 옮겨 주면 된다</li>
+</ul>
+
+<h3 id="-3nf">✽ 3NF</h3>
+
+<ul>
+  <li>2NF에 부합해야 한다</li>
+  <li>테이블 안에 있는 모든 attribute 들은 오직 primary key에 대해서만 함수 종속성이 있어야 합니다</li>
+  <li>이행적 함수 종속성이 있으면 안된다</li>
+  <li>컬럼을 이동시킨 이후에 Foregin key를 만들어 준다</li>
+</ul>
+
+<h3 id="-비정규화">✽ 비정규화</h3>
+
+<ul>
+  <li>정규화를 하게되면 많은 테이블을 만들어야 되기 때문에 조인 연산을 많이 해야해서 시간이 오래걸린다.</li>
+  <li>성능 개선을 하기위해서 비정규화를 실행한다</li>
+  <li>비정규화는 주로 삽입, 업데이트, 삭제하는 것보다 조회하는 용도로만 사용하고 있을 대 사용한다</li>
+</ul>
+
+<h3 id="-네이밍이름-짓기">✽ 네이밍(이름 짓기)</h3>
+
+<ul>
+  <li>컴퓨터과학에서 어려운 건 딱 두가지가 있다 : 캐시 무효화와 네이밍이다</li>
+  <li>단수/복수 정하기</li>
+</ul>
+
+<h3 id="-데이터-타입">✽ 데이터 타입</h3>
+
+<ul>
+  <li>각 컬럼이 “어떤”데이터를 저장하는지에 대한 내용</li>
+  <li>데이터베이스의 가장 기본적인 제약 사항(데이터 정확성을 지켜주는 역할을 한다)</li>
+  <li>다양한 연산과 함수들을 사용하기 위해서</li>
+  <li>정수저장 단위(<code class="language-plaintext highlighter-rouge">TINYINT</code>(1BYTE), <code class="language-plaintext highlighter-rouge">SMALLINT</code>(2BYTE),<code class="language-plaintext highlighter-rouge">INTEGER</code>(4BYTE) ,<code class="language-plaintext highlighter-rouge">BIGINT</code>(8BYTE))</li>
+  <li>실수형 단위(<code class="language-plaintext highlighter-rouge">DECIMAL</code>, <code class="language-plaintext highlighter-rouge">FLOAT</code>, <code class="language-plaintext highlighter-rouge">DOUBLE</code>)</li>
+  <li>날짜 및 시간 타입(<code class="language-plaintext highlighter-rouge">DATA</code>, <code class="language-plaintext highlighter-rouge">DATETIME</code>, <code class="language-plaintext highlighter-rouge">TIMESTAMP</code>)</li>
+  <li>문자열 타입(<code class="language-plaintext highlighter-rouge">CHAR</code>, <code class="language-plaintext highlighter-rouge">VARCHAR</code>, <code class="language-plaintext highlighter-rouge">TEXT</code>)</li>
+</ul>
+
+<h3 id="-선형-vs-이진-탐색">✽ 선형 VS 이진 탐색</h3>
+
+<ul>
+  <li>뒤죽박죽 섞인 숫자 배열에서 2를 찾기</li>
+  <li>
+    <p>처음부터 끝까지 찾는다. 선형탐색(Liner Search)</p>
+  </li>
+  <li>오름차순으로 저장된 배열</li>
+  <li>이진탐색법 사용 데이터가 정렬되어 있을 때 사용된다.</li>
+  <li>특정 순서대로 정렬 이진탐색을 통해서 빠르게 찾아낼 수 있다.</li>
+</ul>
+
+<h3 id="-clustered-vs-non-clustered-인덱스">✽ Clustered vs Non-Clustered 인덱스</h3>
+
+<ul>
+  <li>Clustered 인덱스
+    <ul>
+      <li>테이블 자체를 특정 순서로 저장하는 인덱스</li>
+      <li>조회 속도가 굉장히 빠르다</li>
+      <li>인덱스를 하나밖에 못 만든다</li>
+      <li>언어 사전과 비슷한 개념</li>
+    </ul>
+  </li>
+  <li>Non-Clustered 인덱스
+    <ul>
+      <li>테이블 자체는 그대로 놔두고 다른 곳에 순서를 저장</li>
+      <li>인덱스를 모든 컬럼에 대해서 만들 수 있다</li>
+      <li>Clustered 인덱스보다는 조금 느리다</li>
+      <li>일반 책의 색인, 또는 인덱스와 비슷한 개념</li>
+    </ul>
+  </li>
+  <li>인덱스
+    <ul>
+      <li>특정 조건의 데이터를 찾는 조회를 굉장히 빠르게 할 수 있다</li>
+      <li>그렇다고 해서 모든 컬럼과 모든 컬럼의 조합에 인덱스를 추가하지 않는다</li>
+      <li>인덱스 업데이트 문제: 하나의 로우의 값을 바꾸면, 해당 컬럼이 포함된 모든 인덱스를 수정해야 한다</li>
+      <li>인덱스를 추가하려는 테이블의 컬럼들이 얼마나 자주 삽입, 업데이트, 삭제되는지 파악</li>
+      <li>이 연산들을 많이 해야되는 테이블의 컬럼들에는 인덱스가 오히려 역효과를 낳는다</li>
+    </ul>
+  </li>
+  <li>인덱스 추가 기본 원칙
+    <ul>
+      <li>모든 primary key에 대해서 인덱스를 만들어준다</li>
+      <li>모든 foreign key에 대해서 인덱스를 만들어준다</li>
+      <li>특정 조회 쿼리가 너무 느려지거나, 느려질 게 확실한 경우 조회에 사용되는 컬럼들에 대해서 인덱스를 만들어준다</li>
+    </ul>
+  </li>
+</ul>
 
 
                 </div>
